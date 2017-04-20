@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+<title>{$GetSiteTitle}-{$GuestTitle}</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="author" content="kesion.com">
+<meta name="keywords" content="开源CMS ASPCMS 论坛 社区 论坛程序 asp论坛系统 KesionCMS 站长论坛" />
+<meta name="description" content="KesionCMS 万能建站管理系统官方服务技术交流社区 powered by kesion.com" />
+<meta name="author" content="kesion.com"/>
+<link href="{$GetSiteUrl}3g/images/style.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}3g/images/bbs.css" rel="stylesheet" type="text/css">
+<script src="{$GetInstallDir}ks_inc/jquery.js"></script>
+<script src="{$GetInstallDir}ks_inc/common.js"></script>
+<script src="{$GetInstallDir}{$GetClubInstallDir}/images/club.js"></script>
+<style type="text/css">
+	 .postvote{background:#fff;box-shadow: 1px 2px 2px #e6e6e6;border-bottom: 1px solid #d9d9d9; padding-top:0.75rem; padding-bottom:0.75rem; width:100%;overflow:hidden;}
+	 .postvote table{ width:100% !important; margin:auto;font-size: 0.7rem;}
+	 .postvote input.textbox{border:1px solid #e5e5e5;height:1.5rem;line-height:1.5rem;color:#666; margin-bottom:0.5rem; width:96% !important;padding: 0.25rem 2%;font-size: 0.7rem;}
+	 .postvote table textarea.textbox{ border:1px solid #e5e5e5; resize:none; width:96% !important; padding:0 2%;font-size: 0.7rem;line-height: 1.5rem;}
+	 .imagebox{margin-left: 0.75rem !important;}
+	 .imagebox .upbutton{ font-weight:normal !important; color:#898989 !important; line-height:2.5rem;}
+	 #CategoryId{ height:1.3rem; line-height:1.3rem; border:1px solid #e5e5e5; padding:0 0.25rem; color:#666;}
+	 .btn{ width:96% !important; margin-left:2%;}
+	 .location{ padding:0;}
+	 #VoteType{border: 1px solid #e5e5e5;height: 1.5rem;line-height: 1.5rem; padding:0 0.5rem; font-size:0.7rem; margin-right:0.5rem; margin-bottom:0.5rem; font-family:"微软雅黑";}
+	 #time{ margin-top:0.5rem; margin-bottom:0.5rem;}
+	 #votetable label{ margin-left:0.35rem;}
+	 #votetable label input[type="radio"],#votetable label input[type="checkbox"]{ vertical-align:middle; margin-right:0.25rem;}
+	 #time input.textbox{ width:auto !important; margin:0 0.25rem;}
+	 #myform .lefttd{ padding-top:0.5rem;}
+	 .imagebox{ height:2.75rem !important;}
+	 .imagebox .upbutton{ width:2.5rem !important; height:2.5rem !important; font-size:2rem !important;}
+	 .tips{ padding-left:3rem !important;}
+	</style>
+<script type="text/javascript">
+	function checkform()
+	{ 
+	 if (jQuery("#SelectCategoryId").val()==1){
+	  if (myform.CategoryId.value=='0'){
+	   alert('主题分类必须选择!');
+	   return false;
+	  }
+	 }
+	  if (myform.Subject.value==""){
+			alert("主题一定要填写！");
+			myform.Subject.focus();
+			return false;
+		}
+		if (myform.boardid.value==""){ alert("请选择要发布的版面!");return false;}
+
+		if ($("#Content").val()=='')	{ alert("主题内容不能留空！"); $("#Content").focus();return false;}
+		{$CheckCode}
+		$("#myform").submit();
+	}
+</script>
+<script type="text/javascript"> 
+//===========================点击展开关闭效果====================================
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+var openTip = oOpenTip || "";
+var shutTip = oShutTip || "";
+if(targetObj.style.display!="none"){
+   if(shutAble) return;
+   targetObj.style.display="none";
+   if(openTip && shutTip){
+    sourceObj.innerHTML = shutTip; 
+   }
+} else {
+   targetObj.style.display="block";
+   if(openTip && shutTip){
+    sourceObj.innerHTML = openTip; 
+   }
+}
+}
+</script>
+<script>
+$(function(){
+	$(".headertit").replaceWith("<div class='headertit'>发表帖子</div>");
+	})
+</script>
+</head>
+<body>
+{LB_3g头部通用}	
+<div id="box2013" style="display:none">
+	<div class="topbg"></div>
+	<ul>
+		{$GetModelList}
+	</ul>
+	<div class="clear"></div>
+</div>
+<!--<div class="location" style="text-align:center;"> 发表帖子</div>-->
+<div class="MiddleCont postvote">
+	<div style="padding-left:0.75rem; padding-right:0.75rem;">
+		{$WriteGuestForm}
+	</div>
+</div>
+
+<script>
+ $(document).ready(function(){
+  $("select").each(function(){
+    if ($(this).attr("modified")!="false")  loadSelect($(this)[0]);
+  });
+ });
+</script>
+			
+<!--3G底部start-->  
+{LB_3g底部按钮}
+<script>
+$(function(){
+	var a = $(".flexbox li").eq(2).find("img").attr("src");
+	b=a.substring(0,a.length-4); //alert(b)截掉最后四个字符
+	$(".flexbox li").eq(2).find("img").attr("src", b + "s.png");
+})
+</script>
+
+<!--3G底部end-->  
+</body>
+</html>

@@ -1,0 +1,143 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$GetSEOTitle}-{$GetClassName}</title>
+<link href="{$GetInstallDir}images/style.css" rel="stylesheet" type="text/css" />
+<meta name="keywords" content="{$GetSEOKeyWords}"/>
+<meta name="description" content="{$GetSEODescription}"/>
+<script type="text/javascript" src="{$GetInstallDir}ks_inc/jquery.js"></script>
+<script type="text/javascript" src="{$GetInstallDir}ks_inc/common.js"></script>
+
+<SCRIPT language=JavaScript type=text/JavaScript>
+//改变图片大小
+//function resizepic(thispic)
+//{ 
+//if(thispic.width>750) thispic.width=750; 
+//}
+$(document).ready(function(){
+	$('.imagelist').find('img').each(function(){
+	  if (this.width>750) this.width=600;
+	});
+});
+
+</SCRIPT>
+</head>
+<body>
+{LB_头部通用}
+<div class="demand_box">
+	<div class="demand_l">
+		{$GetTopClassName}
+	</div>
+	<div class="demand_r">
+		<ul>
+		{LB_子栏目导航}
+		</ul>
+	</div>
+</div>
+
+<div class="blank10"></div>
+<div class="banner">{=GetAdvertise(36)}</div>
+<div class="blank10"></div>
+
+
+<div class="wrap">
+   
+  <div class="navigation">{LB_位置导航}</div>
+  
+   <div class="picnr">
+   <div class="title">{$GetPictureName}
+   </div>
+   
+   <div class="del"><span>时间：{$GetDate}</span> 点击数：{$GetHits}次  总张数：{$GetPicNums}张  作者：{$GetPictureAuthor} 
+	 <script src="{$GetInstallDir}item/gethits.asp?action=commentnum&PostId={$FL_PostId}&M={$ChannelID}&ID={$InfoID}"></script> 
+     {$GetFav}{$GetPictureVote}
+   </div>
+   
+   
+   
+   
+   <div class="clear"></div>
+   <div class="picnrbox">
+       <div class="showpic">{$ShowPictures}</div>
+	   <div class="clear blank10"></div>
+   	<div class="nph_intro">
+	   {$GetPictureIntro}
+	   
+	   
+	</div>
+	
+    
+    
+     <div  class="clear blank10"></div>
+	 
+     
+     <div class="nph_tj">
+	     <ul>
+		     <li>上一图集：{$GetPrevPicture}</li>
+		     <li>下一图集：{$GetNextPicture}</li>
+		 </ul>
+	 </div>
+	
+   </div>
+</div>
+<div class="clear blank10"></div>
+
+<!--相关图片-->
+<div class="xgphoto">
+  <div class="title"><h2>相关图集</h2></div>
+  <div class="xgphotobox">
+      <ul>
+	     {LB_相关图集}
+	  </ul>
+  </div>
+</div>
+<!--相关图片-->
+<div class="clear blank10"></div>
+
+<!--相关图片-->
+<div class="xgphoto">
+  <div class="title"><h2>网友评论</h2></div>
+  <div class="commentbox">
+      <ul>
+	     {$GetShowComment}{$GetWriteComment}
+	  </ul>
+  </div>
+</div>
+<!--相关图片-->
+
+<!--图片主体end-->
+
+
+<!---图片广告s--->
+<div id="picend_showgg" style="display: none; position: absolute; top:-200px ; left:0px; " >
+	<!---自定义区s--->
+	<div class="xgphoto" style=" width:700px;">
+	  <div class="title"><span style="float:left">图片广告</span> <span style="float:right; cursor:pointer; padding-top:5px; padding-right:5px;"><img src="/images/dialogclose.gif"  onclick="picend_showggclose()" /></span></div>
+	  <div class="xgphotobox" style="background:#FFFFFF; overflow:hidden">
+		  <ul>
+		   <!--
+			 这在放广告内容
+			 -->
+			 {LB_相关图集}
+		  </ul>
+	  </div>
+	</div>
+	<!---自定义区s--->
+</div>
+
+<!---图片广告e--->
+
+
+
+
+
+<div class="clearfloat"></div>
+ 
+ </div>
+<!--版权信息-->
+{LB_尾部通用}
+<!--版权信息-->
+
+</body>
+</html>

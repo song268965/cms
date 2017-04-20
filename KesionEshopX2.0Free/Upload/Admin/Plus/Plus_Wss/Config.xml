@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>站点统计插件</AppName>
+		<Role>wss</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>WSS统计配置</ItemName>
+			<ItemUrl><![CDATA[Plus_WSS/wss.asp]]></ItemUrl>
+			<Attribute>SetParam</Attribute>
+			<Role>KSO10003</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>查看WSS统计</ItemName>
+			<ItemUrl><![CDATA[Plus_WSS/wss.asp?action=show]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSO100031</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>系统自带统计</ItemName>
+			<ItemUrl><![CDATA[Plus_WSS/KS.Online.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS20005</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

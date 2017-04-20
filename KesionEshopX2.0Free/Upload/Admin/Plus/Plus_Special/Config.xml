@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>网站专题管理</AppName>
+		<Role>special</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>专题管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Special/KS.Special.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>M010003</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>专题分类管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Special/KS.Special.asp?action=SpecialClassList]]></ItemUrl>
+			<Attribute>Go</Attribute>
+			<Role>M0100031</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

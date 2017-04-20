@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+<title>订单提交成功</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="author" content="kesion.com">
+<meta name="format-detection" content="telephone=no">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/common.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/style.css" rel="stylesheet" type="text/css">
+<script src="{$GetSiteUrl}ks_inc/jquery.js"></script>
+<script src="{$GetSiteUrl}ks_inc/common.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/pageauto.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.js"></script>
+</head>
+<body>
+{LB_3g头部通用}
+<script>
+$(function(){
+	var tit=$("title").html();
+	$(".headertit").html(tit)
+})
+</script>
+
+<div class="MiddleCont">
+
+
+<!--商品内容页begin-->
+<div class="cartbox whitebg">
+   <div class="succ_content">
+     <div class="title">成功提交订单</div>
+	  <div class="paylbox">
+	    <ul>
+		  尊敬的用户，恭喜您，您的订单已提交成功！<br />
+		   付款成功后，才能完成本次交易，请尽快付款 ！<br />
+		   订单号是：<font color="#005599"><strong>{$ShowOrderID}</strong> </font>,您需要支付：<font color="#FF0000"><strong>￥{$ShowTotalMoney}</strong></font>元
+	    </ul>
+	  </div>
+	  
+	   <div class="title">选择在线支付</div>
+	  <div class="payrbox">
+	    <div class="payl">
+		   {$PayMentList}
+		</div>
+		<div class="payr">
+		    <h2>您还可以选择以下支付方式: </h2>
+	   <Input onClick="window.location.href='../USER.asp?Action=addpayment&ID={$ShowOrderAutoID}';" type="image" src="{$GetInstallDir}Images/shop_btn8.gif" border=""0"" alt="余额支付" name=botton32>
+                          &nbsp;&nbsp;
+                          <Input id=s onClick="window.location.href='showpay.asp';" type="image" src="{$GetInstallDir}Images/shop_btn9.gif" border=""0"" alt="银行汇款" name=s>
+                          &nbsp;&nbsp;
+		</div>
+	  </div>
+	  
+  
+	  
+   </div>
+   
+
+</div>
+</div>
+</body>
+</html>

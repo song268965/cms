@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>作者/来源/关键字</AppName>
+		<Role>tags</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>关键字Tags管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Tags/KS.KeyWord.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>M010004</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>搜索关键字管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Tags/KS.KeyWord.asp?issearch=1]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KMST10019</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>作者管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Tags/KS.Author.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KMST10016</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>来源管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Tags/KS.Origin.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KMST10015</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

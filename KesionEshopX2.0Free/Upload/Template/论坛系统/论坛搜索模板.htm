@@ -1,0 +1,118 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>论坛搜索-{$GetSiteTitle}</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name="keywords" content="开源CMS ASPCMS 论坛 社区 论坛程序 asp论坛系统 KesionCMS 站长论坛" />
+<meta name="description" content="KesionCMS 万能建站管理系统官方服务技术交流社区 powered by kesion.com" />
+<meta name="author" content="kesion.com"/>
+<link href="{$GetInstallDir}{$GetClubInstallDir}/images/club.css" type=text/css rel=stylesheet>
+<script src="{$GetInstallDir}ks_inc/jquery.js"></script>
+<script src="{$GetInstallDir}ks_inc/common.js"></script>
+<script src="{$GetInstallDir}{$GetClubInstallDir}/images/club.js"></script>
+<script src="{$GetInstallDir}{$GetClubInstallDir}/images/LeeSelect.js" type=text/javascript></script>
+<!--[if IE 6]>
+<script src="/js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+</head>
+<body>
+{LB_论坛头部通用}
+
+		
+ [SearchContent]
+   
+   [ShowKeySearch]
+
+  <div class="clubbox" style=" background:#fff;">
+   <div class="clubcate">{@search.searchtype}</div>
+   <div class="clear"></div>
+   <div class="sform">
+    <script type="text/javascript">
+	 function checkkey(){
+	  var key=$('#key');
+	  if(key.val()==''){alert('请输入关键字!');key.focus();return false;}
+	  if(key.val().length<2 || key.val().length>20){
+	   alert('关键字字符长度不能小于 2 大于 20 字节!');
+	   key.focus();
+	   return false;
+	  }
+	  return true;
+	 }
+	</script>
+    <form name="sform" action="?" method="get">
+     <input type="text" name="key" class="textbox" id="key" size="35" maxlength="20"/>
+	 
+      <select name="boardid" >
+	   <option value='0'>--选取所有版面--</option>
+	  {$BoardOption}
+      </select>
+	   <input type="radio" name="stype" value="1" checked>主题
+	   <input type="radio" name="stype" value="2">用户名
+	   <input type="submit" value="立即搜索" onClick="return(checkkey())"/>
+   </form>
+   <br/>
+   <span>
+   搜索说明：
+   <br/>
+关键字字符长度不能小于 2 大于 20 字节<br/>
+每次搜索时间间隔 2 秒 <br/>
+按用户名查询为精确查询，必须输入用户名的全称
+   </span>
+  </div>
+  </div>
+  [/ShowKeySearch]
+
+  [SearchResult]
+	 <div class="ShowKeySearch">{@search.resulttips}：</div>
+     <div class="clubmainbox pd20" style="background:#fff;">
+	      <table border="0" style="margin:0px auto;width:100%" align="center" class="glist" cellpadding="0" cellspacing="0">
+		    <thead class="category">
+				<tr>
+					<td style="width:30px;text-align:center">&nbsp;</td>
+					<td style="width:500px;text-align:left">主题</td>
+					<td style="width:140px;text-align:center">版面名称</td>
+					<td style="width:80px;text-align:center">作者</td>
+					<td style="width:60px;text-align:center">回复</td>
+					<td style="width:150px;text-align:center">最后发表↓</td>
+				</tr>
+			 </thead>
+				{@loop.begin}
+				<tbody class="topiclist">
+				<tr onMouseOver="this.className='tron'" onMouseOut="this.className='trout'">
+				    <td style="width:30px;text-align:center"><img src="{$GetSiteUrl}{$GetClubInstallDir}/images/common.gif" /></td>
+					<td class="topictitle">{@item.category}<a href="{@item.linkurl}" target="_blank">{@item.subject}</a></td>
+					<td style="width:140px;color:#ff5500;text-align:center"><a href="{@item.boardurl}" target="_blank">{@item.boardname}</a></td>
+					<td style="width:80px;text-align:center"><a href="{$GetSiteUrl}space/?{@item.username}" class="author" target="_blank">{@item.username}</a><div class="time">{@item.addtime}</div></td>
+					<td style="width:60px;text-align:center">{@item.totalreplay}<div class="time">{@item.hits}</div></td>
+					<td style="width:150px;text-align:center">
+						<a href="{$GetSiteUrl}space/?{@item.lastreplayuser}" target="_blank">{@item.lastreplayuser}</a>
+						<div class="time">{@item.lastreplaytime}</div>
+					</td>
+				</tr>
+				</tbody>
+				{@loop.end}
+		 </table>
+		 
+       <div class="blank8 clear"></div>
+		 {@search.showpage}
+	 </div>
+ </div>
+[/SearchResult] 
+	 
+
+[/SearchContent]
+
+
+
+
+<div class="blank8 clear"></div>
+
+{LB_论坛底部通用}
+<div class="blank8 clear"></div>
+</div>
+
+</body>
+</html>

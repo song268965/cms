@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>新会员注册</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<link href="{$GetSiteUrl}3g/images/common.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}3g/images/style.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}3g/images/member.css" rel="stylesheet" type="text/css">
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javaScript"></script>
+<script src="{$GetInstallDir}ks_inc/common.js" type="text/javaScript"></script>
+<script type="text/javascript">
+ var mobile={$Show_Mobile};
+ var mobileCodeTF={$Show_MobileCodeTF};
+ var detailTF={$Show_DetailTF};
+$(window).load(function(){
+ $("input[name=GroupID]").click(function(){
+   loadDetailForm();
+ });
+ if ($("#detailForm").css("display")!="none"){
+  loadDetailForm();
+ }
+ 
+});
+function loadDetailForm(){
+  if (detailTF!=2) return;
+  var groupid=$("input[name=GroupID]:checked").val();
+  if (groupid==undefined) groupid=$("#GroupID").val();
+  if (groupid==undefined && detailTF!=2) return;
+  $("#loading").show();
+	  $.get("{$GetInstallDir}user/reg/regajax.asp",{from:"3g",action:"getregform",groupid:groupid},function(d){
+	  $("#userDetail").hide().html(unescape(d)).fadeIn("slow");
+	   $("#loading").hide();
+  });
+}
+
+function loadCity(v,ll){
+ $.get("{$GetInstallDir}user/reg/regajax.asp",{action:"getcityoption",province:escape(v)},function(d){
+   $("#City").empty().append("<option value=''>--请选择城市--</option>").append(d);
+   if(ll==22){
+	   $('#City option[value=广州市]').attr("selected", true)
+   }
+ });
+}
+
+
+ function CheckForm() 
+		{ 
+			if (document.myform.UserName.value =="")
+			{
+			$.dialog.alert("请填写您的会员名！",function(){  document.myform.UserName.focus(); });
+			return false;
+			}
+			if (document.myform.PassWord.value =="") 
+			{
+			 $.dialog.alert("请填写您的密码！",function(){ document.myform.PassWord.focus(); });
+			 return false; 
+			}
+
+			if (document.myform.Mobile.value ==""&&mobile==1)
+			{
+			$.dialog.alert("请填写您的手机号码！",function(){  document.myform.Mobile.focus(); });
+			  return false;
+			}
+			else if(ismobile(document.myform.Mobile.value)==false&&mobile==1)
+			{
+			 $.dialog.alert("您的手机号码不正确！",function(){  document.myform.Mobile.focus(); });
+			  return false;
+			}
+			if (mobileCodeTF==1){
+				  if ($("#MobileCode").val()==''){
+				   $.dialog.alert("请输入手机短信验证码！",function(){ document.myform.MobileCode.focus(); });
+			       return false;
+				  }
+			}
+			
+			if(document.myform.Email.value !="" && ((document.myform.Email.value.indexOf("@")==-1)||(document.myform.Email.value.indexOf(".")==-1)))
+			{
+			$.dialog.alert("您输入的电子邮件地址有误！",function(){   document.myform.Email.focus(); });
+				return false;
+			}
+
+		  return true;
+}
+
+</script>
+<script type="text/javascript"> 
+//===========================点击展开关闭效果====================================
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+var openTip = oOpenTip || "";
+var shutTip = oShutTip || "";
+if(targetObj.style.display!="none"){
+   if(shutAble) return;
+   targetObj.style.display="none";
+   if(openTip && shutTip){
+    sourceObj.innerHTML = shutTip; 
+   }
+} else {
+   targetObj.style.display="block";
+   if(openTip && shutTip){
+    sourceObj.innerHTML = openTip; 
+   }
+}
+}
+</script>
+<body>
+<!-- head begin -->
+{LB_3g头部通用}
+<script>
+$(function(){
+	var tit =$("title").html();
+	$(".headertit").html(tit)
+})
+</script>
+<div id="box2013" style="display:none">
+	<div class="topbg"></div>
+	<ul>
+		{$GetModelList}
+	</ul>
+	<div class="clear"></div>
+</div>
+
+<div class="clear"></div>
+
+<form name="myform" id="myform" onSubmit="return CheckForm();" action="RegOK.asp" method="post">
+	<div class="user_topd" >
+		<div class="usertopd">
+			  <!--注册信息start-->
+			<dl class="cc">
+				<dt style=" font-size:0.6rem;">用 户 组：</dt>
+				<dd class="put" style=" font-size:0.6rem;">
+					{$ShowUserType}<font color="red">*</font>
+				</dd>
+			</dl>
+			<dl class="cc">
+				<dd class="put">
+					<input name="UserName" placeholder="会员名称" class="input" maxlength="30" id="UserName" type="text" ><font color="red">*</font>
+				</dd>
+			</dl>
+			<dl class="cc">
+				<dd class="put">
+					<input id="PassWord" placeholder="用户密码" name="PassWord" class="input" type="PassWord" style="font-FAMILY: verdana;" ><font color="red">*</font>
+				</dd>
+			</dl>
+			<dl class="cc">
+				<dd class="put"><input name="Mobile"  placeholder="手机号码"  type="text" id="Mobile" class="input"><font color="red">*</font></dd>
+			</dl>
+			<dl class="cc"{$DisplayMobileCode}>
+				<dd class="put" style="height: auto;">
+					<input name="MobileCode" placeholder="手机验证码" maxlength="6" type="text" id="MobileCode" class="input"><font color="red">*</font>
+					<br/>
+					<input type="button" value="免费获取手机验证码" id="MobileCodeBtn" onClick="getMobileCode({$Show_OutTimes},'101','Mobile','MobileCodeBtn')" class="button" style="font-size: 0.6rem;"/>
+				</dd>
+			</dl>
+			<dl class="cc">
+				<dd class="put">
+					<input name="Email" id="Email" placeholder="邮箱地址" class="input"  type="text">
+				</dd>
+				<dd class="tips"><span id="emailmsg" class="d_default"></span></dd>
+			</dl> 
+			<div{$DisplayRegQuestion}>
+			   <dl class="cc">
+					<dt>您的问题：</dt>
+					<dd class="put">
+						<font color="red">{$RegQuestion}</font>
+					</dd>
+			   </dl>
+			   <div class="blank10 clear"></div>
+			   <dl class="cc">
+					<dt>您的答案：</dt>
+					<dd class="put">
+						<input name="a{$AnswerRnd}" id="a{$AnswerRnd}"  placeholder="您的答案"  class="input"  type="text">
+						<dd class="tips"><span id="reganswermsg" class="d_default"></span></dd>
+					</dd>
+			   </dl>
+			</div>
+			<div class="regL" id="detailForm"{$Show_Detail}>
+				 <h2>用户详细信息</h2>
+				 <div id="userDetail" style="padding-top:10px;">
+				 
+				 </div>
+			</div>
+			<dl class="cc"{$Show_VerifyCodeTF}>
+				<dd class="put">
+					<input onFocus="this.value='';" name="Verifycode" placeholder="验 证 码"  type="text" id="Verifycode" class="input" style="width:52%" maxlength="6">
+					<font color="red">*</font>
+					<span style=" padding-top:10px; height:40px; line-height:40px;"><img style='cursor:pointer; height:40px; position:relative; top:16px;' onClick="this.src='../plus/verifycode.asp?time='+Math.random();" src="../plus/verifycode.asp?n="/></span>
+				</dd>
+			</dl> 
+			<div style="clear:both;padding-left:10px"><input type="image" src="{$GetInstallDir}user/images/button_reg.gif" alt="注册" align="middle" border="0"></div>  
+				   
+			  <!--注册信息end-->
+		</div>
+	</div>
+</form>
+</body>
+</html>

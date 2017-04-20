@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>访谈管理</AppName>
+		<Role>InterView</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>在线访谈管理</ItemName>
+			<ItemUrl><![CDATA[Plus_InterView/KS.InterView.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>InterView0000</Role>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>添加访谈</ItemName>
+			<ItemUrl><![CDATA[Plus_InterView/KS.InterView.asp?action=Add]]></ItemUrl>
+			<Attribute>Go</Attribute>
+			<Role>InterView0001</Role>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

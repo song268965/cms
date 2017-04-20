@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>自定义表单</AppName>
+		<Role>form</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>表单管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Form/KS.Form.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10006</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>添加表单</ItemName>
+			<ItemUrl><![CDATA[Plus_Form/KS.Form.asp?action=Add]]></ItemUrl>
+			<Attribute>GO</Attribute>
+			<Role>KSMS100061</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>表单调用代码</ItemName>
+			<ItemUrl><![CDATA[Plus_Form/KS.Form.asp?action=total]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS100062</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

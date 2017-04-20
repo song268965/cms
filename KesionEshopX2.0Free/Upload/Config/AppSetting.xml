@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+ <MyApp>
+   <app name="ads" status="1"><![CDATA[广告管理]]></app>
+   <app name="announce" status="1"><![CDATA[网站公告]]></app>
+   <app name="bshare" status="1"><![CDATA[Bshare分享插件]]></app>
+   <app name="collect" status="1"><![CDATA[采集插件]]></app>
+   <app name="digmood" status="1"><![CDATA[DIG/点评/评论]]></app>
+   <app name="form" status="1"><![CDATA[自定义表单]]></app>
+   <app name="interview" status="1"><![CDATA[访谈管理]]></app>
+   <app name="link" status="1"><![CDATA[链接管理]]></app>
+   <app name="mallscore" status="1"><![CDATA[兑换礼品]]></app>
+   <app name="pk" status="1"><![CDATA[PK管理]]></app>
+   <app name="special" status="1"><![CDATA[网站专题管理]]></app>
+   <app name="survey" status="1"><![CDATA[多问卷调查]]></app>
+   <app name="tags" status="1"><![CDATA[作者/来源/关键字]]></app>
+   <app name="tool" status="1"><![CDATA[辅助工具]]></app>
+   <app name="vote" status="1"><![CDATA[调查及反馈]]></app>
+   <app name="wss" status="1"><![CDATA[站点统计插件]]></app>
+ </MyApp>

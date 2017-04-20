@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$GetSiteName}-成功注册</title>
+<link href="{$GetInstallDir}user/images/css.css" type=text/css rel=stylesheet>
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javaScript"></script>
+<!--[if IE 6]>
+<script src="{$GetInstallDir}js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+</head>
+<body>
+{LB_会员中心头部}
+
+<div class="hearder">
+	<div class="logoNav">
+		<div class="wrap">
+			<div class="logo"><a href="{$GetInstallDir}"><img src="{$GetInstallDir}images/logo-black.png" alt="KESION" /></a></div>
+			<div class="nav">
+				<ul>
+					<li ><a href="{$GetInstallDir}">首页</a></li>
+					<li class="current"><a href="{$GetInstallDir}user/">会员</a></li>
+					<li><a href="{$GetInstallDir}user/weibo.asp">微博</a></li>
+					<li><a href="{$GetInstallDir}club/">论坛</a></li>
+					<li><a href="{$GetInstallDir}space/">门户</a></li>
+					<li><a href="{$GetInstallDir}user/user_payonline.asp">充值</a></li>
+					<li><a href="{$GetInstallDir}user/Complaints.asp">投诉</a></li>
+					<li><a href="{$GetInstallDir}user/UserLogout.asp"  onclick="return(confirm('确认退出吗？'))">退出</a></li>
+			　　　</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="blank10 clear"></div>
+<div id="main">
+	<div class="regL">
+		<h1>注册成功</h1>
+		<ul class="mt30">
+		
+		
+		    {$GetUserRegResult}
+			
+		</ul>
+		
+		</div>
+
+</div><!--登录结束-->
+<div class="foot">
+	<p>{$GetCopyRight}</p>
+</div>
+
+</body>
+</html>
+

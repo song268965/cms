@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>{$GetClassName}-{$GetSiteName}</title>
+{$GetClass_Meta_KeyWord}
+{$GetClass_Meta_Description}
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+ 
+<link href="{$GetInstallDir}images/style.css" type=text/css rel=stylesheet>
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javascript"></script>
+<script src="{$GetInstallDir}ks_inc/common.js" type="text/javascript"></script>
+
+<!--[if IE 6]>
+<script src="{$GetInstallDir}js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+</head>
+<body>
+{LB_头部通用}
+
+<div class="demand_box">
+	<div class="demand_l">
+		{$GetTopClassName}
+	</div>
+	<div class="demand_r">
+		<ul>
+		{LB_子栏目导航}
+		</ul>
+	</div>
+</div>
+
+<div class="blank10"></div>
+<div class="banner">{=GetAdvertise(36)}</div>
+<div class="blank10"></div>
+
+
+<div class="navigation">{LB_位置导航}</div>
+
+<!---列表主体-->
+<div class="clear blank10"></div>
+<div class="shoplist mainbox">
+   <div class="left">
+       <div class="left01">
+	       <div class="title">商品导航</div>
+		   <div class="left01box">
+		       {SQL_通用分类外(20106315753206)}
+		   </div>
+	   </div>
+	   
+	   <div class="clear blank10"></div>
+	   
+	    <div class="left01">
+	       <div class="title">热销商品</div>
+		   <div class="left02box">
+		          <!--开始-->
+			    
+            <div id="Hotsale" class='lazyload'>
+                <!--标签内容开始-->
+                                
+					{LB_热销商品}
+
+               
+                <!---标签内容结束-->
+            </div>
+
+
+<script type="text/javascript">
+ //$(document).ready(function(){
+$("div[id$='Hotsale']").each(function(){
+
+var currentId="#"+$(this).attr("id");
+//alert(currentId)
+$(currentId+" > div:odd").hover(
+function(){
+$(currentId+" > div:odd").removeClass("hidden");
+var indx=$(currentId+"  > div:odd").index(this);
+$(this).addClass("hidden");
+$(currentId+"  > div:even").addClass("hidden");
+$($(currentId+"  > div:even").get(indx)).removeClass("hidden");
+}
+)
+
+})
+//})
+</script>
+			  
+			  <!--结束-->
+		   </div>
+	   </div>
+	   
+	   
+   </div>
+   <div class="right">
+       <div class="right01">
+	       <div class="title">{$GetClassName}</div>
+		   <div class="right01box">
+			     {LB_商品分页列表}
+		   </div>
+	   </div>
+    </div>
+</div>
+
+<!---列表主体end-->
+<div class="clear blank10"></div>
+{LB_商城服务}
+<div class="clear blank10"></div>
+
+<!--版权信息-->
+{LB_尾部通用}
+<!--版权信息-->
+
+
+
+</body>
+</html>

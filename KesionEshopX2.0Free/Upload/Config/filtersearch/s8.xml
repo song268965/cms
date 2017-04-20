@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<field>
+ <template><![CDATA[{@TemplateDir}/供求系统/筛选模板.html]]></template>
+ <isrewrite>0</isrewrite>
+ <maxperpage>20</maxperpage>
+ <item name="tid" enabled="true">
+  <title>分类</title>
+  <fieldname>tid</fieldname>
+  <fieldtype>-1</fieldtype>
+  <condition>dy</condition>
+  <showvalue>0</showvalue>
+  <searchvalue>0</searchvalue>
+ </item>
+ <item name="typeid" enabled="true">
+  <title>交易类别</title>
+  <fieldname>typeid</fieldname>
+  <fieldtype>-1</fieldtype>
+  <condition>dys</condition>
+  <showvalue>0</showvalue>
+  <searchvalue>0</searchvalue>
+ </item>
+ <item name="brandid" enabled="false">
+  <title></title>
+  <fieldname>brandid</fieldname>
+  <fieldtype>-1</fieldtype>
+  <condition>dys</condition>
+  <showvalue>0</showvalue>
+  <searchvalue>0</searchvalue>
+ </item>
+ <item  name="title" enabled="false">
+  <title>信息主题</title>
+  <fieldtype>0</fieldtype>
+  <fieldname>title</fieldname>
+  <condition>dy</condition>
+  <showvalue></showvalue>
+  <searchvalue></searchvalue>
+ </item>
+ <item  name="keywords" enabled="false">
+  <title>关 键 字</title>
+  <fieldtype>0</fieldtype>
+  <fieldname>keywords</fieldname>
+  <condition>dy</condition>
+  <showvalue></showvalue>
+  <searchvalue></searchvalue>
+ </item>
+ <item name="area" enabled="true">
+  <title>所在省份</title>
+  <fieldtype>0</fieldtype>
+  <fieldname>area</fieldname>
+  <condition>dy</condition>
+  <showvalue></showvalue>
+  <searchvalue></searchvalue>
+ </item>
+ <orderitem name="id" enabled="true">
+  <uptitle>按信息ID升序</uptitle>
+  <downtitle>按信息ID降序</downtitle>
+ </orderitem>
+ <orderitem name="adddate" enabled="true">
+  <uptitle>按添加时间升序</uptitle>
+  <downtitle>按添加时间降序</downtitle>
+ </orderitem>
+ <orderitem  name="hits" enabled="false">
+  <uptitle>按点击数升序</uptitle>
+  <downtitle>按点击数降序</downtitle>
+ </orderitem>
+ <orderitem  name="cmtnum" enabled="false">
+  <uptitle>按评论数升序</uptitle>
+  <downtitle>按评论数降序</downtitle>
+ </orderitem>
+ <optionitem  name="1">
+  <title>所有信息</title>
+  <sqlparam><![CDATA[1=1]]></sqlparam>
+ </optionitem>
+ <optionitem  name="2">
+  <title>推荐信息</title>
+  <sqlparam><![CDATA[recommend=1]]></sqlparam>
+ </optionitem>
+ </field>

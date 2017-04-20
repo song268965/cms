@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$GetSiteName}-匿名投稿</title>
+<link href="{$GetInstallDir}user/images/css.css" type=text/css rel=stylesheet>
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javaScript"></script>
+<script src="{$GetInstallDir}ks_inc/common.js" type="text/javaScript"></script>
+</head>
+<body>
+<!-- head begin -->
+{LB_会员中心头部}
+
+<div class="hearder">
+	<div class="logoNav">
+		<div class="wrap">
+			<div class="logo"><a href="{$GetInstallDir}"><img src="{$GetInstallDir}images/logo-black.png" alt="KESION" /></a></div>
+			<div class="nav">
+				<ul>
+					<li ><a href="{$GetInstallDir}">首页</a></li>
+					<li class="current"><a href="{$GetInstallDir}user/">会员</a></li>
+					<li><a href="{$GetInstallDir}user/weibo.asp">微博</a></li>
+					<li><a href="{$GetInstallDir}club/">论坛</a></li>
+					<li><a href="{$GetInstallDir}space/">门户</a></li>
+					<li><a href="{$GetInstallDir}user/user_payonline.asp">充值</a></li>
+					<li><a href="{$GetInstallDir}user/Complaints.asp">投诉</a></li>
+					<li><a href="{$GetInstallDir}user/UserLogout.asp"  onclick="return(confirm('确认退出吗？'))">退出</a></li>
+			　　　</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="blank10 clear"></div>
+
+
+<div class="nmt">
+<div class="nmtgmain">
+    <div class="left">
+	    <div class="left01">
+		     <div class="tit">匿名投稿</div>
+			 <div class="left01box">
+			     <ul>
+				     {#ShowUserMain}
+				 </ul>
+			 </div>
+		</div>
+	</div>
+	<div class="right">
+	      <div class="right01">
+		        <div class="title">投稿须知</div>
+				<div class="right01box">
+				    <ul>
+					     <li>请自觉遵守互联网相关政策法规，请不要发广告。 </li>
+					     <li>用户投稿信息仅代表其个人意见，并且承担一切因投稿内容引起的纠纷和责任。</li>
+					     <li>本站管理人员有权在不通知用户的情况下删除不符合规定的投稿信息或留做证据。  </li>
+					</ul>
+				</div>
+		  </div>
+		  <div class="clear blank10"></div>
+		  
+	</div>
+</div>
+</div>
+	<div class="clear"></div>	
+<div class="foot">
+	<p>{$GetCopyRight}</p>
+</div>
+</body>
+</html>

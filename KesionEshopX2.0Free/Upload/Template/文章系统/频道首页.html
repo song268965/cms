@@ -1,0 +1,311 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$GetClassName}-{$GetSiteTitle}</title>
+<meta name="keywords" content="{$GetClass_Meta_KeyWord}"/>
+<meta name="description" content="{$GetClass_Meta_Description}"/>
+<link href="{$GetInstallDir}images/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{$GetInstallDir}ks_inc/jquery.js"></script>
+<script type="text/javascript" src="{$GetInstallDir}ks_inc/common.js"></script>
+<script type="text/javascript" src="{$GetInstallDir}js/SuperSlide2.js"></script>
+
+</head>
+
+<body>
+{LB_头部通用}
+
+<div class="demand_box">
+	<div class="demand_l">
+		{$GetTopClassName}
+	</div>
+	<div class="demand_r">
+		<ul>
+		 {LB_图片导航}
+		 <li>{$GetSpecial}</li>
+		</ul>
+	</div>
+</div>
+<!--导航-->
+
+
+
+<div class="blank10"></div>
+<div class="banner">{=GetAdvertise(37)}</div>
+<div class="blank10"></div>
+<!--广告-->
+<!--导航-->
+
+
+<div class="wrap">
+<div class="clearfloat"></div>
+ <div class="content">
+     <div class="main2">
+     
+	   <div class="newsleft">
+           <div class="tab">
+                <div class="bd">
+                    <div class="lh">{LB_国内幻灯}
+                        <div class="xwitem">
+                            <ul>
+                              {LB_新闻频道国内新闻列表}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lh">{LB_国际幻灯}
+                        <div class="xwitem">
+                            <ul>
+                             {LB_新闻频道国际新闻列表}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lh">{LB_社会幻灯}
+                        <div class="xwitem">
+                            <ul>
+                             {LB_新闻频道社会新闻列表}
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="lh">{LB_经济幻灯}
+                        <div class="xwitem">
+                            <ul>
+                             {LB_新闻频道经济新闻列表}
+                            </ul>
+                        </div>
+                    </div>
+                </div>		
+            </div>
+	 
+	  
+	
+	   <div class="tab2">
+	           <div class="bt"><h3><span>最</span>新专题</h3></div>
+			
+            {LB_最新专题2}
+
+		
+	</div>
+	
+	
+	
+	<div class="tab">
+	  
+			 <div class="hd">
+				<ul>
+                	<li class="on"><a href="{=GetClassUrl(683)}">{=GetClassName(683)}</a></li>
+					<li><a href="{=GetClassUrl(682)}">{=GetClassName(682)}</a></li>
+					<li><a href="{=GetClassUrl(680)}">{=GetClassName(680)}</a></li>
+					<li><a href="{=GetClassUrl(679)}">{=GetClassName(679)}</a></li>
+				</ul>
+			</div>
+		
+		<div class="bd">
+		
+				<div class="lh">{LB_文化幻灯}
+				  <div class="xwitem">
+					<ul>
+					 {LB_新闻频道文化新闻列表}
+					</ul>
+					 
+				    </div>
+				
+				</div>
+				<div class="lh">{LB_娱乐幻灯}
+				  <div class="xwitem">
+					<ul>
+					 {LB_新闻频道娱乐新闻列表}
+					</ul>
+					 
+				    </div>
+				</div>
+				<div class="lh">{LB_教育幻灯}
+				  <div class="xwitem">
+					<ul>
+					 {LB_新闻频道教育新闻列表}
+					</ul>
+					 
+				    </div>
+				</div>
+				<div class="lh">{LB_健康幻灯}
+				  <div class="xwitem">
+					<ul>
+					 {LB_新闻频道健康新闻列表}
+					</ul>
+					 
+				    </div>
+				</div>
+					
+				
+		</div>
+	</div>
+	 
+	
+	
+	
+	<div class="tab">
+	  
+			 <div class="hd">
+				<ul>
+                
+                   <li class="on"><a href="{=GetClassUrl(678)}">{=GetClassName(678)}</a></li>
+					<li><a href="{=GetClassUrl(675)}">{=GetClassName(675)}</a></li>
+					<li><a href="{=GetClassUrl(674)}">{=GetClassName(674)}</a></li>
+					<li><a href="{=GetClassUrl(1202)}">{=GetClassName(1202)}</a></li>
+					</ul>
+			</div>
+		
+		<div class="bd">
+		
+				<div class="lh">{LB_生活幻灯}
+				  	  
+					  <div class="xwitem">
+					<ul>
+					 {LB_新闻频道生活新闻列表}
+					</ul>
+					 
+				    </div>
+				</div>
+				<div class="lh">{LB_视频幻灯}
+				  	  <div class="xwitem">
+					<ul>
+					   {LB_新闻频道视频新闻列表}
+					</ul>
+					 
+				    </div>
+				</div>
+				<div class="lh">{LB_房产幻灯}
+				  	  <div class="xwitem">
+					<ul>
+					 {LB_新闻频道房产新闻列表}
+					</ul>
+					 
+				    </div>
+				</div>
+				<div class="lh">{LB_财经幻灯}
+				  	  <div class="xwitem">
+					<ul>
+					{LB_新闻频道财经新闻列表}
+						
+					</ul>
+					 
+				    </div>
+				</div>
+					
+				</div>
+	</div>
+	 <script type="text/javascript">jQuery(".tab").slide({delayTime:0 });</script>  
+	   </div>
+	
+	   	
+	   <div class="newsright">
+	     
+          {LB_新闻频道新闻头条}
+		 <div class="clearfloat"></div>
+		 <div class="yaowen2">
+		    {LB_中间新闻列表}			
+			
+			
+		 </div>
+		 
+		 <div class="xw123">{=GetClassName(689)}</div>
+			
+			 <div class="xw123_content">
+			   
+			   <ul>
+				 {LB_新闻频道国际新闻列表}
+				</ul>
+				
+		   </div>
+		   
+		   <div class="xw123">{=GetClassName(688)}</div>
+			
+			 <div class="xw123_content">
+			   
+			   <ul>
+				  {LB_新闻频道社会新闻列表}
+				  
+				</ul>
+				
+		   </div>
+		   
+		   
+		   <div class="xw123">{=GetClassName(675)}</div>
+			
+			 <div class="xw123_content">
+			   
+			   <ul class="sspp">
+				  {LB_新闻频道视频新闻列表}
+				  
+				  
+				</ul>
+				
+		   </div>
+		
+		
+		 
+	   </div>
+	   
+	 </div>
+	 <div class="side2">
+	    <div class="tab2">
+	           <div class="bt"><h3><span>最</span>新文章</h3>  </div>
+		  
+			<div class="zxwz">
+			  <ul>
+			     {LB_最新文章}
+				
+			  </ul>
+			  
+		  </div>
+
+
+		
+	</div>
+	
+	
+	<div class="tab2">
+	           <div class="bt"><h3><span>推</span>荐文章</h3></div>
+		  <div class="zxwz">
+			  <ul>
+			     {LB_推荐文章}
+			  </ul>
+			  
+		  </div>
+
+			
+
+	</div>
+	
+	
+	
+	  <div class="tab2">
+	           <div class="bt"><h3><span>热</span>门文章</h3></div>
+		  
+			<div class="zxwz">
+			  <ul>
+			     {LB_热门文章}
+				 
+				
+			  </ul>
+			  
+		  </div>
+
+
+		
+	</div>
+	
+	
+	
+	 </div>
+  </div>
+ </div> 
+<div class="clear blank10"></div>
+<!--版权信息-->
+{LB_尾部通用}
+<!--版权信息-->
+
+
+
+
+</body>
+</html>

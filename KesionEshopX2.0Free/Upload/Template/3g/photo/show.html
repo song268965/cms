@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+<title>{$GetPictureName}-{$GetClassName}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="author" content="kesion.com">
+<meta name="format-detection" content="telephone=no">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/common.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/style.css" rel="stylesheet" type="text/css">
+<script src="{$GetSiteUrl}ks_inc/jquery.js"></script>
+<script src="{$GetSiteUrl}ks_inc/common.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/pageauto.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.js"></script>
+<SCRIPT language=JavaScript type=text/JavaScript> 
+function showimg(src){	window.open(src);}
+</SCRIPT>
+</head>
+
+<body>
+{LB_3g头部通用}
+<section class="location">{$Navigation}</section>
+<div class="MiddleCont whitebg">
+   <div class="content">
+	<h1>{$GetPictureName}</h1>
+	<div class="gray">
+	(编辑：{$FL_Inputer}  日期：{$GetAddDate} 浏览：{$GetHits}次)
+	</div>
+	<div class="newscontent">
+	{$ShowPictures} 
+	{$GetPictureIntro}
+	</div>
+   </div>
+	  
+</section>
+
+</body>
+</html>

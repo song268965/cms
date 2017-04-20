@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>采集插件</AppName>
+		<Role>collect</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>采集项目管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Collect/Collect_Main.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>M010008</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>采集过滤设置</ItemName>
+			<ItemUrl><![CDATA[Plus_Collect/Collect_ItemFilters.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>M0100081</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>采集历史记录</ItemName>
+			<ItemUrl><![CDATA[Plus_Collect/Collect_ItemHistory.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>M0100082</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>文档审核入库</ItemName>
+			<ItemUrl><![CDATA[Plus_Collect/Collect_IntoDatabase.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>M0100083</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

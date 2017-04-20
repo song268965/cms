@@ -1,0 +1,379 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{$GetClassName}  {$GetSiteName}</title>
+{$GetMetaKeyWord}
+{$GetMetaDescript}
+<link href="{$GetInstallDir}images/style.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="{$GetInstallDir}ks_inc/jquery.js"></script>
+<script type="text/javascript" src="{$GetInstallDir}ks_inc/common.js"></script>
+
+<!--[if IE 6]>
+<script src="{$GetInstallDir}js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input, a'); 
+</script>
+<![endif]-->
+
+</head>
+<body>
+{LB_头部通用}
+<div class="clear blank10"></div>
+<div class="banner">{=GetAdvertise(38)}</div>
+<div class="clear blank20"></div>
+<div class="clear blank10"></div>
+
+<div class="shopmain mainbox">
+
+ <div class="tit">
+ 	<div class="tit_l">{$GetTopClassName}</div>
+	<div class="tit_r">
+		<ul>
+		{LB_商城导航}
+		</ul>
+	</div>
+ </div> 
+ 
+ <div class="shopstart">
+   <!--左侧菜单-->
+   <div class="leftmenu">
+     <div class="title"><h2>全部商品分类</h2></div>
+       <ul>
+	      {SQL_通用分类外(20106315753206)}
+		</ul> 
+   </div>
+   <script>
+   $(function(){
+	 $(".leftmenu ul li").hover(function(){
+		 $(this).find(".list").stop(true,true).show();
+	 },function(){
+		  $(this).find(".list").stop(true,true).hide();
+	 })
+	 $(".leftmenu ul li").each(function(){
+		 var a =$(this).find(".list a").length;
+		 if(a == 0){
+			$(this).find(".list").css({display:"none"});
+		 }
+	 })
+   })
+   </script>
+  
+   <div class="r_main">
+   <!--商品幻灯-->
+     <div  class="shop_hd">
+	   <div id="focus">
+		  <!--<div class="hd">
+			<div class="focus-title" id="focus-title">
+				{LB_影视首页幻灯标题}
+			</div>
+		  </div>-->
+		  <div class="focus-bar-box" id="focus-bar-box">
+			<ul class="focus-bar">
+				{LB_商城首页幻灯}
+			</ul>
+		  </div>
+		  <div class="ft">
+			<div id="focus-num" class="change">
+				{LB_商城首页幻灯条数}
+			</div>
+		  </div>
+	   </div>
+	 </div>
+     
+     <div class="right"></div>
+   </div>
+   <script src="{$GetInstallDir}ks_Inc/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript">
+		$(function(){
+				$("#focus").slide({ 
+					mainCell:"#focus-bar-box ul",
+					targetCell:"#focus-title a",
+					titCell:"#focus-num a",
+					prevCell:"#focus-prev",
+					nextCell:"#focus-next",
+					effect:"left",
+					easing:"easeInOutCirc",
+					autoPlay:true,
+					delayTime:300
+				})
+	
+		});
+	</script>  
+
+ </div>
+    <div class="clear blank10"></div>
+    <div class="pbc">
+	   <div class="title"><div class="more"><a href="#">更多品牌</a></div><h3>推荐品牌</h3></div>
+	   <div class="pbbox">
+	      <ul>
+	         {SQL_品牌推荐(16)}
+		  </ul>
+	   </div>
+	</div>
+   <div class="clear blank10"></div>
+   
+    <!--限时抢购、团购-->
+
+     
+       <div class="mianc">
+			<div class="title"><h3>限时<span>抢购</span></h3><h4>特价限量疯抢！</h4></div>
+			
+				<ul class="miancbox">
+					<script src="/ks_inc/AjaxLimit.js"></script>
+					<!---抢购调用--->
+					<script type="text/javascript">
+						  //参数任务id,条数
+						  getLimitBuy(3,1);
+					<!-------------->
+					<!---抢购调用--->
+						  //参数任务id,条数
+						 <!-- getLimitBuy(0,1);-->
+					<!-------------->   
+						  //参数任务id,条数
+						  getLimitBuy(4,1);
+					<!--------------> 
+					<!---抢购调用--->
+						  //参数任务id,条数
+						  getLimitBuy(5,1);
+					</script>
+					<!-------------->             
+	
+				</ul>
+   	   </div>
+	   <div class="tuan">
+	      <div class="title"><h3>今日团购</h3></div>
+		   {LB_今日团购2}
+		   
+	   </div>
+    
+     <div class="clear blank10"></div>
+  
+	 
+   
+   <!--商品分类——服饰鞋包-->
+   
+   <div class="shopmainc">
+      <div class="title"><h2>F1 服饰鞋包</h2></div>
+      
+      <div class="left_type">
+          <div class="shopimg"></div>
+          <ul>
+              {LB_服饰鞋包栏目2}
+          </ul>
+
+      </div>
+          
+          
+      <div class="right_con">
+           <ul class="tab_title">
+              <li class="on"><b></b>特价商品 </li>
+              <li><b></b>品牌男装 </li>
+              <li><b></b>品牌女装</li>
+              <li><b></b>鞋靴箱包 </li>
+              <li><b></b>运动户外 </li>
+          </ul>
+    
+	<div class="tab_con">
+    
+    <!--服饰鞋包特价-->
+        <div class="icontent" style="display:block">
+          <ul>
+            {LB_服饰鞋包特价}
+          </ul>
+        </div>
+        
+         <!--服饰鞋包男装-->
+         <div class="icontent">
+          <ul>
+            {LB_服饰鞋包男装}
+          </ul>
+        </div>
+         <!--服饰鞋包女装-->
+        <div class="icontent">
+          <ul>
+            {LB_服饰鞋包女装}
+          </ul>
+        </div>
+         <!--服饰鞋包箱包-->
+         <div  class="icontent">
+          <ul>
+            {LB_服饰鞋包箱包}
+          </ul>
+        </div>
+         <!--服饰鞋包运动-->
+         <div class="icontent">
+          <ul>
+            {LB_服饰鞋包运动}
+          </ul>
+        </div>
+     
+        
+	</div>
+      
+   </div>
+   
+  </div>
+  <!--end-->
+
+   <div class="clear blank10"></div>
+   
+   <div class="shopmainc">
+      <div class="title"><h2>F2 电脑数码</h2></div>
+      
+      <div class="left_type">
+          <div class="shopimg"></div>
+          <ul>
+              {LB_电脑数码栏目2}
+          </ul>
+
+      </div>
+          
+          
+      <div class="right_con">
+           <ul class="tab_title">
+                <li class="on"><b></b>特价商品</li>
+                <li><b></b>笔记本 </li>
+                <li><b></b>数码影音</li>
+                <li><b></b>DIY攒机 </li>
+                <li><b></b>办公文印</li>
+          </ul>
+    
+	<div class="tab_con">
+    
+    <!--服饰鞋包特价-->
+        <div class="icontent" style="display:block">
+          <ul>
+            {LB_电脑数码特价}
+          </ul>
+        </div>
+        
+         <!--电脑数码笔记本-->
+         <div class="icontent">
+          <ul>
+            {LB_电脑数码笔记本2}
+          </ul>
+        </div>
+         <!--数码影音-->
+        <div class="icontent">
+          <ul>
+            {LB_电脑数码影音}
+          </ul>
+        </div>
+         <!--DIY攒机-->
+         <div class="icontent">
+          <ul>
+            {LB_电脑数码DIY}
+          </ul>
+        </div>
+         <!--电脑数码办公文印-->
+         <div class="icontent">
+          <ul>
+            {LB_电脑数码办公}
+          </ul>
+        </div>
+     
+        
+	</div>
+      
+   </div>
+   
+  </div>
+   
+    
+  <div class="clear blank10"></div>
+  
+  <div class="shopmainc">
+      <div class="title"><h2>F3 居家生活</h2></div>
+      
+      <div class="left_type">
+          <div class="shopimg"></div>
+          <ul>
+              {LB_生活居家栏目2}
+          </ul>
+
+      </div>
+          
+          
+      <div class="right_con">
+           <ul class="tab_title">
+                <li class="on"><b></b>特价商品</li>
+                <li><b></b>家居家纺 </li>
+                <li><b></b>厨具餐具</li>
+                <li><b></b>家具家装 </li>
+                <li><b></b>日常用品</li>
+             
+          </ul>
+    
+	<div class="tab_con">
+    
+    <!--服饰鞋包特价-->
+        <div class="icontent" style="display:block">
+          <ul>
+            {LB_生活居家特价}
+          </ul>
+        </div>
+        
+         <!--生活居家家纺-->
+         <div class="icontent">
+          <ul>
+            {LB_生活居家家纺 }
+          </ul>
+        </div>
+         <!--生活居家厨具-->
+        <div class="icontent">
+          <ul>
+            {LB_生活居家厨具}
+          </ul>
+        </div>
+         <!--生活居家家具-->
+         <div class="icontent">
+          <ul>
+            {LB_生活居家家具}
+          </ul>
+        </div>
+         <!--生活居家日常-->
+         <div class="icontent">
+          <ul>
+            {LB_生活居家日常}
+          </ul>
+        </div>
+     
+        
+	</div>
+      
+   </div>
+   
+  </div> 
+   
+   <script type="text/javascript">
+         function tab(nav,type){
+                var $nav = $(nav);
+                var $title = $(".tab_title", $nav);
+                
+                $title.find("li").bind(type,function(){
+                        $this = $(this);
+                        var index = $this.prevAll().length;
+                        $this.siblings("li").removeClass("on").end().addClass("on");;
+                        $this.parent().next(".tab_con").find(".icontent").hide().eq(index).show();
+                })
+        }
+        //
+        tab(".right_con","click");
+        tab(".right_con","mouseover")
+ </script>
+  <!--end-->
+
+  
+ </div>
+ <div class="clear blank10"></div>
+	{LB_商城服务}
+ <div class="clear blank10"></div>
+ 
+<!--版权信息-->
+{LB_尾部通用}
+<!--版权信息-->
+
+
+</body>
+</html>

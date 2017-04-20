@@ -1,0 +1,420 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>收银台--{$GetSiteTitle}</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+ 
+<link href="{$GetInstallDir}images/style.css" type=text/css rel=stylesheet>
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javascript"></script>
+<script src="{$GetInstallDir}ks_inc/common.js" type="text/javascript"></script>
+<!--[if IE 6]>
+<script src="{$GetInstallDir}js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+<script type="text/javascript">
+ function showIsInvoice(o){
+  if (o==0){
+   $("#ShowInvoice").hide();
+  }else{
+   $("#ShowInvoice").show();
+  }
+  if (o==2){
+   $("#InvoiceZZS").show();
+  }else{
+   $("#InvoiceZZS").hide();
+  }
+  gettaxmoney();
+ }
+ function CheckShopForm(){
+  if ($("#ContactMan").val()==""){
+   alert('请输入收货人姓名!');
+   $("#ContactMan").focus();
+   return false;}
+  if ($("#Address").val()==""){
+   alert('请输入收货人地址!');
+   $("#Address").focus();
+   return false; }
+  if ($("#ZipCode").val()==""){
+   alert('请输入收货人邮编!');
+   $("#ZipCode").focus();
+   return false; }
+  if ($("#Phone").val()==""&&$("#Mobile").val()==""){
+   alert('收货人手机或电话至少要填一个!');
+   $("#Mobile").focus();
+   return false;}
+  if ($("#Email").val()==""){
+   alert('请输入收货人邮箱!');
+   $("#Email").focus();
+   return false;}
+  if ($("#mustyf").val()==1){
+    if ($("#tocity").val()==''){
+   alert('请选择送货地区!');
+   return false;}
+  }
+ }
+ function ajshowdata(city){ 
+	$.get("ajax.getdate.asp",{totalweight:{$TotalWeight},city:escape(city),expressid:$("#DeliverType option:selected").val()},function(d){  var r=unescape(d).split('|');
+		if (r[0]=='error'){
+			alert(r[1]);
+			$("#jgxx").html('选择发往路线确定运费!');
+			$("#tocity").val('');
+		 }else{ 
+			$("#orderyf").html(parseFloat(r[2]).toFixed(2));
+			gettaxmoney();
+			calculationordermoney();
+			//$("#jgxx").html(r[1]);
+			$("#jgxx").html(parseFloat(r[2]).toFixed(2)+'元');
+			$("#tocity").val(city);
+		}
+	});
+ } 
+ //计算订单税费
+ function gettaxmoney(){
+  var NeedInvoice=parseInt($("input[name=NeedInvoice]:checked").val());
+  var facevalue=getfacevalue();
+  if (NeedInvoice!=0){
+    var TaxRate='{$TaxRate}';
+	var IncludeTax='{$IncludeTax}';
+	var total=parseFloat($("#ordergoodsmoney").html())+parseFloat($("#orderyf").html())-parseFloat(facevalue);
+	var TaxMoney;
+	if (IncludeTax=='1'){TaxMoney=0}else{TaxMoney=parseFloat(TaxRate)/100};
+	TaxMoney=parseFloat(total)*TaxMoney;
+	$("#ordertax").html(TaxMoney.toFixed(2));
+  }else{
+    $("#ordertax").html(0);
+  }
+  calculationordermoney();
+ }
+ function getfacevalue(){
+   var facevalue=$("#facevalue").html();
+   if (facevalue==undefined){facevalue=0}
+   return facevalue;
+ }
+ function calculationordermoney(){
+   var facevalue=getfacevalue();
+   var total=parseFloat($("#ordergoodsmoney").html().replace(/,/,''))+parseFloat($("#orderyf").html())+parseFloat($("#ordertax").html())-parseFloat(facevalue);
+   $("#ordertotalmoney").html(parseFloat(total).toFixed(2));
+ }
+ function userscore(zsjf,score){
+   var money=$("#TRealTotalPrice").val();
+   var myscore=$("#myscore").val();
+   $("#usezf").val(0);
+   var url = 'ajax.getdate.asp';
+   $.get(url,{action:"checkscore",money:money,myscore:myscore,score:score},function(s){
+     var returnStr=unescape(s);
+     if (returnStr!='' && returnStr !=null){
+		  rarr=returnStr.split('|');
+		  if (rarr.length<=1)
+		  {
+		   alert(returnStr);
+		   return;
+		  }
+		  var facevalue=parseFloat(rarr[1]);
+		  if (facevalue>0){
+		      var realmoney=parseFloat($('#TRealTotalPrice').val())-facevalue;
+		  	  str='- 积分低扣:<font color=blue>￥<span id="facevalue">'+parseFloat(facevalue).toFixed(2) +'</span></font> 元';
+			  $('#RealTotalPrice').val(parseFloat(realmoney));
+			  $("#ORDER_COSTS").html(str);
+			  $("#ORDER_SCORE").html(0);
+			  $("#usezf").val(1);
+		  }else{
+			  $("#ORDER_COSTS").html('');
+			  $("#ORDER_SCORE").html(zsjf);
+		  }
+		 calculationordermoney();
+	 }
+   });
+ }
+ </script>
+ 
+ 
+ <script type="text/javascript">
+/* *
+ * 改变红包
+ */
+var selectedCoupon=0
+var CouponNum=0;
+function changeCoupon(val)
+{
+  if (selectedCoupon == val)
+  {
+    return;
+  }
+  else
+  {
+    selectedCoupon = val;
+  }
+  var url = 'ajax.getdate.asp';
+  $.get(url,{action:"Shop_GetCoupon",CouponId:val},function(s){
+  updateOrderFee(unescape(s));
+  });
+}
+function updateOrderFee(returnStr){
+    var realmoney=0;
+	var facevalue=0;
+	var maxdiscount=0;
+	var availablemoney=0;
+	var minAmount=0;
+	var rarr=null;
+	var str='';
+	if (returnStr!='' && returnStr !=null)
+	{
+	  rarr=returnStr.split('|');
+	  if (rarr.length<=1)
+	  {
+	   alert(returnStr);
+	   return;
+	  }
+	  facevalue=parseFloat(rarr[0]).toFixed(2);
+	  minAmount=parseFloat(rarr[1]).toFixed(2);
+	  maxdiscount=parseFloat(rarr[2]);
+	  availablemoney=parseFloat(rarr[3]).toFixed(2);
+	  realmoney=parseFloat($('#TRealTotalPrice').val()).toFixed(2);
+	  if (parseFloat(realmoney)<parseFloat(minAmount))
+	  {
+	    alert('对不起,该优惠券最小订单金额为￥'+minAmount+ ' 元才可使用!' );
+	    return ;
+	  }else if(availablemoney<=0){
+	    alert('对不起,该优惠券已用完!');
+		return;
+	  }else{
+	   if (maxdiscount==0){
+	    if (parseFloat(availablemoney)>=parseFloat(realmoney)){
+		 alert('恭喜,该优惠券可抵用￥'+availablemoney+ ' 元,使用后该优惠券还剩￥'+(availablemoney-realmoney).toFixed(2)+'元!');
+		 facevalue=realmoney;
+		 realmoney=0;
+		}else{
+	     alert('恭喜,该优惠券可抵用￥'+facevalue+ ' 元!');
+	    }
+	   }else{
+	      var allowmoney=parseFloat(realmoney)* (maxdiscount/100);                         //按百分比得可抵扣金额
+		  if (allowmoney>availablemoney){
+		     allowmoney=availablemoney;
+		  }
+		  if (availablemoney==facevalue || availablemoney-allowmoney!=0){
+		  alert('恭喜,该优惠券是按订单总金额的'+maxdiscount+'%抵用,最多不超过￥'+facevalue+'元,当前可用余额￥'+parseFloat(availablemoney).toFixed(2)+'元。在本订单中可抵用￥'+parseFloat(allowmoney).toFixed(2)+ ' 元,使用后该优惠券还剩￥'+(availablemoney-allowmoney).toFixed(2)+'元!');
+		  }else{
+		  alert('恭喜,该优惠券还可抵用￥'+parseFloat(allowmoney).toFixed(2)+ ' 元,使用后该优惠券还剩￥'+(availablemoney-allowmoney).toFixed(2)+'元!');
+		  }
+		  facevalue=allowmoney;
+	   }
+	   if (realmoney!=0) realmoney=(parseFloat(realmoney)-parseFloat(facevalue)).toFixed(2);
+	  str='- 优惠券:<font color=blue>￥<span id="facevalue">'+parseFloat(facevalue).toFixed(2) +'</span></font> 元';
+	 // str+=' 应付款金额:<font color=red>￥'+realmoney+'</font> 元';
+	  $('#RealTotalPrice').val(realmoney);
+	  $("#ORDER_COSTS").html(str);
+	  $("#ORDER_SCORE").html(0);
+	  }
+	}
+	gettaxmoney();
+	calculationordermoney();
+}
+function validateCoupon()
+{
+  if ($("#couponnum").val()=='')
+  {
+    $("#couponnum").focus();
+   alert('请输入优惠券号!');
+   return false;
+  }
+  if (CouponNum == $("#couponnum"))
+  {
+    return;
+  }
+  else
+  {
+    CouponNum = $("#couponnum");
+  }
+  var url = 'ajax.getdate.asp';
+  $.get(url,{action:"Shop_ValidateCoupon",CouponNum:$("#couponnum").val()},function(s){
+    var returnStr=unescape(s);
+	if (returnStr=='' || returnStr==null){
+	  alert('对不起,您输入的优惠券不可用!');
+	  $("#couponnum").val('');
+	  return ;
+	}
+	 else{
+	updateOrderFee(returnStr);
+	}
+  });
+
+  
+}
+function getupinput(obj){
+		var getstr=$(obj).next('span').find('input[name=up_ContactMan]').val();
+		$('input[name=ContactMan]').val(getstr);
+		getstr=$(obj).next('span').find('input[name=up_Address]').val();
+		$('input[name=Address]').val(getstr);
+		getstr=$(obj).next('span').find('input[name=up_ZipCode]').val();		
+		$('input[name=ZipCode]').val(getstr);
+		getstr=$(obj).next('span').find('input[name=up_Mobile]').val();
+		$('input[name=Mobile]').val(getstr);
+		getstr=$(obj).next('span').find('input[name=up_Phone]').val();
+		$('input[name=Phone]').val(getstr);
+		getstr=$(obj).next('span').find('input[name=up_QQ]').val();
+		$('input[name=QQ]').val(getstr);
+		getstr=$(obj).next('span').find('input[name=up_Email]').val();
+		$('input[name=Email]').val(getstr);													  
+}
+</script>
+</head>
+<body>
+{LB_头部通用}
+<div class="clear blank10"></div>
+<div class="banner">{=GetAdvertise(38)}</div>
+<div class="clear blank10"></div>
+
+<div class="mainbox">
+<div class="navsite">
+  <div class="left"><img src="/shop/images/cartnav-step3.gif"></div>
+  <div class="right"><img src="/shop/images/cartnav-cart.gif"></div>
+</div>
+<div class="clear blank10"></div>
+
+<!--商品内容页begin-->
+
+
+<div class="contactborder" >
+   <div class="logintips">{$ShowLoginTips}</div>
+</div>
+
+<div class="clear blank10"></div>
+
+<div class="contactborder">
+              
+			  <FORM name="myform" onSubmit="return CheckShopForm();" action="order.asp" method="post">
+			  <INPUT id=Action type=hidden value=Confirm name=Action>
+				  <table cellSpacing=1 cellPadding=3 width="98%" align=center border=0 style="margin:10px;">
+                          <tr>
+                              <td colSpan=2 class="titleinput">请填写收货信息 </td>
+                          </tr>
+						  <tr class=tdbg>
+						  	   <td align=right width=100>快速选择地址： <br/>
+							   <a href="{$GetInstallDir}User/User_ShopUserOrder.asp" target="_blank" ><span style="color:#0066CC">收货信息管理</span></a>&nbsp;&nbsp; 
+							   </td>
+						  	  <td>{$Contactup}</td>
+						  </tr>
+                          <tr class=tdbg>
+                              <td align=right width=100>收货人姓名：</td>
+                              <td><INPUT maxLength=50 value="{$ContactMan}" name="ContactMan" id="ContactMan">* </td>
+                          </tr>
+                          <tr class=tdbg>
+                             <td align=right width=100>收货人地址：</td>
+                             <td><INPUT maxLength=255 size=60 value="{$Address}" name="Address" id="Address">*</td>
+                           </tr>
+                           <tr class=tdbg>
+                             <td align=right width=100>收货人邮编：</td>
+                             <td height=20><INPUT maxLength=6 value="{$ZipCode}" name="ZipCode" id="ZipCode">* </td>
+                           </tr>
+                           <tr class=tdbg>
+                             <td align=right width=100>手机号码：</td>
+                             <td><INPUT maxLength=50 size=20 value="{$Mobile}" name="Mobile" id="Mobile">
+                                                或固定电话<INPUT maxLength=50 size=20 value="{$Phone}" name="Phone" id="Phone">*<span class='tips'>两个至少填一个</span> </td>
+                            </tr>
+                            <tr class=tdbg>
+                              <td align=right width=100>收货人邮箱：</td>
+                              <td height=20><INPUT maxLength=100 size=30 value="{$Email}" name=Email id="Email">*</td>
+                            </tr>
+                            <tr class=tdbg>
+                               <td align=right>收货人QQ：</td>
+                               <td><INPUT maxLength=50 size=30 value="{$QQ}" name="QQ" id="QQ"></td>
+                            </tr>
+							<tr>
+                              <td align=right width=100>备注/留言： </td>
+                              <td><TEXTAREA name=Remark cols=42></textarea></td>
+                           </tr>
+						 
+				 </table>
+</div>
+
+<div class="clear blank10"></div>
+
+<div class="contactborder">
+				 <table cellSpacing=1 cellPadding=3 width="98%" align=center border=0 style="margin:10px;">
+				  <tr>
+                     <td colSpan=2 class="titleinput">付款及送货方式</td>
+                   </tr>
+                    <tr>
+                         <td align=right width=100>付款方式：</td>
+                            <td>{$PaymentType}</td>
+                     </tr>
+                    <tr{$ShowDelivery}>
+                          <td align=right>送货方式：</td>
+                          <td>
+							 <div class='delivery'>{$DeliveryType}</div>
+						  </td>
+                    </tr>
+                     <tr>
+                           <td align=right width=100>发票信息：</td>
+                            <td class="fpxx">
+							
+							<label><INPUT onClick="showIsInvoice(0)" type="radio" checked value="0" style="height:15px;" name="NeedInvoice">不需要</label>
+							<label><INPUT onClick="showIsInvoice(1)" type="radio" value="1" style="height:15px;" name="NeedInvoice">普通发票</label>
+							<label><INPUT onClick="showIsInvoice(2)" type="radio" value="2" style="height:15px;" name="NeedInvoice">增值税发票</label>
+							
+							<div id='ShowInvoice' style="display:none">
+							
+							 <table border="0" cellpadding="1" cellspacing="2">
+							  <tr>
+							   <td width="100" align="left">单位名称：</td><td><INPUT maxLength=255 size="30" style="height:20px; line-height:20px;" value="" name="InvoiceContent" id=textarea>
+							   </td>
+							  </tr>
+							  <tbody id="InvoiceZZS" style="display:none">
+							  <tr>
+							    <td width="100" align="left">纳税人识别码：</td><td><INPUT maxLength=255 size="30" style="height:20px; line-height:20px;" value="" name="InvoiceCode" id=textarea></td>
+							  </tr>
+							  <tr>
+							    <td  width="100" align="left">注册地址：</td><td><INPUT maxLength=255 size="30" style="height:20px; line-height:20px;" value="" name="InvoiceAddress" id=textarea></td>
+							  </tr>
+							  <tr>
+							    <td width="100" align="left">注册电话：</td><td><INPUT maxLength=255 size="30" style="height:20px; line-height:20px;" value="" name="InvoiceTel" id=textarea></td>
+							  </tr>
+							  <tr>
+							    <td width="100" align="left">开户银行：</td><td><INPUT maxLength=255 size="30" style="height:20px; line-height:20px;" value="" name="InvoiceBank" id=textarea></td>
+							  </tr>
+							  <tr>
+							    <td width="100" align="left">银行账号：</td><td><INPUT maxLength=255 size="30" style="height:20px; line-height:20px;" value="" name="InvoiceBankCard" id=textarea></td>
+							  </tr>
+							  </tbody>
+							 </table>
+							
+							</div>
+                            </td>
+                   </tr>
+
+           </table>
+</div>
+<div class="clear blank10"></div>
+
+<div class="contactborder">
+			<table cellSpacing=1 cellPadding=3 width="98%" align=center border=0 style="margin:10px;">
+				  <tr>
+                     <td class="titleinput">商品清单</td>
+                   </tr>
+				  <tr>
+                     <td>{$ShowShoppingCart}</td>
+                   </tr>
+              </table>
+			  
+			  <div style="text-align:center;margin:10px">
+ <INPUT type="image" src="{$GetInstallDir}Images/sure.gif" border="0" alt="确认订单" name=submit2>                          
+</div>
+
+</div>
+
+ </FORM>
+</div>
+<!---内容页主体end-->
+<div class="clear blank10"></div>
+{LB_商城服务}
+<div class="clear blank10"></div>
+
+<!--版权信息-->
+{LB_尾部通用}
+<!--版权信息-->
+
+
+</body>
+</html>

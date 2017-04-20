@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pagestyle>
+	<item issys="1" name="1" id="1">
+		<name>经典分页样式</name>
+		<content>&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;div class="fengye" align="right"&gt;共&lt;span id="totalrecord"&gt;{$totalput}&lt;/span&gt;篇 页次:&lt;span id="currpage" style="color:red"&gt;{$currentpage}&lt;/span&gt;/&lt;span id="totalpage"&gt;{$totalpage}&lt;/span&gt;页 &lt;span id="perpagenum"&gt;{$maxperpage}&lt;/span&gt;{$itemunit}/页 
+&lt;a href="{$homeurl}"&gt;首页&lt;/a&gt;  &lt;a href="{$prevurl}"&gt;上一页&lt;/a&gt; &lt;a href="{$nexturl}"&gt;下一页&lt;/a&gt;  &lt;a href= "{$endurl}"&gt;尾页&lt;/a&gt;
+ 转到：{$turnpage}&lt;/div&gt;</content>
+	</item>
+	<item issys="1" name="2" id="2">
+		<name>主流分页样式</name>
+		<content>&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;div align="right" class="fenye" id="fenye"&gt;
+  &lt;table border="0"&gt;&lt;tr&gt;&lt;td id="pagelist"&gt;
+	 &lt;a href="{$homeurl}" class="prev"&gt;首 页&lt;/a&gt; &lt;a href="{$prevurl}" class="next"&gt;上一页&lt;/a&gt;
+		 {$pagenumlist}
+	 &lt;a href="{$nexturl}" class="next"&gt;下一页&lt;/a&gt;
+	 &lt;a href="{$endurl}" class="prev"&gt;末页&lt;/a&gt; &lt;span&gt;总共&lt;span id="totalpage"&gt;{$totalpage}&lt;/span&gt;页&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;</content>
+	</item>
+	<item issys="0" name="3" id="3">
+		<name>我的个性分页样式</name>
+		<content>&lt;div class="clear"&gt;&lt;/div&gt;
+&lt;div align="right" class="fenye" id="fenye"&gt;
+  &lt;table border="0"&gt;&lt;tr&gt;&lt;td id="pagelist"&gt;
+	 &lt;a href="{$homeurl}" class="prev"&gt;首 页&lt;/a&gt; &lt;a href="{$prevurl}" class="next"&gt;上一页&lt;/a&gt;
+	 &lt;a href="{$nexturl}" class="next"&gt;下一页&lt;/a&gt;
+	 &lt;a href="{$endurl}" class="prev"&gt;末页&lt;/a&gt; &lt;span&gt;总共&lt;span id="totalpage"&gt;{$totalpage}&lt;/span&gt;页&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;</content>
+	</item>
+</pagestyle>

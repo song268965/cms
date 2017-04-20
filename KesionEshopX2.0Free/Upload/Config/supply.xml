@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<labeltemplate>
+   <label name="divajax">
+      <![CDATA[
+		  <div id="c{$InfoID}"><img src="{$GetSiteUrl}images/loading.gif" align="absmiddle" />加载中...</div>
+		  <script type="text/javascript">
+			jQuery(document).ready(function(){loadShow()});
+		   function loadShow(){
+		   jQuery("#c{$InfoID}").load('{$GetSiteUrl}plus/ajaxs.asp?action=GetSupplyContact&id={$InfoID}');
+		   }
+		   function payShow(id){
+              jQuery.ajax({type:"get",url:"{$GetInstallDir}plus/ajaxs.asp?action=paySupplyShow&id="+id+"&anticache=" + Math.floor(Math.random()*1000),cache:false,dataType:"html",success:function(d){
+				 var s=unescape(d);
+				 if (s.substring(0,6)=='error:'){
+				 alert(s.split(':')[1])
+				 }else{
+				  jQuery("#c{$InfoID}").html(s);
+				 }
+			}
+			});
+		   }
+		  </script>
+	 ]]>
+   </label>
+   <label name="contactinfo">
+      <![CDATA[
+         <li>联 系 人： {$GetContactMan}</li>
+		 <li>联系地址： {$GetAddress}</li>
+		 <li>电子邮箱： {$GetEmail}</li>
+		 <li class="call">{$GetContactTel}</li>
+	   ]]>
+   </label>
+   <label name="noencrypted">
+      <![CDATA[
+         <li>联 系 人： 王先生</li>
+		 <li>联系地址： 福建漳州</li>
+		 <li>电子邮箱： server@hotmail.com</li>
+		 <li class="call">0596-000000</li>
+	   ]]>
+   </label>
+</labeltemplate>

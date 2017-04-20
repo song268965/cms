@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<labeltemplate>
+   <label name="proimages">
+    <![CDATA[
+
+		<style type="text/css">
+/* zoom-section */
+.zoom-section{clear:both;}
+*html .zoom-section{display:inline;clear:both;}
+.zoom-desc{float:left;margin-left:10px;margin-bottom:20px;}
+.zoom-desc .zoom-tiny-image{width:45px;height:50px;margin:0px 2px;}
+.cloud-zoom{border:1px solid #d5d5d5;width:{$BigWidth}px;}
+.zoom-small-image{}
+.zoom-tiny-image{border:1px solid #d5d5d5;margin:0px;}
+.zoom-tiny-image:hover{border:1px solid #C00;}
+
+/* 这是下方的鼠标指针的移动镜头平方米。 */
+.cloud-zoom-lens {border: 1px solid #888;margin:-4px;background-color:#fff;cursor:move;}
+/* 这是标题文本 */
+.cloud-zoom-title {background-color:#000;color:#fff;padding:3px;width:100%;text-align:center;font-weight:bold;font-size:12px;top:0px;}
+/* 这是缩放窗口。 */
+.cloud-zoom-big {border:4px solid #ccc;overflow:hidden;}
+/* 这是加载消息。 */
+.cloud-zoom-loading {color:white;background:#222;padding:3px;border:1px solid #000;}
+
+</style>
+<script>
+var swidth={$BigWidth};
+$(document).ready(function(){
+ $(".cloud-zoom-gallery").click(function(n){
+   $(".zoom-tiny-image").attr("style","border:1px solid #ccc");
+   $(this).children().attr("style","border:1px solid red");
+  });
+  fHideFocus("A");
+ });
+ function fHideFocus(tName){
+	aTag=document.getElementsByTagName(tName);
+	for(i=0;i<aTag.length;i++)aTag[i].onfocus=function(){this.blur();};
+  }
+</script>
+	<script src="{$GetInstallDir}Shop/js/cloud-zoom.1.0.2.min.js"></script>
+
+<table width="{$BigWidth}" border="0"  align="center" cellpadding="0" cellspacing="0">
+	 <tr>
+			<td valign="top">
+			<div class="zoom-section">    	  
+				<div class="zoom-small-image">
+					<a href='{$DefaultBigPic}'  class = 'cloud-zoom' id='zoom1' rel="adjustX:10, adjustY:-4"><img src="{$DefaultSmallPic}" alt='' width="{$BigWidth}" height="{$BigHeight}" title="{$GetProductName}" onerror="this.src='{$GetSiteUrl}images/nopic.gif';" /></a>
+				</div>
+				<div class="zoom-desc">
+					
+					<div style="width:{$BigWidth}px;margin-bottom:10px;margin-top:10px;text-align:center;cursor:pointer" onClick="window.open('{$GetSiteUrl}shop/ShowPic.asp?id={$InfoID}&u='+jQuery('#zoom1').attr('href'))"><img src="{$GetSiteUrl}images/look.gif" align="absmiddle">点击看大图</div>
+					
+					   
+					<p id="image_list" class="jcarousel-skin-tango">
+					{$GroupImgList}
+					</p>
+				</div>
+			</div><!--zoom-section end-->
+	  </td>
+	 </tr>
+	</table>
+	
+	
+	]]>
+   </label>
+   
+   
+      <label name="proimages3g">
+    <![CDATA[
+	
+	   <div class="imglist" style="text-align:center">
+	    {$ShowImgList}
+		 <div style="height:35px;line-height:35px;">
+		   <strong>共有 <span style='color:red'>{$num}</span> 张图，点击以上浏览。</strong>
+		 </div>
+	    </div>
+		<link rel="stylesheet" href="{$GetSiteUrl}ks_inc/Swipebox/swipebox.css">
+		<script src="{$GetSiteUrl}ks_inc/Swipebox/jquery.swipebox.js"></script>
+		<script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+		</script>
+       ]]>
+   </label>
+   
+   
+  </labeltemplate>

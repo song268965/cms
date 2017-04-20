@@ -1,0 +1,66 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{@search.keyword}--{$GetSiteName}</title>
+<link href="{$GetInstallDir}images/style.css" type=text/css rel=stylesheet>
+{$GetMetaKeyWord}
+{$GetMetaDescript}
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javascript"></script>
+<script src="{$GetInstallDir}ks_inc/common.js" type="text/javascript"></script>
+<!--[if IE 6]>
+<script src="{$GetInstallDir}js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+<script type="text/javascript">
+ jQuery(document).ready(function(){
+	var tags = $("td.tags a");  
+	for(i=0;i<tags.length;i++)
+	{
+		var str = "0123456789abcdef";
+		var t = "#";
+		for(j=0;j<6;j++)
+		{t = t+ str.charAt(Math.random()*str.length);}
+		tags[i].style.background=t; 
+	}
+})
+</script>
+</head>
+<body>
+{LB_头部通用}
+<div class="navigation">您当前位置： <a href="{$GetInstallDir}">{$GetSiteName}</a> >> 关键字[{@search.keyword}]</div>
+
+<!---列表主体-->
+<div class="tagsmain mainbox">
+    <div class="tit">关键字</div>
+	<div class="tagsshow">
+	   <ul>
+       {@loop.begin}
+            <li class="clearfix">
+                <span class="art_title"><a href="{@item.linkurl}" target="_blank">{@item.title} </a></span>
+                <span class="artintro"><img src="{@item.photourl}" width="120" height="100" align="right"/> {@item.intro}...</span>
+                <!--<span class="arturl"><a href="{@item.linkurl}" target="_blank">{@item.linkurl}</a></span>-->
+                <span class="c9">{@item.adddate}</span>
+              <div>关键字：{@item.keywords}</div>   
+              <!--<div>关键字带链接：{@item.keywordlist}</div>   -->
+             </li>
+		{@loop.end}
+        <div style="clear: both"></div>
+			{@search.showpage}
+       
+       </ul>
+	</div>
+	与 {@search.keyword} 相关的词条
+	<ul>
+	{@search.relatekeyword}
+	</ul>
+</div>
+
+<div class="clear blank10"></div>
+
+
+ <!--bottom end-->{LB_尾部通用}
+</body>
+</html>

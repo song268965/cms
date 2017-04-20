@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<field>
+	<item id="11">
+		<Fast>问答系统</Fast>
+		<Role>ask0</Role>
+		<Fastico>icon0{#BasicType}.png</Fastico>
+		<TF>1</TF>
+		<Fastmenu>
+			<Fast>问答参数设置</Fast>
+			<Fasturl><![CDATA[Ask/KS.AskSetting.asp]]></Fasturl>
+			<Attribute>SetParam</Attribute>
+			<Role>WDXT10000</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		
+       <Fastmenu>
+			<Fast>问题列表管理</Fast>
+			<Fasturl><![CDATA[Ask/KS.AskList.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>WDXT10001</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		<Fastmenu>
+			<Fast>审核回答管理</Fast>
+			<Fasturl><![CDATA[Ask/KS.AskList.asp?action=verifyanswer]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>WDXT10004</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		<Fastmenu>
+			<Fast>分类管理</Fast>
+			<Fasturl><![CDATA[Ask/KS.AskClass.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>WDXT10002</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		<Fastmenu>
+			<Fast>添加分类</Fast>
+			<Fasturl><![CDATA[Ask/KS.AskClass.asp?action=add]]></Fasturl>
+			<Attribute>GO</Attribute>
+			<Role>WDXT10002</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		<Fastmenu>
+			<Fast>等级头衔设置</Fast>
+			<Fasturl><![CDATA[Ask/KS.AskGrade.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>WDXT10003</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		<Fastmenu>
+			<Fast>专家认证管理</Fast>
+			<Fasturl><![CDATA[Ask/KS.AskZJ.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>WDXT10005</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		
+		
+	</item>
+</field>

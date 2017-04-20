@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<template>
+
+  <label name="showweb">
+		<![CDATA[
+		<div id="c_{$InfoID}">
+		 	&nbsp;以下是对 <strong>[<a href="{$ItemUrl}" target="_blank">{$Title}</a>]</strong> 的评论,总共:<font color="red" class="cmtnum">{$CmtNum}</font>条评论<br />
+			<table align="center" border="0" cellpadding="0" cellspacing="1" width="98%">
+			<tbody id="cc_{$InfoID}">
+	           {$LoopText}
+	       </tbody>
+	   </table>
+   
+	</div><div id="p_{$InfoID}" style="text-align:right"></div>
+		]]>
+ </label>
+ 
+  <label name="showwebloop">
+		<![CDATA[
+		
+		<tr>
+				<td rowspan="3" style="border-bottom: #999999 1px dotted; margin-top: 3px" width="70">
+					<a href="{$SpaceUrl}" target="_blank"><img alt="{$UserName}" border="1" height="60" onerror="this.src='{$GetSiteUrl}user/images/noavatar_middle.gif';" src="{$UserFace}" width="60" /></a>
+				</td>
+				<td height="25" width="*">
+					{$Publish}&nbsp;&nbsp;<font color="#999999">{$AddDate}</font></td>
+				<td width="60">
+					<font style="font-family: Arial Black; color: #eef0ee; font-size: 32px">{$Floor}</font></td>
+			</tr>
+			<tr>
+				<td colspan="2" height="25" style="font-size:14px;color:#000;word-break: break-all">
+					{$Content}</td>
+			</tr>
+			<tr>
+				<td colspan="2" height="25" style="border-bottom: #999999 1px dotted; margin-top: 3px">
+					<div style="text-align: right">
+						 <a href="javascript:void(0)" style="color:#999" onClick="javascript:Support({$ChannelID},{$InfoID},{$PostID},{$CmtID},1,'{$GetSiteUrl}');"><img src="{$GetSiteUrl}images/default/good.gif" alt="顶" align="absmiddle"/>顶(<span id="d{$CmtID}">{$Support}</span>)</a> <a false="" href="javascript:void(0)" style="color:#999" onClick="javascript:Support({$ChannelID},{$InfoID},{$PostID},{$CmtID},0,'{$GetSiteUrl}');return"><img src="{$GetSiteUrl}images/default/bad.gif"  alt="踩" align="absmiddle"/>踩(<span id="c{$CmtID}">{$Opposition}</span>)</a> <a href="javascript:void(0)" style="color:#999" onclick="replyCmt({$PostID},{$ChannelID},{$InfoID},{$CmtID},'{$GetSiteUrl}');"><img src="{$GetSiteUrl}images/default/reply.gif" align="absmiddle" alt="回复"/>回复</a>
+						 
+						 </div>
+						</td>
+			</tr>
+			 
+ ]]>
+ </label>
+ 
+   <label name="show3g">
+		<![CDATA[
+		<div id="c_{$InfoID}">
+		 		&nbsp;<strong>本文共有<font color="red">{$CmtNum}</font>条评论</strong><br />
+	<table align="center" border="0" cellpadding="0" cellspacing="1" width="98%">
+	     <tbody id="cc_{$InfoID}">
+	           {$LoopText}
+	       </tbody>
+    </table>
+	</div><div id="p_{$InfoID}" style="text-align:right"></div>
+		]]>
+ </label>
+  <label name="show3gloop">
+		<![CDATA[
+		<tr>
+				<td rowspan="3" style="border-bottom: #999999 1px dotted; margin-top: 3px" width="70">
+					<a href="{$SpaceUrl}" target="_blank"><img alt="{$UserName}" border="1" height="60" onerror="this.src='{$GetSiteUrl}user/images/noavatar_middle.gif';" src="{$UserFace}" width="60" /></a>
+				</td>
+				<td height="25" width="*">
+					{$Publish} <font color="#999999">({$AddDate})</font></td>
+			
+			</tr>
+			<tr>
+				<td colspan="2" height="25" style="word-break: break-all">
+					{$Content}</td>
+			</tr>
+			<tr>
+				<td colspan="2" height="25" style="border-bottom: #999999 1px dotted; margin-top: 3px">
+					<div style="text-align: right">
+						<a href="javascript:void(0)" onClick="javascript:Support({$ChannelID},{$InfoID},{$PostID},{$CmtID},1,'{$GetSiteUrl}');" style="color:#999">顶(<span id="d{$CmtID}">{$Support}</span>)</a> <a false="" href="javascript:void(0)" onClick="javascript:Support({$ChannelID},{$InfoID},{$PostID},{$CmtID},0,'{$GetSiteUrl}');return" style="color:#999">踩(<span id="c{$CmtID}">{$Opposition}</span>)</a></div>				</td>
+			</tr>
+    ]]>
+ </label>
+
+</template>

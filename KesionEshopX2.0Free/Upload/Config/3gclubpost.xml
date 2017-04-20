@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<posttemplate>
+ <label name="post">
+		<![CDATA[
+		
+		
+		<iframe src="about:blank" name="hidIframe" id="hidIframe" width="0" height="0" style="display:none"></iframe>		
+					<form action="../club/Save_Post.asp" method="post" name="myform" id="myform" target="hidIframe" >
+						 <input type="hidden" name="boardid" id="boardid" value="{$BoardID}"/>
+						   <input type="hidden" value="" name="pic" id="pic" />
+						   <input type="hidden" value="" name="AnnexExt" id="AnnexExt" />
+<table width="98%" align="center" border="0" cellspacing="0" cellpadding="0">
+					   <input type="hidden" name="from3g" value="1"/>
+					   <input type="hidden" name="posttype" value="{$PostType}"/>
+                          <tr> 
+						    <td height="30" nowrap>
+							{$PostSubject}
+							</td>
+                           
+                          </tr>
+                          <tr> 
+						    <td class="lefttd">
+							  {$ShowModelField}
+							  内容：
+							<textarea class="textbox" placeholder="请输入帖子内容!" style="width:100%;height:150px" id="Content" name="Content">{$Content}</textarea>
+							
+						   </td>
+					      </tr>
+						   
+						  {IF:mid(KS.Setting(161),3,1)="1"}
+                          <tr>
+                            <td height="30">
+							<span style="color:red">问题：{$Question}</span><br/>
+							答案：<input type="text" class="textbox" name="Answer{$RndID}" id="Answer{$RndID}"> <span style="color:#999999">防发帖机，只有回答正确才可以发帖</span>							</td>
+						  </tr>
+						  {/IF}
+                          <tr{$CodeTF}>
+                            <td colspan="2" height="45" style="padding-top:15px;padding-left:10px">
+							<span>附 加 码 ：<script>writeVerifyCode('{$GetInstallDir}',1);</script></span></td>
+                          </tr>
+                        </table> 
+						</form>
+						 {IF:BSetting(36)="1"}
+						 <!--上传图片-->
+							   <style>
+							   /*添加图片*/
+								.imagebox{margin-left:12px; margin-top:10px;height:55px; position:relative; }
+								.imagebox #uploadImg{overflow:hidden; position:absolute; cursor:pointer}
+								.imagebox .file{ cursor:pointer;position:absolute; z-index:100; margin-left:-180px; font-size:55px;opacity:0;filter:alpha(opacity=0); margin-top:-5px;}
+								.imagebox .upbutton{background:#E2E2E2;font-size:40px;font-weight:bold;color:#666;width:50px;height:50px;border:none;cursor:pointer}
+								.imagebox .upshow li{float:left;width:55px;}
+								.imagebox .upshow li img{width:49px;height:49px;border:1px solid #ccc;}
+								.tips{ color:#B1B1B1}
+								/**/
+							   </style>
+							   <div class="imagebox">
+								 <script type="text/javascript">
+								   $(document).ready(function(){
+								       jQuery("#Content").click(function(){
+									     setPos()
+									   }).keyup(function(){ 
+									    setPos();
+									    });
+								   });
+								    var pos=null;
+								   function setPos()
+									{ if (document.all){
+											jQuery("#Content").focus();
+											pos = document.selection.createRange();
+										  }else{
+											pos = jQuery("#Content")[0].selectionStart;
+										  }
+								   }
+										//插入到循环体
+									function InsertValue(Val) {
+										if (pos == null) { alert('请先定位插入位置!'); return false; }
+											 if (document.all){
+											  pos.text=Val;
+											 }else{
+											   var obj=jQuery("#Content");
+											   var lstr=obj.val().substring(0,pos);
+											   var rstr=obj.val().substring(pos);
+											   obj.val(lstr+Val+rstr);
+											 }
+									}
+								  function  doSubmit(obj){ 
+								    if ($(".upshow").find("li").length>={$UploadNum}){
+									  alert('对不起，最多只能上传{$UploadNum}张图片!');
+									  return false;
+									}
+								    box=$.dialog({title:false,content:'请稍等，正在上传文件...'});$("#UpFileForm").submit(); 
+								  }
+								  function checkUpoad(){
+								  if (pos == null) { alert('请先定位插入位置!'); return false; }
+								  }
+								  function uploadOk(v){
+									box.close();
+									if ($("#files").val()==''){
+									  $("#files").val(v);
+									}else{
+									  $("#files").val($("#files").val()+"§"+v);
+									}
+									$(".upshow").append("<li><img src='"+v+"'/></li>");
+									InsertValue("[img]"+v+"[/img]");
+								  }
+								 </script>
+								 
+								  <div class="upshow"></div>
+								  
+								  <form name="UpFileForm" id="UpFileForm" method="post" enctype="multipart/form-data" action="../user/swfupload.asp?from=Common" target="hidIframe">
+									<span id="uploadImg">   
+									  <input name="UpType" value="Pic" type="hidden" id="UpLoadFrom"/>
+									  <input name="BoardID" value="{$BoardID}" type="hidden">          
+									  <input name="BasicType" value="9994" type="hidden">          
+									  <input name="ChannelID" value="9994" type="hidden">  
+									  <input name="DefaultUrl" value="0" type="hidden">  
+									  <input name="AddWaterFlag" value="1" type="hidden">  
+			                          <input type="hidden" name="AutoReName" value="4">
+									  <input type="file" onchange="doSubmit(this)" onclick="return(checkUpoad())" size="1" name="File1" class='file'>        
+									  <input type="button" id="BtnSubmit" name="Submit" class="upbutton" value="+" >
+									 
+									</span>
+								  </form>
+								 <span class="tips" style="padding-left:60px;">你最多可上传{$UploadNum}张图片</span>
+								</div> 
+							</div>
+							<!--上传图片结束-->
+						 {/IF}	
+							
+							<input type="button" style="margin-top:10px;width:100%;height:35px;" class="btn" value=" OK,立 即 发 表 " name="Submit" onClick="return(checkform())">
+
+		
+	]]>
+	</label>
+
+
+   <label name="postvote">
+    <![CDATA[
+	
+	<div >
+	<script type="text/JavaScript">
+	
+	var currvotenum = {$CurrVoteNum};
+	function addrow() {
+		currvotenum++;
+		if (currvotenum>{$MaxAllowVoteNum}){
+		 $.dialog.alert('最多只能添加{$MaxAllowVoteNum}个选项!',function(){});
+		 return;
+		}
+		jQuery("#vote"+currvotenum).show();
+		
+	}
+	</script>
+
+
+
+<table width="98%" align="center">
+<tr>
+<td>
+    <table cellspacing="1" id="votetable" width="100%" cellpadding="1" border="0">
+	<tr><td>
+	类型:
+ <select name="VoteType" id="VoteType">
+  {$VoteTypeOption}
+</select>
+ <label><input type='checkbox' name='nmtp' value='1'{$Nmtp}>允许匿名投票</label>
+ <br/>
+ 时间限制: {$TimeLimit}
+ <br/>
+ <div id='time'{$ShowLimitTime}>
+	有效天数<input type='text' class="textbox" name='ValidDays' size='4' style='text-align:center' value='{$ValidDays}'>天
+</div>
+	
+	
+	</td>
+	</tr>
+	<tr style='font-weight:bold;' class="title"><td colspan="2">选项:最多可填写 {$MaxAllowVoteNum} 个选项</td></tr>
+	<tr><td>{$VoteItem}</td></tr>
+	<tr><td><div><img src="images/edit.gif" align="absmiddle"/> <a href="#" onclick="addrow()" class="addtr">增加一项</a></div></td>
+	</tr>
+	</table>
+</td>
+
+ </tr>
+</table>
+
+	</div>
+	
+	]]>
+   </label>
+   
+   
+   
+   
+</posttemplate>

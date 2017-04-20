@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>兑换礼品</AppName>
+		<Role>mallscore</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>兑换礼品管理</ItemName>
+			<ItemUrl><![CDATA[Plus_MallScore/KS.MallScore.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS20010</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>兑换记录管理</ItemName>
+			<ItemUrl><![CDATA[Plus_MallScore/KS.MallScoreOrder.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS200101</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

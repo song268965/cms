@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+<title>{$GetSiteName}-{$GetChannelName}-{$GetClassName}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="author" content="kesion.com">
+<meta name="format-detection" content="telephone=no">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/common.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/style.css" rel="stylesheet" type="text/css">
+<script src="{$GetSiteUrl}ks_inc/jquery.js"></script>
+<script src="{$GetSiteUrl}ks_inc/common.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/pageauto.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.js"></script>
+</head>
+
+<body>
+{LB_3g头部通用}
+<nav class="column">
+	<ul class="swiper-wrapper">
+		{LB_3g栏目通用}
+    </ul>
+    <div class="bg"></div>
+</nav>
+<script>
+var swiper = new Swiper('.column', {
+    //pagination: '.swiper-pagination',
+    slidesPerView: 3.5,
+    paginationClickable: true,
+  //  spaceBetween: 30
+});
+</script>
+
+<section class="blank15"></section>
+
+<section class="indexpic whitebg clearfix">
+	<div class="parttit clearfix">
+        <span class="tit fl">最新{$GetItemName}</span>
+        <span class="menu fr">
+            <a href="list.asp?modelid={$GetModelID}">更多</a>
+        </span>
+    </div>
+    <ul>
+    	{LB_3G最新图片}
+    </ul>
+</section>
+
+
+<section class="blank15"></section>
+
+<section class="indexpic whitebg clearfix">
+	<div class="parttit clearfix">
+        <span class="tit fl">推荐{$GetItemName}</span>
+        <span class="menu fr">
+            <a href="list.asp?modelid={$GetModelID}&tj=1">更多</a>
+        </span>
+    </div>
+    <ul>
+    	{LB_3G推荐图片}
+    </ul>
+</section>
+
+
+<section class="blank15"></section>
+
+<section class="indexpic whitebg clearfix">
+	<div class="parttit clearfix">
+        <span class="tit fl">热门{$GetItemName}</span>
+        <span class="menu fr">
+            <a href="list.asp?modelid={$GetModelID}&rm=1">更多</a>
+        </span>
+    </div>
+    <ul>
+    	{LB_3G热门图片}
+    </ul>
+</section>
+
+
+
+</body>
+</html>

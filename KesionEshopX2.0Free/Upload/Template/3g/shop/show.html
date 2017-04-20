@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+<title>{$GetPictureName}-{$GetClassName}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="author" content="kesion.com">
+<meta name="format-detection" content="telephone=no">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/common.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/style.css" rel="stylesheet" type="text/css">
+<script src="{$GetSiteUrl}ks_inc/jquery.js"></script>
+<script src="{$GetSiteUrl}ks_inc/common.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/pageauto.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.js"></script>
+<script src="{$GetSiteUrl}shop/js/shop.detail.js"></script>
+
+<SCRIPT language=JavaScript type=text/JavaScript> 
+function showimg(src){	window.open(src);}
+</SCRIPT>
+</head>
+
+<body>
+{LB_3g头部通用}
+<div class="shopcart"><a href='/3g/shop/shoppingcart.asp'><img src="{$GetSiteUrl}{$Get3GInstallDir}/images/shopcart.png"><script src="{$GetInstallDir}3g/shop/CartNum.asp"></script></a></div>
+
+<section class="location">{$Navigation}</section>
+
+<div class="MiddleCont whitebg">
+	<div class="contimg">{=GetGroupPhoto()}</div>
+
+    <div class="content">
+        <div class="productr">
+            <ul>
+                <li>商品货号： <span>{$GetProductID}</span></li>
+                <li>品牌商标： <span> {$GetBrandName}</span></li>
+                <li>市 场 价： <del>￥{$GetPrice_Market}</del> 元 </li>
+                <li>商城价： <span class="price">￥{$GetPrice_Member}</span> 元</li>
+                <li>VIP价：<span class="vipprice">{$GetGroupPrice}</span></li>
+                <li>获赠积分：<span>{$GetScore}</span></li>
+                <li>上架时间： <span> {$GetProductDate}</span></li>
+                <li>已 销 售： <span class="sales"> {$GetHasSold}</span> {$GetProductUnit}</li>
+                <li>浏 览 量： 已有<span class="hits">{$GetHits}</span>人关注</li>
+                <li>商品介绍：<span>{$GetProductIntro}</span></li>
+            </ul>
+            <ul>
+                {$GetAddCarAttribute}
+            </ul>
+        </div>
+    </div>
+	  
+</div>
+</body>
+</html>

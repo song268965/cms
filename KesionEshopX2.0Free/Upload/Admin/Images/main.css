@@ -1,0 +1,133 @@
+﻿*{margin:0;padding:0;word-wrap:break-word;}
+div,ul,li,p,form,table,dt,dl,dd,tr,i,em,b,a,s{padding: 0px; margin: 0px;list-style-type: none;}
+
+body{width:100%; font-family:Arial,'hiragino sans gb','microsoft yahei ui','microsoft yahei',simsun,sans-serif;color:#343a3e; font-size:12px; background:#edf1f2;}
+
+textarea, select, input{font-family:'HelveticaLT55Roman',microsoft yahei !important;}
+a{color:#303234;text-decoration:none; cursor:pointer; outline:none}
+a:hover{text-decoration:none; color:#50869f;}
+a:focus{outline:none;}
+img{border:none; } 
+em,i{font-style: normal;font-weight: normal;}
+h3,h4{padding:0px; font-size:14px; font-weight:bold;}
+.clearfix:after{content:"";display:block;height:0;clear:both;visibility:hidden}
+.clear{ height:0px; clear:both; overflow:hidden;}
+.blank10{ height:10px; overflow:hidden;}
+.blank20{ height:20px; overflow:hidden;}
+.blank30{ height:30px; overflow:hidden;}
+
+.red{color:#fb2c33 ;}
+.green{color:#26a854;}
+
+.hide{ display:none}
+
+
+.icon{ background:url(ico/123456.png) no-repeat; height:32px; width:32px; vertical-align:middle; display:inline-block; margin:10px 25px;}
+.icon.a1{ background-position:-72px -219px;}
+.icon.a2{ background-position:-785px -176px;}
+.icon.a3{ background-position:-581px -176px;}
+.icon.a4{ background-position:-682px -176px;}
+.icon.a5{ background-position:-629px -176px;}
+.icon.a7{ background-position:-530px -219px;}
+.icon.a8{ background-position:-755px -219px;}
+.icon.test{ background-position:-530px -176px;}
+.icon.bbs{background-position:-176px -176px;}
+.icon.ask{background-position:-477px -176px;}
+.icon.add{ background-position:-806px -219px;}
+
+
+
+
+.indexMain{position:relative;}
+
+.stateBox{ background:#fff;margin-top:20px; padding:30px 40px 40px 40px;border-radius:5px;}
+.stateBox #currversion{color:#fff; line-height:36px; }
+.stateBox #currversion span{ font-size:16px !important;color:#2d3a44 !important;}
+.stateBox #currversion a{ padding:0px 15px; background:#4cbd74;color:#fff; display:inline-block;border-radius:3px;height:26px; line-height:26px; margin-left:20px; font-size:14px;}
+
+.stateBox .text{color:#90989e; line-height:22px; font-size:12px;margin-top:5px;}
+.stateBox .text a{color:#2679b5;}
+
+.indexMain{ padding:0px 20px;}
+.indexMain .left{ padding-bottom:20px;float:left;}
+.indexMain .right{width:300px;float:right; }
+
+.indexMain .right .todayData{  padding-bottom:15px;background:#fff;border-radius:5px;margin-top:20px;}
+.indexMain .right .todayData .titleStyle{ padding:0px 20px; height:50px; line-height:50px;}
+.indexMain .right .todayData ul{ padding:0px 20px;}
+.indexMain .right .todayData li{height:30px; line-height:30px; font-size:14px;color:#697680; overflow:hidden;}
+.indexMain .right .todayData li span{ float:right;color:#90989e;}
+.indexMain .right .todayData li .dot{width:12px;height:12px; float:left; background:#b7bcc0;border-radius:50%;margin:9px 10px 0px 0px;}
+.indexMain .right .todayData li .dot0{ background:#53d9da;}
+.indexMain .right .todayData li .dot1{ background:#f6ba49;}
+.indexMain .right .todayData li .dot2{ background:#81d19d;}
+.indexMain .right .todayData li .dot3{ background:#f8a8a8;}
+.indexMain .right .todayData li .dot4{ background:#88c1e9;}
+.indexMain .right .todayData li .dot5{ background:#7e80b6;}
+.indexMain .right .todayData li a{color:#697680;}
+
+.indexMain .right .posts li{ font-size:12px; line-height:28px;height:28px;}
+
+.indexMain .shortcut{ background:#fff; padding:0px 20px 20px 20px;margin-top:20px;border-radius:5px;}
+
+.indexMain .shortcut .Cp_box{ padding:15px; margin:10px 5px 0px 10px;border:1px solid #edf1f2; float:left; width:65px; height:65px; text-align:center; position:relative ; border-radius: 2px; line-height:22px }
+.indexMain .shortcut .Cp_box img{height:40px; display:block; overflow:hidden;margin:0 auto;}
+.indexMain .shortcut .Cp_box .delico{ display:none;}
+.indexMain .shortcut .name{ display:block; line-height:42px;}
+
+.indexMain .shortcut .Cp_boxG{ padding:15px; margin:10px 5px 0px 10px;border:1px solid #edf1f2; float:left; width:65px; height:65px; text-align:center; position:relative ; border-radius: 2px; line-height:22px }
+.indexMain .shortcut .Cp_boxG img{height:40px; display:block; overflow:hidden;margin:0 auto;}
+.indexMain .shortcut .Cp_boxG .delico{ position:absolute; top:-7px; right:-7px;}
+.indexMain .shortcut .Cp_boxG .delico img{height:20px; cursor:pointer;}
+
+
+
+
+
+.titleStyle{height:50px; line-height:50px; overflow:hidden; font-size:16px;}
+
+.dataStatistics{ background:#fff;margin-top:20px;border-radius:5px; padding:0px 20px 20px 20px;}
+.dataStatistics tspan{font-weight:normal;}
+.dataStatistics text{ text-decoration:none !important;color:#90989e !important;fill:#90989e !important;font-family:'HelveticaLT55Roman','hiragino sans gb','microsoft yahei ui','microsoft yahei',simsun,sans-serif;}
+
+/*滚动条*/
+.nicescroll-rails{z-index:9999 !important;}
+.nicescroll-rails div{ background:url(rgba0_30.png) !important}
+
+/*右边*/
+.rightmain{ margin:10px 30px 0px 5px;}
+.rightmain .welcomebox{ height:75px;}
+.rightmain .welcomebox .user_l{width:75px; float:left}
+.rightmain .welcomebox .user_l .userpicbg{width:58px; height:58px; background:url(imgbox.gif) no-repeat; position:absolute;}
+.rightmain .welcomebox .user_l img{width:52px; height:52px;margin:2px 0px 0px 3px; background:#fff;}
+.rightmain .welcomebox .user_r{ float:left; line-height:23px; padding-top:5px;color:#666;} 
+.rightmain .welcomebox .user_r strong{color:#444;}
+.rightmain .welcomebox .user_r strong span.span01{color:#06abde}
+.rightmain .welcomebox .user_r span.span02{color:#444; padding:0px 3px}
+.rightmain .welcomebox .user_r span.span03{color:#e14d64; padding:0px 3px}
+
+
+.rightmain .shortcutbox{border-radius: 2px;background:#fff; padding-bottom:8px;border:1px solid #ebf0f5; }
+.rightmain .shortcutbox h4{ height:26px; line-height:26px;font-weight:normal;font-size:16px; padding-left:15px;border-bottom:1px solid #d3d7da; background:url(bg24.png) repeat-x;}
+.rightmain .shortcutbox .topic{padding:20px 20px; }
+.rightmain .shortcutbox ul li{ height:87px; width:84px; border:1px solid #ddd; float:left; margin:5px 5px; }
+.rightmain .shortcutbox ul li:hover{ border:1px solid #FF9900;}
+.rightmain .shortcutbox ul li img{ padding:10px 25px;}
+.rightmain .shortcutbox ul li span{ text-align:center; padding-left:17px;}
+
+
+.titlek { background:url(titlek_bg_z.png);line-height:28px; font-weight:bold;height:30px; color:#555; margin-left:20px;margin-right:20px;text-decoration:none;font-size:14px; margin-top:10px; padding-left:40px; padding-top:8px; position:relative; margin-bottom:0px; }
+
+			
+
+.rightmain .chenxubox{margin-top:15px}
+.rightmain .chenxubox .leftbox{width:49%;border-radius: 2px; float:left;border:1px solid #ebf0f5;height:210px; background:#fff; margin-right:10px;}
+.rightmain .chenxubox .leftbox h4{ height:26px; line-height:26px;font-weight:normal;font-size:14px; padding-left:15px;border-bottom:1px solid #d3d7da; background:url(bg24.png) repeat-x;}
+.rightmain .chenxubox .leftbox div{ padding:10px 15px; line-height:26px}
+
+
+.rightmain .chenxubox .rightbox{width:49%;border-radius: 2px; float:right;border:1px solid #ebf0f5; height:210px; background:#fff;overflow:hidden}
+.rightmain .chenxubox .rightbox h4{ height:26px; line-height:26px;font-weight:normal;font-size:14px; padding-left:15px;border-bottom:1px solid #d3d7da; background:url(bg24.png) repeat-x;}
+.rightmain .chenxubox .rightbox ul{ padding:10px 15px 10px 15px;}
+.rightmain .chenxubox .rightbox ul li{ height:24px; line-height:24px; background:url(bg25.png) no-repeat 0 50%; padding-left:10px}
+.rightmain .chenxubox .rightbox ul li span{ float:right;color:#888}

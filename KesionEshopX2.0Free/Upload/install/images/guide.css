@@ -1,0 +1,61 @@
+﻿/* CSS Document */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,p,blockquote,th,td,figure{margin:0;padding:0;}
+ li{list-style-type:none}
+  ul{margin:0px;padding:0px}
+ img{border:0px;}
+ a{text-decoration:none;color:#333}
+ a:hover{text-decoration:underline}
+body{ font-family:Arial, Helvetica, sans-serif;font-size:12px; background:#e5e5e5 url(body.png) repeat-x;}
+.l{ float:left}.r{ float:right}
+.clear{ clear:both;}.blank10{ height:10px; overflow:hidden}
+.idx{ width:980px;margin:0 auto;}
+.baiyun{ width:980px;margin:0 auto; height:100px; background:url(baiyun.png) no-repeat 100% 0; position:absolute}
+.guide{width:960px;margin:0 auto;margin-top:20px;padding-bottom:5px}
+.guide .guidetitle{width:720px; height:70px; line-height:60px}
+.guide .guidetitle .l{ background:url(logo.png) no-repeat -10px 50%; height:70px; width:300px}
+.guide .guidetitle .r{color:#97c3ca;margin-top:10px; position:relative; z-index:9999}
+.guide .guidesm{width:720px; padding-bottom:10px;color:#97c3ca}
+.guide .guidesm .l{width:580px; line-height:24px;margin-top:10px}
+.guide .guideboxbig{width:720px;margin-top:15px}
+.guide .guideboxbig .guidebox{ background:#fff;height:280px;padding:3px 12px 10px 12px;font-size:12px; line-height:24px;color:#666; overflow:auto;}
+.guide .guideboxbig .guidebox h4{ height:35px; line-height:35px; text-align:center;font-size:14px;color:#005e96; background:url(01.png) no-repeat 30% 0}
+.guide .btnbg{width:81px; height:29px; background:url(btn.png) no-repeat;border:0px}
+.guide .btnbg:hover{background:url(btn02.png) no-repeat;}
+
+
+.guide .datiao{width:720px;}
+.guide .datiao ul li{ float:left;color:#97c3ca;font-size:14px;padding:0px 22px 0px 10px; background:url(bg01.png) no-repeat 100% 50%}
+.guide .datiao ul li.curr{font-weight:bold;color:#e1f082; background:url(bg02.png) no-repeat 100% 50%}
+
+.guide .hjlist{width:690px; background:#fff;color:#777;margin-top:15px;padding:0px 15px; padding-bottom:10px}
+.guide .hjlist h5{padding-top:25px; height:20px;font-size:12px;color:#555;}
+.guide .hjlist ul{ height:24px; line-height:24px}
+.guide .hjlist ul.tit{font-weight:bold;color:#3890ad}
+.guide .hjlist ul li{ float:left}
+.guide .hjlist ul li.li01{width:200px}
+.guide .hjlist ul li.li02{width:150px}
+.guide .hjlist ul li.li03{width:150px}
+.guide .hjlist ul li.li04{width:150px;}
+.guide .hjlist ul li img{margin:-2px 2px 0px 0px}
+.guide .hjlist ul li.li05{width:280px;}
+.guide .hjlist ul li.li06{width:200px;}
+.guide .hjlist ul li.li07{width:200px;}
+.guide .sjlist{width:690px; background:#fff;color:#777;margin-top:15px;padding:0px 15px; padding-bottom:10px}
+.guide .sjlist h5{padding-top:25px; height:20px;font-size:12px;color:#555;}
+.guide .sjlist ul li{margin-top:10px;padding:0px 10px}
+.guide .sjlist ul li .text{ height:20px; width:190px;border:1px solid #ddd;border-top:1px solid #aaa;border-left:1px solid #aaa;margin:0px 10px;padding-left:3px;color:#666;}
+.guide .sjlist ul li span{ float:left; line-height:26px;color:#555;width:115px}
+.foot{width:960px;margin:0 auto;border-top:1px solid #fff; text-align:center; line-height:18px;padding:10px 0px;font-size:11px;font-family:"\5FAE\8F6F\96C5\9ED1";}
+
+
+
+
+
+
+
+
+
+
+
+
+

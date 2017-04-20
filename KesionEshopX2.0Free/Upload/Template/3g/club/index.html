@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+<title>{$GuestTitle}-{$GetSiteTitle}</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="author" content="kesion.com">
+<meta name="format-detection" content="telephone=no">
+<link href="{$GetSiteUrl}3g/images/style.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}3g/images/bbs.css" rel="stylesheet" type="text/css">
+<script src="{$GetInstallDir}ks_inc/jquery.js"></script>
+<script src="{$GetInstallDir}ks_inc/common.js"></script>
+<script src="{$GetInstallDir}{$GetClubInstallDir}/images/club.js"></script>
+<script src="{$GetInstallDir}{$GetClubInstallDir}/images/LeeSelect.js" type=text/javascript></script>
+<script src="{$GetInstallDir}ks_inc/weibo.js" type=text/javascript></script>
+<script>
+$(function(){
+	$(".headertit").replaceWith("<div class='headertit'>论坛首页</div>");
+	})
+</script>
+</head>
+<body>
+	<script type="text/javascript"> 
+	//===========================点击展开关闭效果====================================
+	function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+	var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+	var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+	var openTip = oOpenTip || "";
+	var shutTip = oShutTip || "";
+	if(targetObj.style.display!="none"){
+	   if(shutAble) return;
+	   targetObj.style.display="none";
+	   if(openTip && shutTip){
+		sourceObj.innerHTML = shutTip; 
+	   }
+	} else {
+	   targetObj.style.display="block";
+	   if(openTip && shutTip){
+		sourceObj.innerHTML = openTip; 
+	   }
+	}
+	}
+	</script>
+	{LB_3g头部通用}
+    <style>
+	.header .return{ display:none;}
+	</style>
+
+	<div id="box2013" style="display:none">
+		<div class="topbg"></div>
+		<ul>
+			{$GetModelList}
+		</ul>
+		<div class="clear"></div>
+	</div>
+	<div class="MiddleCont">
+		 <div class="weibo">
+			<div class="caCon"><h3><i class="incoNotice commF"><img src="{$GetSiteUrl}3g/images/lb.png" style="vertical-align:middle;width:0.75rem; margin-right:0.25rem;"></i>置顶帖<a href="" class="iMore">更多&gt;&gt;</a></h3></div>
+			<div class="weibolist"><div class="club_weibo"><script src="showfresh.asp?action=scroll"></script></div></div>
+		 </div> 
+		 <!--club_t4 begin-->  
+		 <div style=" background:#fff" class="hns">
+			<table cellpadding="4" cellspacing="0" border="0" title="今日：{$TodayNum} 帖  | 昨日：{$YesterDayNum} 帖 |最高日：{$MaxDayNum} 帖 
+	主题：{$TopicNum} 帖 | 帖子：{$ReplayNum} 帖 | 会员数：{$UserNum}位  | 新会员：{$NewUser}">
+				<tr>
+				<th><p{IF:{$TodayNum}>0} style="color:#ff6600;font-size:20px"{/IF}>{$TodayNum}</p>今日发帖</th><th><p>{$YesterDayNum}</p>昨日发帖</th><th><p>{$ReplayNum}</p>总帖子数</th><td><p>{$UserNum}</p>注册会员</td>
+				
+				</tr>
+			</table>
+		 </div>		
+		 <div class="mainleft1">
+			   {$GetGuestList} 
+		 </div>		
+	</div>	
+    
+<!--3G底部start-->  
+{LB_3g底部按钮}
+<script>
+$(function(){
+	var a = $(".flexbox li").eq(2).find("img").attr("src");
+	b=a.substring(0,a.length-4); //alert(b)截掉最后四个字符
+	$(".flexbox li").eq(2).find("img").attr("src", b + "s.png");
+})
+</script>
+
+<!--3G底部end-->  
+</body>
+</html>

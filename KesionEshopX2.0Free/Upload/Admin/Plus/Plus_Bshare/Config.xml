@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>Bshare分享插件</AppName>
+		<Role>bshare</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>Bshare插件配置</ItemName>
+			<ItemUrl><![CDATA[Plus_Bshare/bshare.asp]]></ItemUrl>
+			<Attribute>SetParam</Attribute>
+			<Role>KSO10002</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>Bshare数据统计</ItemName>
+			<ItemUrl><![CDATA[Plus_Bshare/bshare.asp?action=getdata]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSO100021</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

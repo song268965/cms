@@ -1,0 +1,121 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$GetSiteTitle}-搜索结果</title>
+<link href="{$GetInstallDir}images/style.css" type=text/css rel=stylesheet>
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javascript"></script>
+<script src="{$GetInstallDir}ks_inc/common.js" type="text/javascript"></script>
+<script src="{$GetInstallDir}ks_inc/flotr2.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+function Surveyshow(id){
+	$.dialog.open('?action=Surveyshow&surveystid='+id,{
+	title:'查看详细投票内容',
+	id: 'a15',
+	lock:true,
+    width: 750,
+    height: 450
+	});
+}
+</script>
+
+</head>
+<body>
+<!--网站头部通用-->
+{LB_头部通用}
+<!--头部搜索-->
+<div class="clear blank10"></div>
+<div class="banner">{=GetAdvertise(39)}</div>
+<div class="clear blank10"></div>
+
+
+<div class="mapbody mainbox">
+<div class="navigation"><a href="{$GetInstallDir}Survey/">多问卷调查</a> >>{@Survey.Surveyname}</div>
+
+<div class="survaytit mainbox">
+	<div style="padding:0 15px;">
+        {@Survey.ProjectContent}
+        <div style="text-align:right">
+         {@Survey.ProjectDateLimit}
+        </div>
+    </div>
+</div>
+<div class="content mainbox">
+   <div class="search_left">
+    
+	<div class="articlesearch" ID="SurveyList" >
+		 <form name="myform" id="myform" method="post" action="SurveyR.asp?Action=getItemNum&Surveyid={@Survey.surveyid}" onSubmit=""return(CheckForm())"">
+	     {@loop.begin}
+              <ul style="clear:both">
+                <li>
+				<span class="class_name">{@item.num}、{@item.SurveySTName}</span> <br />
+				<div>
+					<div style="float:left">{@item.SurveyBox}</div>
+					<div style="float:right; border:1px #CCCCCC solid">
+					
+					
+					
+					<div id="container{@item.num}" style="margin:0 auto;width:350px;height:200px"></div>
+	
+							<script type="text/javascript">
+						   (function basic_pie(container) {
+						  var graph;
+						  graph = Flotr.draw(container, [
+							{@item.SurveyNum}
+						  ],
+						   {
+							HtmlText : true,
+							grid : {
+							  verticalLines : false,
+							  horizontalLines : false
+							},
+							xaxis : { showLabels : false },
+							yaxis : { showLabels : false },
+							pie : {
+							  show : true, 
+							  explode : 6
+							},
+							mouse : { track : true },
+							legend : {
+							  position : 'se',
+							  backgroundColor : '#D2E8FF'
+							}
+						  });
+						})(document.getElementById("container{@item.num}"));
+						</script>
+											
+					
+					
+					
+					
+					
+					
+					</div>
+				</div>
+			   </li>
+            </ul>
+        {@loop.end}
+	   <div style="clear:both"></div>
+	    已有{@Survey.VoteNum}人次参与了此调查，共计参与人数{@Survey.UserNum}人。
+		</form>
+	   <div style="clear:both"></div>
+		
+	</div>	
+ </div>
+</div>
+ </div>
+  <div class="clear blank10"></div>
+<!-- 
+		感谢您使用KesionCMS,为了支持KesionCMS的发展,请您保留版权信息.使用上有什么疑问欢迎提交到技术论坛交流Http://bbs.kesion.com
+		,KesionCMS因您会更精彩!
+	-->
+<!--友情链接-->
+ <!--bottom end-->
+<!--版权信息-->
+{LB_尾部通用}
+<!--版权信息-->
+
+</body>
+</html>

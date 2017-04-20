@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<field>
+	<item id="1">
+		<Fast>文章模型</Fast>
+		<Role>article0</Role>
+		<Fastico>icon0{#BasicType}.png</Fastico>
+		<TF>1</TF>
+		<Fastmenu>
+			<Fast>{#ItemName}管理</Fast>
+			<Fasturl><![CDATA[System/KS.ItemInfo.asp?ChannelID={#ChannelID}]]></Fasturl>
+			<Attribute>VIEWFOLDER</Attribute>
+			<Role>0</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		<Fastmenu>
+			<Fast>添加{#ItemName}</Fast>
+			<Fasturl><![CDATA[Article/KS.Article.asp?Action=Add&ChannelID={#ChannelID}]]></Fasturl>
+			<Attribute>AddInfo</Attribute>
+			<Role>M{#ChannelID}10002</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		<Fastmenu>
+			<Fast>{#FolderName}管理</Fast>
+			<Fasturl><![CDATA[System/KS.Class.asp?ChannelID={#ChannelID}]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>M{#ChannelID}10008</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		<Fastmenu>
+			<Fast>审核{#ItemName}</Fast>
+			<Fasturl><![CDATA[System/KS.ItemInfo.asp?ShowType=1&ChannelID={#ChannelID}]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>M{#ChannelID}10010</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+
+		
+	</item>
+</field>

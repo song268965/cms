@@ -1,0 +1,65 @@
+﻿
+html, body, h1, h2, h3, h4, ul, li, dl, input{ font-size:12px; font-family:Arial,'hiragino sans gb','microsoft yahei ui','microsoft yahei',simsun,sans-serif;color:#333;}
+.pageWidth{width:980px;margin:0 auto;}
+.header{height:40px; line-height:40px; background:#142632;}
+.header .left li{float:left; padding:0px 15px;}
+.header .left li a{color:#fff;}
+.header .left li.other img{ margin-top:12px;width:18px;*margin-top:5px;_margin-top:5px;}
+.header .left li.other {position: relative; height:40; line-height:40px;}
+.header .left li.other .moreNav{position: absolute;background: #142632;left: 0;top: 40px;display: none;}
+.header .left li.other:hover .moreNav{ display:block;width: 100%;}
+.header .left li.other .moreNav li{float: none;padding: 0;text-align: center;height: 30px;line-height: 30px;}
+
+.header .right{float:right;}
+.header .right li{float:left; position:relative; padding:0px 15px;}
+.header .right li.iconfor{ width:170px; height:26px; border-radius:30px; background:#fff; margin:7px 15px 0px 0px;}
+.header .right li.iconfor .tip_box{ position:absolute; left:0px; top:0px; width:50px; cursor:pointer; height:26px; line-height:26px; text-align:center; z-index:999}
+.header .right li.iconfor .tip_name{ color:#949DA3; background:url(search_j.png) no-repeat right center; text-align:left; padding-left:10px;}
+.header .right li.iconfor .tip_menu{ background:#fff;box-shadow:0px 2px 3px rgba(0,0,0,0.2); position:absolute; top:30px; left:0; width:64px; display:none;}
+.header .right li.iconfor .tip_menu a{ display:block;color:#949DA3; line-height:30px;height:30px; overflow:hidden;}
+.header .right li.iconfor .tip_menu a:hover{ background:#338BC9; color:#fff; text-decoration:none;}
+.header .right li.iconfor .tip_text{ border:0; padding-left:45px; padding-right:40px; line-height:28px;}
+.header .right li.iconfor .tip_text .textbox{ width:105px; height:26px; outline:none; line-height:26px; border:0;margin:0px; float:left;box-sizing: initial;}
+.header .right li.iconfor .tip_text .textbox:hover{ background:#fff;}
+.header .right li.iconfor .tip_text .btnbox{ width:26px; height:26px; line-height:26px; position:absolute; right:5px; top:0px; background:url(iconfor.png) no-repeat center center;border:0; cursor:pointer; outline:none;}
+.header .right li.iconfor img{}
+.header .right li img{ height:18px;margin-top:11px; display:block;}
+.header .right li .code{ background:#fff; position:absolute; width:140px; height:140px; right:-15px; top:40px; box-shadow:0px 2px 3px rgba(0,0,0,0.2); display:none;}
+.header .right li .code img{ width:130px; height:130px; padding:5px; margin:0;}
+
+
+.userTop{ padding:15px 0px;height:62px; }
+.userTop .logo{width:240px;float:left;margin-top:6px; padding-left:15px;}
+.userTop .logo img{height:40px;}
+.userTop .userInfoRight{float:right;}
+.userTop .userInfoRight .avatar48 { padding:3px; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,0.1); width: 56px; margin-right:10px; height: 56px;}
+.userTop .userInfoRight .avatar48 img { width: 56px; height: 56px; }
+
+
+.fastlgs{color:#555;line-height:20px;padding-left:0px;width:375px;}
+
+.fastlgs span{color:#555 !important;}
+.fastlgs a span{color:#ec2121 !important;}
+
+.fastlg .c{float:left; line-height:25px; padding-left:15px;}
+.fastlg .r{border-left:1px solid #eee;padding:5px 15px;height:50px;width:60px;float:right; line-height:25px;}
+.fastlg .l{width:98px;float:left;height:50px; font-size:12px;color:#333;text-align:center; border-right:#eee 1px solid; padding:5px 15px;}
+.fastlg .l strong{text-align:left; line-height:25px;font-weight:normal;}
+.fastlg .l img{height:25px;margin-right:2px;}
+
+.fastlg .c p{ padding-bottom:4px;}
+.fastlg .textbox{width:140px;border:1px solid #e0e0e0;margin:0px 5px;border-top:1px solid #848484;border-left:1px solid #848484;height:23px; padding-left:5px; background:#fff url(textLine.png) repeat-x;}
+
+.fastlg .btn{width:66px;height:26px;background:url(btnbg.png) repeat-x;border:1px solid #999; font-size:14px;color:#111;font-weight:normal;}
+
+.mainNav .pageWidth{ background:#fff;}
+.mainNav .inner{height:40px; line-height:40px;border:1px solid #C1D8EA;border-top:3px solid #338bc9;}
+.mainNav .bbsmenu li{float:left; padding:0px 20px; font-size:14px;}
+.mainNav .bbsmenu li.curr a{color:#338bc9;}
+.mainNav .bbsmenu li a:hover{color:#338bc9; text-decoration:none;}
+.mainNav .club_weibo{ float:right;width:585px;height:18px; line-height:18px; overflow:hidden;margin-top:11px;}
+.mainNav .club_weibo a img{ display:none;}
+.mainNav .club_weibo a{color:#5083a7 ;}
+.mainNav .club_weibo a:hover{ text-decoration:none;}
+
+.mainNav .club_weibo a:first-child{color:#333 !important;}

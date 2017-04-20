@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<field>
+	<item id="11">
+		<Fast>论坛系统</Fast>
+		<Role>bbs0</Role>
+		<Fastico>icon0{#BasicType}.png</Fastico>
+		<TF>1</TF>
+		
+		<Fastmenu>
+			<Fast>论坛主题管理</Fast>
+			<Fasturl><![CDATA[Club/KS.GuestBook.asp?Action=Main]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMB10000</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		
+       <Fastmenu>
+			<Fast>帖子回收站</Fast>
+			<Fasturl><![CDATA[Club/KS.GuestBook.asp?Action=Recycle]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMB10000</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		<Fastmenu>
+			<Fast>论坛版面分类</Fast>
+			<Fasturl><![CDATA[Club/KS.GuestBoard.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMB10001</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+      <Fastmenu>
+			<Fast>论坛系统配置</Fast>
+			<Fasturl><![CDATA[Club/KS.GuestSetting.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMB10004</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+	<Fastmenu>
+			<Fast>当前数据表管理</Fast>
+			<Fasturl><![CDATA[Club/KS.GuestTable.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMB10003</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		<Fastmenu>
+			<Fast>等级头衔</Fast>
+			<Fasturl><![CDATA[Club/KS.GuestGrade.asp?typeflag=1]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMB10003</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		<Fastmenu>
+			<Fast>勋章管理</Fast>
+			<Fasturl><![CDATA[Club/KS.GuestMedal.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMB10004</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		
+		
+	</item>
+</field>

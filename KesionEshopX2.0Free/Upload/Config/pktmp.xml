@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<labeltemplate>
+   <label name="tmp">
+      <![CDATA[
+		  	<style>
+			 .pk{}
+			 .pk h3{font-size:14px;padding-top:3px;line-height:35px;color: #030;}
+			 .pk h3 a:hover{text-decoration:underline;color:#f60;}
+			 .pkleft{width:32%;padding:0 10px ; border:#E8E8E8 0px solid; float:left; text-align:left; line-height:22px; }
+			 .pkmiddle{float:left; text-align:center;padding-top:3px; margin-bottom:10px;}
+			 .pkright{width:32%;padding:0 10px ;border:#E8E8E8 0px solid; float:right; text-align:left; line-height:22px;}
+			 .pkleft span{display:block;padding-left:15px;height:27px;line-height:27px;font-size:12px;background:url({$GetSiteUrl}images/default/pk_y.png) no-repeat 0 7px; color:#000; font-weight:bold;}
+			 .pkright span{display:block;padding-left:15px;height:27px;line-height:27px;font-size:12px;background:url({$GetSiteUrl}images/default/pk_y.png) no-repeat 0 7px; color:#000; font-weight:bold;}
+			 .pkps{width:240px;margin:0 auto;}
+             .pkps div{ width:50%;float:left }
+             .pkps div.f1{ background:#E4F3F6;text-align:center;}
+             .pkps div.f2{ background:#ff6600;text-align:center;}
+             .pk .bottom {text-align:center;height:33px;line-height:33px;}
+			 
+			</style>
+			
+			<div class="pk">
+			    <h3><a href="{$GetSiteUrl}plus/pk/pk.asp?id={$PKID}" target="_blank">{$GetPKTitle}</a></h3>
+				<div class="pkmain2box">
+					<div class="pkleft"><span>正方观点</span>{$GetZFTips}</div>
+					<div class="pkmiddle"><img src="{$GetSiteUrl}images/default/pk.gif"/></div>
+					<div class="pkright"><span>反方观点</span>{$GetFFTips}</div>
+				</div>
+				<div class="clear"></div>
+				<div class="pkps">
+						<div class="f1">{$ZFNum}人支持</div>
+						<div class="f2">{$FFNum}人支持</div>
+				    </div>
+				<div class="clear"></div>
+				<div class="bottom"><a href="{$GetSiteUrl}plus/pk/pk.asp?id={$PKID}" target="_blank">我要发布观点</a>&nbsp;|&nbsp;<a href="{$NewsLink}" target="_blank">查看背景新闻</a></div>
+	     </div>
+	 ]]>
+   </label>
+  
+   
+</labeltemplate>

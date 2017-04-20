@@ -1,0 +1,186 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$GetProductName}-{$GetClassName}</title>
+{$GetClass_Meta_KeyWord}
+{$GetClass_Meta_Description}
+<link href="{$GetInstallDir}images/style.css" type=text/css rel=stylesheet>
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javascript"></script>
+<script src="{$GetInstallDir}ks_inc/common.js" type="text/javascript"></script>
+<script src="{$GetSiteUrl}shop/js/shop.compare.js"></script>
+<script src="{$GetSiteUrl}shop/js/shop.detail.js"></script>
+<SCRIPT type=text/javascript>
+jQuery(document).ready(function(){
+	var SDmodel = new scrollDoor();
+	SDmodel.sd(["m01","m02","m03"],["c01","c02","c03"],"sd05","sd06");
+})
+</SCRIPT>
+
+<!--[if IE 6]>
+<script src="{$GetInstallDir}js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+</head>
+<body> 
+{LB_头部通用}
+
+<div class="demand_box">
+	<div class="demand_l">
+		{$GetTopClassName}
+	</div>
+	<div class="demand_r">
+		<ul>
+		{LB_子栏目导航}
+		</ul>
+	</div>
+</div>
+
+
+<div class="blank10"></div>
+<div class="banner">{=GetAdvertise(36)}</div>
+<div class="blank10"></div>
+<div class="navigation">{LB_位置导航}</div>
+
+
+<div class="clear blank10"></div> 
+  
+<!--商品内容页begin-->
+
+<div class="shopnr mainbox">
+    
+	<div class="shopnr01">
+	         <div class="left">
+			    <div class="left01">
+			       <div class="title">同类热销商品</div>
+				   <div class="left01box">
+					  <ul>
+						{LB_同类热销商品}
+					  </ul>
+                   </div>
+			    </div>
+			 </div>
+	 
+			 <div class="right01">
+				
+				 <div class="productbox">
+					 <div class="productl" style="position:relative;z-index:1">
+					  {=GetGroupPhoto(350,350)}
+					  
+					  <div class="product_comp">
+                          <a href="javascript:void(0)" onClick="add({$InfoID},'{$GetProductName}');"><img src="{$GetSiteUrl}shop/images/buttons_comp.jpg"></a> 
+                          <a href="{$GetSiteUrl}User/User_Favorite.asp?Action=Add&ChannelID=5&InfoID={$InfoID}" target="favhidframe"><img src="{$GetSiteUrl}shop/images/buttons_coll.jpg"></a>
+                      </div>
+					  <iframe src="about:blank" name="favhidframe" style="display:none"></iframe>
+				 </div>
+				 
+				 <div class="productr">
+					<ul>
+					   <h3>{$GetProductName}</h3> 
+					  <li>商品货号： <span>{$GetProductID}</span></li>
+					  <li>品牌商标： <span> {$GetBrandName}</span></li>
+					  <li>市 场 价： <del>￥{$GetPrice_Market}</del> 元 </li>
+					  <li style="height:auto;">
+					  <style>
+					  .vipprice{font-size:18px;font-weight:bold}
+					  .price{font-size:12px;}
+					  .carbox input[type="text"]{*vertical-align:middle;_vertical-align:middle;}
+					  </style>
+					  <script src="/shop/ajax.getdate.asp?id={$InfoID}&action=Shop_ShowPrice"></script>
+					  </li>
+					  <li>获赠积分： <span>{$GetScore}</span></li>
+					  <li>上架时间： <span> {$GetProductDate}</span></li>
+					  <li>已 销 售： <span class="sales"> {$GetHasSold}</span> {$GetProductUnit}</li>
+					  <li>浏 览 量： 已有<span class="hits">{$GetHits}</span>人关注</li>
+					</ul>
+					
+					<ul>
+						{$GetAddCarAttribute}
+					</ul>
+					
+					 <div class="share"><a class="bshareDiv" href="http://www.bshare.cn/share">分享按钮</a><script language="javascript" type="text/javascript" src="http://static.bshare.cn/b/button.js#uuid=395e9bd9-6962-46f8-b9e1-d5e7455d98c4&style=2&textcolor=#000&bgcolor=none&bp=qqmb,sinaminiblog,sohubai,renren&ssc=false&sn=true&text=分享到"></script></div>
+				 </div>
+				 </div>
+				 
+				 
+				 
+			 </div>
+        </div>
+        <div class="clear blank10"></div>
+        <div class="shopnr02">         
+                         <!--------------------------------------------------->
+                    	  <div class="left">
+                            <div class="left01">
+                               <div class="title">商品导航</div>
+                               <div class="left01box">
+                                   <script language="javascript" type="text/javascript" src="/JS/shop.js"></script>
+                               </div>
+                            </div>
+                            <div class="clear blank10"></div>
+                            <div class="left02">
+                               <div class="title">最近浏览商品</div>
+                               <div class="left02box">
+                                  <ul>
+                                    <script src='{$GetInstallDir}plus/browsing.asp?channelid={$ChannelID}&id={$InfoID}&Num=10'></script>
+                                  </ul>
+                               </div>
+                            </div>
+                            
+                            	<!--------------------------------------------------->
+                         </div>      
+                         <div class="right02">
+                                <!-- 商品详情 -->
+                       
+                        
+                             <!--最新动态-->
+                            <div class="scrollFrame">
+							   
+                                 <ul class="scrollUl4">
+                                    <li class="sd05" id=m01>商品介绍</li>
+                                    <li class="sd06" id=m02>售后服务</li>
+                                    <li class="sd06" id=m03>客户点评</li>
+                                </ul>
+								
+                                <div class="bor03 cont">
+                                    <div class="display productline" id=c01>
+                                        <p style="margin-top:20px;"><img src="/shop/images/icon2.gif" /></p>
+                                          <div class="productintro">{$GetProductIntro}</div>
+                                     </div>
+                                      
+                                    <div class="hidden productline" id=c02 >
+                                       <div class="productintro">{LB_售后服务}</div>
+                
+                                    </div>
+                                    
+                                     <div class="hidden productline" id=c03 >
+                                        <div class="productintro">  {=GetShowComments(11)}<br />{=GetWriteComments(11)}</div>
+                
+                                    </div>
+                                    
+                                </div>
+                            
+                
+                   <!--商品详情结束--> 
+                          
+                         </div>
+		 
+		 </div>
+	
+</div>
+
+
+</div>
+<!---内容页主体end-->
+<div class="clear blank10"></div>
+{LB_商城服务}
+<div class="clear blank10"></div>
+
+
+<!--版权信息-->
+{LB_尾部通用}
+<!--版权信息-->
+
+</body>
+</html>

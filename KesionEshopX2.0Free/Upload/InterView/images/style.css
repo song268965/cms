@@ -1,0 +1,195 @@
+﻿/*通用样式*/
+*{margin:0;padding:0;word-wrap:break-word;}
+body{font:12px/1.75 "宋体", arial, sans-serif,'DejaVu Sans','Lucida Grande',Tahoma,'Hiragino Sans GB',STHeiti,SimSun,sans-serif;color:#333;}
+body{background:#fff url(body.png) repeat-x}
+html, body, h1, h2, h3, h4, ul, li, dl,input{ margin:0px;padding:0px;list-style-type:none }
+a{color:#333;text-decoration:none;}
+a:hover{text-decoration:underline;color:#900}
+a img{border:none;} 
+div,ul,li,p,form{padding: 0px; margin: 0px;list-style-type: none;}
+em{font-style: normal;font-weight: normal;}
+table {padding: 0px; margin: 0px;list-style-type: none;}
+dt,dl,dd {padding: 0px; margin: 0px;list-style-type: none;}
+form{margin:0px;padding:0px;}
+tr {padding: 0px; margin: 0px;list-style-type: none;}
+h3,h4{padding:0px; font-size:14px; font-weight:bold;}
+.clear {clear:both;height:0px; overflow:hidden;}
+.blank10{height:10px;overflow:hidden;}
+.dotline{border-bottom:#CCC 1px dashed;margin:8px;}
+.l{ float:left}.r{ float:right}
+
+
+
+.daohangbox{height:28px; line-height:28px;padding:0px 10px;border:1px solid #fff; background: #E6F3FE url(bg38.png) no-repeat 10px 50%; padding-left:27px}
+
+/*头部 Start*/
+.baiyun{ height:190px; background:url(baiyun.png) no-repeat 50% -25px; padding-top:10px}
+.bannerbox{width:998px;margin:0 auto; height:200px; position:relative}
+.bannerbox .loginbg{ position:absolute;width:200px; padding-left:85px; margin-left:710px;color:#ccc;}
+.bannerbox .loginbg a:hover{ color:#333; text-decoration:none}
+.bannerbox .loginbg a.regbtn{ float:left;width:44px; height:26px; background:url(reg.png) no-repeat}
+.bannerbox .loginbg a.regbtn:hover{ background:url(reg02.png) no-repeat; text-decoration:none}
+.bannerbox .loginbg a.loginbtn{ float:left;width:46px; height:26px; background:url(login.png) no-repeat}
+.bannerbox .loginbg a.loginbtn:hover{ background:url(login02.png) no-repeat; text-decoration:none}
+
+.bannerbox02{width:998px;margin:0 auto;margin-top:10px; border-bottom:2px solid #0C9AD8;}
+.bannerbox02 strong{font-size:16px; color:#069}
+
+.navmain{width:1002px;margin:0 auto; height:38px; background:url(nav.png); position:relative;}
+.navmain ul{ padding:0px 10px}
+.navmain ul li{ float:left;}
+.navmain ul li a{ display:block; padding:0px 20px;font-size:15px;height:38px;font-family:"\5FAE\8F6F\96C5\9ED1";color:#fff; line-height:38px;}
+.navmain ul li img{margin-top:9px}
+.navmain ul li.curr a{ background:url(currbg.png) no-repeat 0 5px;width:71px; padding:0px; text-align:center;color:#333}
+.submenu{ width:960px;margin:0 auto;padding:10px 0px 10px 0px;color:#666;font-size:11px; background:url(sub.png) no-repeat 50% 100%; }
+.submenu b{ float:left;width:80px;margin-top:1px;}
+.submenu a{ padding:0px 5px;font-size:12px;}
+
+.wrap{width:998px;margin:0 auto; padding:0px 10px; background:url(wrap.png) no-repeat 0 -4px;}
+
+/*头部通用End*/
+
+.lbanner{width:100px; height:500px;top:100px;left:0px;position:fixed;_position:absolute;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||10)-(parseInt(this.currentStyle.marginBottom,10)||0))); z-index:199999;}
+.lbanner img{width:100px; height:500px;}
+.lbanner .closebtn{width:17px; height:17px; background:url(close03.png) no-repeat; position:absolute;margin:5px 0px 0px 78px;}
+.lbanner .closebtn:hover{background:url(close04.png) no-repeat}
+.rbanner{width:100px; height:500px;top:100px;right:0px;position:fixed;_position:absolute;_top:expression(eval(document.documentElement.scrollTop+document.documentElement.clientHeight-this.offsetHeight-(parseInt(this.currentStyle.marginTop,10)||10)-(parseInt(this.currentStyle.marginBottom,10)||0)));  z-index:199999}
+.rbanner img{width:100px; height:500px;}
+.rbanner .closebtn{width:17px; height:17px; background:url(close03.png) no-repeat; position:absolute;margin:5px 0px 0px 78px;}
+.rbanner .closebtn:hover{background:url(close04.png) no-repeat}
+
+
+/*--在线访谈频道首页主体begin-*/
+.InterView{width:998px;margin-top:10px; background:url(bg36.png) no-repeat; height:100%; position:relative; padding:10px 0px;}
+.InterView .left{width:230px; float:left;}
+.InterView .left .leftbox{border:1px solid #bbd6e9; background:#e3f2ff;}
+.InterView .left .leftbox .leftbox1{border:1px solid #fff; padding-bottom:8px}
+.InterView .left .leftbox .leftbox1 .left01{}
+.InterView .left .leftbox .leftbox1 .left01 .title{ height:40px; line-height:30px; background:url(bg43.png) no-repeat 10px 8px}
+.InterView .left .leftbox .leftbox1 .left01 .title h4{border-bottom:2px solid #0661be; float:left;margin-left:10px; padding:0px 5px 0px 15px}
+.InterView .left .leftbox .leftbox1 .left01 ul li a{width:168px; height:30px;color:#256484;font-weight:bold; display:block; margin:0 auto;margin-top:2px; padding-left:42px; background:url(bg30.png) no-repeat; line-height:30px;}
+.InterView .left .leftbox .left01 ul li a:hover{background:url(bg32.png) no-repeat;color:#900; }
+.InterView .left .leftbox .left02{ padding:5px 0px; }
+.leftbox1 .tit{height:40px; line-height:30px; background:url(bg43.png) no-repeat 10px 8px;}
+.leftbox1 .tit  h3{border-bottom:2px solid #0661be; float:left;margin-left:10px; padding:0px 5px 0px 15px; font-weight:700}
+.leftbox1 .votetitle h3{ font-weight:500}
+.leftbox1 .vote{ padding-left:15px}
+
+.InterView .right{width:758px; float:right}
+.InterView .right .right01{ background:url(bg37.png); border:1px solid #bbd6e9}
+.InterView .right .right01 .daohangbox{height:28px; line-height:28px;padding:0px 10px;border:1px solid #fff; background:url(bg38.png) no-repeat 10px 50%; padding-left:27px}
+
+.InterView .right .right02{ background:url(bg39.png); border:1px solid #bbd6e9;margin-top:10px;}
+.InterView .right .right02 .right02box{height:55px;padding:5px 10px;border:1px solid #fff;}
+.InterView .right .right02 .right02box strong{color:#256484;}
+.InterView .right .right02 .right02box .sctext{width:170px;margin-left:5px; float:left; height:18px;border:1px solid #e5e5e5;border-top:1px solid #aaa; padding-left:5px;margin-right:5px;color:#999}
+.InterView .right .right02 .right02box .scbtn{width:48px; height:20px;border:0px; background:url(cxbtn.png) no-repeat; text-align:center; float:left;cursor:pointer}
+.InterView .right .right02 .right02box .gjscbtn{width:70px; height:20px;border:0px;margin:0px 8px; background:url(gjscbtn.png) no-repeat; text-align:center; float:left; cursor:pointer}
+
+.InterView .right .right03{margin-top:15px;}
+.InterView .right .right03 h4{ height:22px; line-height:22px;border-bottom:2px solid #2b87d1; }
+.InterView .right .right03 h4 span{ float:left;width:160px; text-align:center;font-size:12px;color:#fff;margin-left:15px; background:url(bg40.png) no-repeat}
+.InterView .right .right03 table tr.trtitle{ background:url(bg37.png);height:28px; line-height:28px;}
+.InterView .right .right03 table tr.trtitle td{border-bottom:1px solid #fff;font-weight:bold;color:#256484;}
+.InterView .right .right03 table tr.trbox01 td{ padding-top:10px; background:url(bg41.png) repeat-x;border-top:1px solid #bbd6e9}
+.InterView .right .right03 table tr{ height:30px; line-height:30px;}
+.InterView .right .right03 table tr td{ padding:0px 10px; }
+.InterView .right .right03 table tr td a .jieshaobox{width:500px; display:none; position:absolute; border:1px solid #bbd6e9; background:#e3f2ff;margin:15px 0px 0px 30px}
+.InterView .right .right03 table tr td a .jieshaobox ul{ padding:10px;border:1px solid #fff}
+.InterView .right .right03 table tr td a .jieshaobox ul li{ line-height:24px;}
+.InterView .right .right03 table tr td a .jieshaobox ul li strong{color:#256484}
+.InterView .right .right03 table tr td a .jieshaobox ul li.li02{width:50%; float:left}
+.InterView .right .right03 table tr td a:hover{ text-decoration:none;color:#333;}
+.InterView .right .right03 table tr td a:hover .jieshaobox{ display:block}
+.InterView .right .right03 table tr.trbox02 td{border-top:1px dashed #ccc}
+.InterView .right .ClassIntrobox{ background:#fff url(bg44.png) repeat-x;}
+.InterView .right .ClassIntrobox .zzftconter{ }
+.InterView .right .ClassIntrobox .zzftconter h4{ height:22px; line-height:22px;border-bottom:2px solid #0C9AD8; margin-bottom:10px;}
+.InterView .right .ClassIntrobox .zzftconter h4 span{ float:left;width:160px; text-align:left;font-size:16px;color:#069;margin-left:15px; background:url(bg40.png) no-repeat}
+.InterView .right .ClassIntrobox .zzftconter ul {}
+.InterView .right .ClassIntrobox .zzftconter ul li{ height:170px;}
+.InterView .right .ClassIntrobox .zzftconter ul li img.width{ width:170px; height:156px; border:1px solid #ccc; padding:2px;}
+.InterView .right .ClassIntrobox .zzftconter ul li dt{ width:100%; border-bottom:1px solid #bbd6e9; height:100%; overflow:hidden}
+.InterView .right .ClassIntrobox .zzftconter ul li p{float:left; text-indent:5px;}
+.InterView .right .ClassIntrobox .zzftconter ul li p.tit01{  line-height:24px; width:80px; height:100%; overflow:hidden; text-align:center; border-right:1px solid #bbd6e9; }
+.InterView .right .ClassIntrobox .zzftconter ul li p.tit011{ height:60px; }
+.InterView .right .ClassIntrobox .zzftconter ul li p.bt{ width:410px; font-weight:900}
+.InterView .right .ClassIntrobox .zzftconter ul li p.cont01{ width:400px; padding:5px;}
+
+
+/*--在线访谈频道首页主体end*/
+
+
+/*--在线访谈内容页主体begin-*/
+.InterViewpage{ background:url(bg36.png) no-repeat; padding-top:10px; width:998px;}
+.InterViewpage .title{font-size:14px; height:31px; line-height:31px; color:#256484; font-weight:900; padding-left:10px;  background:url(bg35.png) repeat-x;border:1px solid #BBD6E9;}
+.InterViewpage .title span{ background:url(bg46.png) no-repeat;padding-left:20px;}
+.InterViewpage .titlea {height:22px; line-height:22px;border-bottom:2px solid #2b87d1; margin-bottom:10px;}
+.InterViewpage .titlea span{float:left;width:100px;font-size:12px;font-weight:900; background:url(bg40.png) center no-repeat}
+.InterViewpage .zxft01-l{float: left;width:677px;}
+.InterViewpage .zxft01-l ul {}
+.InterViewpage .zxft01-l ul li{ height:170px;}
+.InterViewpage .zxft01-l ul li img.width{ width:210px; height:234px; border:1px solid #ccc; padding:2px; }
+.InterViewpage .zxft01-l ul li dt{ width:100%; border-bottom:1px solid #bbd6e9; height:26px; line-height:26px; overflow:hidden}
+.InterViewpage .zxft01-l ul li dt.zhaiyao{ height:129px; border:none}
+.InterViewpage .zxft01-l ul li p{float:left; text-indent:5px;}
+.InterViewpage .zxft01-l ul li p.bt{ width:325px; font-weight:900}
+.InterViewpage .zxft01-l ul li p.cont01{ width:315px; padding:5px;}
+.InterViewpage .zxft01-l ul li p.tit01{ width:80px;overflow:hidden; text-align:center; border-right:1px solid #bbd6e9; height:129px;}
+.InterViewpage .zxft01-l ul li p.tit011{ height:129px; border-right:1px solid #bbd6e9;}
+
+.InterViewpage .zxft01-r{ width:290px; float:right; padding:10px; border:1px solid #BBD6E9; background:#E3F2FF }
+.InterViewpage .zxft01-r .tit01{height:22px; line-height:22px;border-bottom:2px solid #2b87d1; margin-bottom:10px;}
+.InterViewpage .zxft01-r .tit01 span{float:left;width:160px; text-align:center;font-size:12px;color:#fff;margin-left:15px; font-weight:900; background:url(bg40.png) no-repeat}
+
+                 /*现在图片*/
+.InterViewpage .Picture	{ border:1px solid #BBD6E9; border-top:none}
+.InterViewpage .Picture .imglist{}
+.InterViewpage .Picture .imglist{ padding:10px 0;}
+.InterViewpage .Picture .imglist li{ margin-bottom:10px; margin-left:10px; float:left;border:1px solid #ccc;width:177px; text-align:center}
+.InterViewpage .Picture .imglist li img{width:175px;height:150px; padding:1px;border-bottom:1px solid #ccc;  }
+                /*现在图片end*/
+
+
+.InterViewpage .left{ padding:15px; float:left;width:705px; background:#f0f9fe;border:1px solid #c9dce5;border-top:0px;}
+.InterViewpage .left .left01{ height:125px; overflow:hidden}
+.InterViewpage .left .left01 .lititle{ float:left; height:95px;width:25px; text-align:center; line-height:22px;font-size:16px;font-weight:bold; padding:14px 10px;background:url(bg12.png) no-repeat;color:#256484;}
+.InterViewpage .left .left01 .lititle02{ float:left;height:95px;width:25px; text-align:center;line-height:22px;font-size:16px;font-weight:bold; padding:14px 10px; background:url(bg24.png) no-repeat;color:#256484;}
+
+.InterViewpage .left .left01 ul{width:620px; height:108px; padding:6px 15px; float:right; background:url(bg13.png) no-repeat}
+.InterViewpage .left .left01 ul li.li02{ height:26px; line-height:26px; padding-left:25px; background:url(bg11.png) no-repeat 10px 45%;border-bottom:1px solid #e3e3e3;}
+.InterViewpage .left .left01 ul li.li02 span{ padding-right:25px}
+.InterViewpage .left .left01 ul li.li02 span.span01 a{color:#256484}
+
+.InterViewpage .left .left02{ height:240px; background:#fff;border:1px solid #d2e2ea;border-right:1px solid #c9dce5;border-bottom:1px solid #c9dce5}
+.InterViewpage .left .left02 dl{ height:35px; line-height:30px; background:url(bg14.png) repeat-x}
+.InterViewpage .left .left02 dl dt{ float:left;font-size:14px; width:130px; text-align:center; background:url(bg16.png) no-repeat 100% 0}
+.InterViewpage .left .left02 dl dt.sd01{font-weight:bold;color:#fff; background:url(bg15.png) no-repeat; position:relative; z-index:19999; height:37px}
+.InterViewpage .left .left02 dl dt.more{ float:right; background:none; text-align:right; padding-right:10px;font-size:12px}
+.InterViewpage .left .left02 dl dt.more a{color:#1d537c}
+.InterViewpage .left .left02 table tr.trtitle{color:#256484;background:url(bg17.png) repeat-x 0 28px; height:37px;}
+.InterViewpage .left .left02 table tr.trtitle .trbg{ background:url(bg18.png) repeat-x 0 28px; text-align:left; padding-left:20px}
+.InterViewpage .left .left02 table tr td{ text-align:center; line-height:26px}
+.InterViewpage .right{ width:230px; float:right; height:360px;}
+.InterViewpage .right .right01{ background:#f0f9fe;border:1px solid #d2e2ea;border-right:1px solid #c3d7e1;border-bottom:1px solid #c3d7e1; height:204px; background:#fff}
+.InterViewpage .right .right01 h4{ height:30px; line-height:30px; background:url(bg34.png) no-repeat;border-bottom:1px solid #c9dce5;color:#256484; padding-left:15px}
+
+.InterViewpage .right .right02{ background:#f0f9fe;border:1px solid #d2e2ea;border-right:1px solid #c3d7e1;border-bottom:1px solid #c3d7e1; height:325px;margin-top:10px; background:#fff}
+.InterViewpage .right .right02 h4{ height:30px; line-height:30px; background:url(bg34.png) no-repeat;border-bottom:1px solid #c9dce5;color:#256484; padding-left:15px}
+.InterViewpage .right .right02 h4 span{ float:right}
+.InterViewpage .right .right02 h4 span a{color:#1d537c;font-weight:normal; padding-right:10px;font-size:12px;}
+.InterViewpage .right .right02 ul li.li01{ padding:10px; height:70px; overflow:hidden;}
+.InterViewpage .right .right02 ul li.li01 img{width:70px; height:60px;margin-top:2px; float:left}
+.InterViewpage .right .right02 ul li.li01 .r_ct{width:115px; float:right; padding-right:10px;}
+.InterViewpage .right .right02 ul li.li01 .r_ct a{color:#256484;}
+.InterViewpage .right .right02 ul li.li01 .r_ct .intro{color:#666; line-height:17px; padding-top:3px; height:60px; overflow:hidden}
+.InterViewpage .right .right02 ul li.li01 .r_ct .intro strong{color:#333;}
+.InterViewpage .right .right02 ul li.li02{ background:url(bg05.png) no-repeat 10px 50%; padding-left:20px; line-height:24px}
+.InterViewpage .right .right02 ul li.li02 a{color:#256484;}
+
+/*--在线访谈内容页主体end-*/
+
+
+
+
+

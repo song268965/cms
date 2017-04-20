@@ -1,0 +1,60 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>我的购物车--{$GetSiteTitle}</title>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+ 
+<link href="{$GetInstallDir}images/style.css" type=text/css rel=stylesheet>
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javascript"></script>
+<script src="{$GetInstallDir}ks_inc/common.js" type="text/javascript"></script>
+<!--[if IE 6]>
+<script src="{$GetInstallDir}js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+
+</head>
+<body> 
+{LB_头部通用}
+
+<div class="clear blank10"></div>
+<div class="banner">{=GetAdvertise(38)}</div>
+<div class="clear blank10"></div>
+
+<div class="clear blank10"></div>
+<div class="mainbox">
+	<div class="navsite">
+	  <div class="left"><img src="/shop/images/cartnav-step1.gif"></div>
+	  <div class="right"><img src="/shop/images/cartnav-cart.gif"></div>
+	</div>
+	<div class="clear blank10"></div>
+	
+	<!--商品内容页begin-->
+	
+	<script>
+	   $(function(){
+		  $(".cartbox .prolist li a:eq(0)").addClass("pimg");
+		  $(".cartbox .prolist li a:eq(1)").addClass("pname");
+		  $(".cartbox .prolist li a:eq(2)").css("margin-top","10px");   
+		})
+	</script>
+	<div class="cartbox">
+	 <div class="logintips">{$ShowLoginTips}</div>
+	 <div class="ShoppingCart">{$ShowShoppingCart}</div>
+	</div>
+	
+	<!---内容页主体end-->
+	<div class="clear blank10"></div>
+	{LB_商城服务}
+	<div class="clear blank10"></div>
+</div>
+
+
+<!--版权信息-->
+{LB_尾部通用}
+<!--版权信息-->
+
+
+</body>
+</html>

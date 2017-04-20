@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+		<html>
+		<head> 
+		<title>发表微博-{$GetSiteName}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Cache-control" content="max-age=1700">
+		<meta name="viewport" content="user-scalable=no, width=device-width">
+		<meta name="MobileOptimized" content="320">
+		<meta name="author" content="kesion.com">
+		<meta name="format-detection" content="telephone=no">
+		<link href="images/style.css" rel="stylesheet" type="text/css">
+		<script src="../ks_inc/jquery.js" type="text/javascript"></script>
+        <script src="../ks_inc/common.js" type="text/javascript"></script>
+		<script src="../ks_inc/weibo.js"></script>
+		<style type="text/css">
+			h2{font-size:22px;}
+			.rightml1{height:100%; overflow:hidden;}
+			.pf-bd{}
+			.pf-bd .fluid-input{ padding-top:10px}
+			.pf-bd .fluid-input .textinput{font-size:18px;width:94%; padding:8px;color:#b3b3b3;border:1px solid #ddd; height:80px; overflow:hidden;background:#fff url(../../../3g/images/input.png) repeat-x}
+			.pf-bd .pf-ft{height:80px;line-height:80px;}
+			.pf-bd .pf-cmds{width:50%; float:right; line-height:80px;}
+			.pf-bd .pf-acts{width:40%; float:left;}
+			.pf-bd .pf-acts a{ display:block; float:left; padding:0px 8px;}
+			.pf-bd .pf-acts a:hover{ color:red; text-decoration:none;}
+		</style>
+<body>
+		
+<script type="text/javascript"> 
+//===========================点击展开关闭效果====================================
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+var openTip = oOpenTip || "";
+var shutTip = oShutTip || "";
+if(targetObj.style.display!="none"){
+   if(shutAble) return;
+   targetObj.style.display="none";
+   if(openTip && shutTip){
+    sourceObj.innerHTML = shutTip; 
+   }
+} else {
+   targetObj.style.display="block";
+   if(openTip && shutTip){
+    sourceObj.innerHTML = openTip; 
+   }
+}
+}
+</script>
+<div class="lmposition">
+	<div class="lmbg">
+		发表微博<a href="#" onClick="openShutManager(this,'box01')" class="a_btn">&nbsp;</a><a href="{$GetSiteUrl}3g/user.asp" class="a_btn02">&nbsp;</a><a href="javascript:location.reload();void(0);"><img src="{$GetSiteUrl}3g/images/r.png" align="right" style="margin-right:15px" /></a>
+	</div>	
+</div>
+<div id="box01" class="xl_box02" style="display:none">
+	<div class="topbg"></div>
+	<ul>
+		{LB_3G二级栏目导航}
+	</ul>
+</div>
+<div class="MiddleCont">
+			
+			<div class="rightml1" style="padding:15px">
+							  <h2>
+							  <img src="{$GetInstallDir}user/images/2.png" /><Br/>
+							  <span>剩余 <label style="width:40px;font-weight:bold;color:#999;font-size:14px;" id="commentmax">{#MaxLen}</label> 个字</span></h2>
+							  <div class="pf-bd">
+									<div class="fluid-input">
+									 <textarea class="textinput" onClick="checkcommentlength(this,{#MaxLen});" name="msg" id="msg" onFocus="if (this.value=='有什么新鲜事想告诉大家！'){this.value='';}" onBlur="if(this.value==''){this.value='有什么新鲜事想告诉大家！';}"  onkeydown="checkcommentlength(this,{#MaxLen});" onKeyUp="checkcommentlength(this,{#MaxLen});">有什么新鲜事想告诉大家！</textarea></div>
+									<div class="blank10 clear"></div>
+										<div class="pf-ft">
+									
+                                         
+											<div class="pf-acts">
+												
+												<strong>同步选项</strong>
+												{#ShowSynchronizedOption} 
+												
+												
+											</div>
+											<div class="pf-cmds">
+											  <input type="button" value=" 发表 " onClick="{#CheckJS}return(checkmsg());" class="button">
+											</div>
+									</div>
+								
+								</div>
+					
+						</div>		
+		
+		
+			
+</div>
+<div class="blank10 clear"></div>
+
+	 <!--3G底部start-->  
+		{LB_3G底部通用}
+	 <!--3G底部end-->  
+</body>
+</html>

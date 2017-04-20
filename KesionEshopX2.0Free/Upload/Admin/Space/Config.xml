@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<field>
+	<item id="11">
+		<Fast>空间门户</Fast>
+		<Role>space0</Role>
+		<Fastico>icon0{#BasicType}.png</Fastico>
+		<TF>1</TF>
+		<Fastmenu>
+			<Fast>空间参数设置</Fast>
+			<Fasturl><![CDATA[Space/KS.SpaceSetting.asp]]></Fasturl>
+			<Attribute>SetParam</Attribute>
+			<Role>KSMS10000</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>
+		
+       <Fastmenu>
+			<Fast>个人空间管理</Fast>
+			<Fasturl><![CDATA[Space/KS.Space.asp?showtype=1]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10001</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+       <Fastmenu>
+			<Fast>空间博文管理</Fast>
+			<Fasturl><![CDATA[Space/KS.SpaceLog.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10002</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		
+       <Fastmenu>
+			<Fast>微博数据管理</Fast>
+			<Fasturl><![CDATA[User/KS.UserLog.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS20016</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		
+       <Fastmenu>
+			<Fast>用户相册管理</Fast>
+			<Fasturl><![CDATA[Space/KS.SpaceAlbum.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10003</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		
+       <Fastmenu>
+			<Fast>用户圈子管理</Fast>
+			<Fasturl><![CDATA[Space/KS.SpaceTeam.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10004</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		
+       <Fastmenu>
+			<Fast>用户留言管理</Fast>
+			<Fasturl><![CDATA[Space/KS.SpaceMessage.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10005</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		
+       <Fastmenu>
+			<Fast>用户歌曲管理</Fast>
+			<Fasturl><![CDATA[Space/KS.SpaceMusic.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10007</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		
+       <Fastmenu>
+			<Fast>企业空间管理</Fast>
+			<Fasturl><![CDATA[Space/KS.EnterPrise.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10008</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		
+       <Fastmenu>
+			<Fast>企业新闻管理</Fast>
+			<Fasturl><![CDATA[Space/KS.EnterPriseNews.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10009</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		
+       <Fastmenu>
+			<Fast>企业产品管理</Fast>
+			<Fasturl><![CDATA[Space/KS.EnterPrisePro.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10010</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+       <Fastmenu>
+			<Fast>行业分类管理</Fast>
+			<Fasturl><![CDATA[Space/KS.EnterPriseClass.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10012</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+       <Fastmenu>
+			<Fast>行业广告管理</Fast>
+			<Fasturl><![CDATA[Space/KS.EnterPriseAD.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10013</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+       <Fastmenu>
+			<Fast>荣誉证书管理</Fast>
+			<Fasturl><![CDATA[Space/KS.EnterPriseZS.asp]]></Fasturl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS10011</Role>
+			<Fastico>6.png</Fastico>
+			<order>1</order>
+		</Fastmenu>		
+		
+		
+		
+	</item>
+</field>

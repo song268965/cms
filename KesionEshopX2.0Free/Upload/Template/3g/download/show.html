@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+<title>{$GetArticleTitle}-{$GetClassName}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="author" content="kesion.com">
+<meta name="format-detection" content="telephone=no">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/common.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/style.css" rel="stylesheet" type="text/css">
+<script src="{$GetSiteUrl}ks_inc/jquery.js"></script>
+<script src="{$GetSiteUrl}ks_inc/common.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/pageauto.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.js"></script>
+<SCRIPT language=JavaScript type=text/JavaScript> 
+function resizepic(thispic){ if(thispic.width>300) thispic.width=300;}
+function showimg(src){	window.open(src);}
+function bbimg(o){}
+</SCRIPT>
+<style>
+.lmbg .lmbgtit{ background:url({$GetSiteUrl}3g/images/tit06.png) no-repeat 50% 50%;}
+</style>
+
+</head>
+
+<body>
+{LB_3g头部通用}
+<section class="location">{$Navigation}</section>
+<section class="MiddleCont whitebg">
+   <div class="content">
+        <h1>{$GetArticleTitle}</h1>
+        <div class="newscontent">{=GetDownPhoto()}</div>
+        <div class="listinfo clearfix">
+          <ul>
+             <li><span>软件作者：</span> {$GetDownAuthor}</li>
+             <li><span>软件大小：</span> {$GetDownSize}</li>
+             <li><span>软件类别：</span> {$GetDownType} </li>
+             <li><span>软件语言：</span> {$GetDownLanguage}</li>
+             <li><span>软件评级：</span> {$GetRank}</li>
+             <li><span>运行环境：</span> {$GetDownSystem}</li>
+             <li><span>更新时间：</span> {$GetDownDate}</li>
+             <li><span>软件授权：</span> {$GetDownPower}</li>
+             <li><span>所需点数：</span> <font color="red">{$GetDownPoint}</font></li>
+             <li><span>插件情况：</span><img src="{$GetInstallDir}images/plug.gif" align="absmiddle" /> </li>
+             <li><span>相关链接：</span> {$GetDownLink}</li>
+             <li class="full"><span>演示地址：</span> {$GetDownYSDZ}</li>
+             <li class="full"><span>软件下载：</span> {$GetDownAddress}</li>
+             <li class="full"><span>软件介绍：</span> {$GetDownIntro}</li>
+             
+          </ul>
+        </div>
+	</div>
+</section>
+
+<section class="comment">
+    <div class="comtit">网友评论：</div>
+    <div class="comcont">
+        <div class="cont">{$GetWriteComment}</div>
+        <div class="list">{$GetShowComment}</div>
+    </div>
+</section>
+</body>
+</html>

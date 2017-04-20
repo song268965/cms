@@ -1,0 +1,182 @@
+﻿/*通用样式*/
+*{margin:0;padding:0;word-wrap:break-word;}
+body{font:12px/1.75 "宋体", arial, sans-serif,'DejaVu Sans','Lucida Grande',Tahoma,'Hiragino Sans GB',STHeiti,SimSun,sans-serif;color:#444;}
+body{background:#fff;}
+html, body, h1, h2, h3, h4, ul, li, dl,input{ font-family:Arial, Helvetica, sans-serif;  margin:0px;padding:0px;list-style-type:none }
+a{color:#333;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a img{border:none;} 
+div,ul,li,p,form{padding: 0px; margin: 0px;list-style-type: none;}
+em{font-style: normal;font-weight: normal;}
+table {padding: 0px; margin: 0px;list-style-type: none;}
+dt,dl,dd {padding: 0px; margin: 0px;list-style-type: none;}
+form{margin:0px;padding:0px;}
+tr {padding: 0px; margin: 0px;list-style-type: none;}
+h3,h4{padding:0px; font-size:14px; font-weight:bold;}
+.clear {clear:both;height:0px; overflow:hidden;}
+.blank10{height:10px;overflow:hidden;}
+.dotline{border-bottom:#CCC 1px dashed;margin:8px;}
+
+.header{width:100%;margin:0px auto; height:33px;}
+.header .top{width:951px;margin:0px auto;}
+.header .top .left{width:550px;float:left;text-align:left; line-height:33px;}
+.header .top .right{width:300px;float:right;text-align:right; line-height:33px;}
+
+
+.banner{background:url(header_bg.jpg) top center;height:315px;}
+.banner h1{font-size:30px;font-weight:bold;color:#fff;text-align:left;padding-top:105px;padding-left:825px;}
+.banner h2{font-size:12px;font-weight:normal;color:#2F6D9A;text-align:left;padding-top:10px;padding-left:180px;}
+
+.menu{width:951px; margin:0px auto; margin-top:93px; height:50px;}
+.menu li{float:Left;text-align:center;background:url(menu_bg.gif) right no-repeat;}
+.menu a{font-size:14px;color:#fff; display:block; padding:13px 20px;}
+.menu a:hover{ color:#82b638; text-decoration:none;}
+
+.mainbody{width:951px; margin:0px auto; margin-top:10px;}
+.mainbodyl{width:240px;float:right;}
+.mainbodyl1{width:200px;background:#D9F2B6}
+.mainbodyl1 .title{height:25px;line-height:25px;text-align:left;font-weight:bold;color:#82b638;padding-left:10px; padding-top:10px;}
+.artlist #Verifycode{height: 28px;}
+.box{padding:8px;border-top:none;height:100%;overflow:hidden;}
+
+
+.mainbodyl1 .box .userinfomenu li{width:48%; float:left; text-align:left; background:url(blog_56.jpg) no-repeat; height:28px; line-height:28px; margin:2px 1px;}
+.mainbodyl1 .box .userinfomenu a{ padding-left:6px;}
+.mainbodyl1 .box .userinfomenu a:hover{ color:red; text-decoration:none;}
+
+.userzl li{width:78px;margin:5px;float:left;border:#E5E5E5 1px solid;}
+
+.mainbodyl1 .box .ul_brief{clear:both;text-align:left;margin-top:10px;}
+.mainbodyl1 .box .ul_brief li{line-height:24px;}
+
+.mainbodym{width:700px;float:left;}
+.mainbodyr{width:200px;float:right;}
+
+.mainbodyl2{background:#D9F2B6;margin-top:10px;}
+.mainbodyl2 .title{height:25px;line-height:25px;text-align:left;font-weight:bold;color:#82b638;padding-left:10px;}
+.friends{border-top:none;}
+.friends ul{padding:8px;height:100%;overflow:hidden;}
+.friends li{width:33%;float:left;height:98px;overflow:hidden;}
+.friends a.b{margin:5px;}
+.friends a.b img{width:40px;height:40px;border:#ccc 1px solid;padding:2px;}
+
+.ul_stats{}
+.ul_stats ul{padding:8px;text-align:left;line-height:24px;}
+.ul_stats ul li{ width:33%; float:left; text-align:center; height:60px; overflow:hidden; font-size:12px;}
+.ul_stats ul li span{ display:block; text-decoration:none;}
+
+.mainbodym .wzfl{font-size:12px;line-height:33px;text-align:left;padding-left:10px;}
+.mainbodym .wzfl span.classcolor{}
+.mainbodym .wzfl span.classcolor a{ color:green;}
+.mainbodym .wzfl span.classcolor a:hover{ color:red; text-decoration:none;}
+
+.mainbodymbox{margin-top:10px;}
+.mainbodymbox .title{height:25px;line-height:25px;text-align:left;font-weight:bold;padding-left:10px; font-size:14px; color:#82b638; border-bottom:1px dashed #82b638}
+.dzwz{border-top:none;}
+.dzwz ul{padding:8px;}
+.dzwz .ul_recommend{text-align:left; background:url(../blog1/58pic_523928f62b1af_12.gif) no-repeat; background-size:30px; background-position:10px 4px; padding-left:55px;}
+.dzwz .ul_recommend li{line-height:24px;background:url(dot.jpg) no-repeat 5px 10px;padding-left:15px;border-bottom:#B7E0EC 1px dotted;}
+.dzwz .ul_recommend span{color:#C4BED4;}
+
+.dzwz .ul_recommend span.titletips a{ font-size:18px; font-weight:bold;}
+.dzwz .ul_recommend span.titletips a:hover{ color:red; text-decoration:none;}
+
+.dzwz .ul_recommend .splittd a{ color:#555;}
+.dzwz .ul_recommend .splittd a:hover{ color:red; text-decoration:none;}
+
+
+.dzwz .ul_recommend .intro{ line-height:22px; color:#666;}
+
+
+
+.artlist{padding:8px;text-align:left;}
+.artlist .splittd{background:url(../blog1/58pic_523928f62b1af_12.gif) no-repeat; background-size:30px; background-position:0px 4px; padding-left:45px; height:40px;}
+.artlist .splittd span.titletips a{ color:green;}
+.artlist .splittd span.titletips a:hover{ color:red; text-decoration:none;}
+.artlist span.intro{ line-height:22px; color:#666;}
+
+.artlist .splittd a{}
+.artlist .splittd a:hover{ color:red; text-decoration:none;}
+
+.artlist textarea{ padding:8px; line-height:24px;color:#999;}
+
+.xiangce{padding:8px;text-align:left;background:url(../blog1/58pic_523928f62b1af_12.gif) no-repeat; background-size:30px; padding-left:55px; background-position:10px 3px;}
+.xiangce span.titletips{line-height:30px;}
+.xiangce span.titletips a.username{ color:green;}
+.xiangce a.more{line-height:30px; color:green;}
+.xiangce a.zp{background:#f1f1f1;}
+.xiangce a.zp:hover{background:#ff9900;}
+.xiangce a.zp img{width:95px;height:95px;}
+.xiangce a:hover{ color:red; text-decoration:none;}
+
+.mainbodyr1{ background:#D9F2B6;}
+.mainbodyr1 .title{height:25px;line-height:25px;text-align:left;font-weight:bold;color:#82b638;padding-left:10px; font-size:14px;}
+.note{padding:8px;line-height:24px;text-align:left; background:url(../blog1/58pic_523928f62b1af_12.gif) no-repeat; background-size:30px; padding-left:55px; background-position:10px 3px;}
+.rili{padding:8px;line-height:24px;text-align:left;}
+
+.mainbodyr2box{ padding:8px;background:url(../blog1/58pic_523928f62b1af_12.gif) no-repeat; background-size:30px; padding-left:55px; background-position:10px 3px;}
+.mainbodyr2box a{}
+.mainbodyr2box a:Hover{ color:red; text-decoration:none;}
+
+
+
+.mainbodyr2{background:#D9F2B6;margin-top:10px;}
+.mainbodyr2 .title{height:25px;line-height:25px;text-align:left;font-weight:bold;color:#82b638;padding-left:10px;  position:relative; font-size:14px;}
+.mainbodyr2 .title span{position:absolute;right:10px; top:0px;}
+.mainbodyr2 .title span a{ color:#fff; font-weight:normal;}
+
+
+.mainbody .blogmain{width:700px; float:left;background:#D9F2B6; }
+.mainbody .blogmain .location{background:#D9F2B6;font-size:12px;line-height:33px;text-align:left;padding-left:10px;}
+.mainbody .blogmain .location span{padding-right:10px;}
+.mainbody .blogmain .loglist{ background:#EFF8FA; margin-top:10px; padding:8px;}
+.mainbody .blogmain .loglist .t{ line-height:30px;}
+.mainbody .blogmain .loglist .t a{ font-size:14px; font-weight:bold;}
+.mainbody .blogmain .loglist .t a:hover{ color:red; text-decoration:none;}
+.mainbody .blogmain table{ margin:10px;}
+.mainbody .blogmain .loglist .intro{ line-height:24px; color:#999;}
+
+
+
+
+.mainbody .blogmain .border{width:98%; padding:10px;margin-top:10px; height:100%; overflow:hidden;}
+.mainbody .blogmain .border .titlename{ font-weight:bold; color:#000; background:#f1f1f1;}
+.mainbody .blogmain .border .splittd{padding-left:15px;}
+.mainbody .blogmain .border .splittd a{}
+.mainbody .blogmain .border .splittd a:hover{ color:red; text-decoration:none;}
+
+.mainbody .blogmain .border span.tips{ color:#999; padding-left:15px;}
+
+.mainbody .blogmain .albumlist{margin-top:10px; padding:10px; height:100%; overflow:hidden;}
+.mainbody .blogmain .albumlist li{width:25%; float:left; text-align:center;}
+.mainbody .blogmain .albumlist .albumbg img{width:120px; height:100px;}
+.mainbody .blogmain .albumlist b a{ font-size:12px; font-weight:normal;}
+.mainbody .blogmain .albumlist b a:hover{ color:red; text-decoration:none;}
+
+
+.mainbody .blogmain .wzfl{font-size:12px;line-height:33px;text-align:left;padding-left:10px; margin-top:10px;}
+.mainbody .blogmain .border strong{padding-left:15px; line-height:30px;}
+.mainbody .blogmain .border a{ color:green;}
+.mainbody .blogmain .border td{ padding-left:15px;}
+
+.mainbody .blogmain .xxcategory{line-height:33px;text-align:left;padding-left:10px; margin-top:10px;}
+
+.mainbody .blogmain .comment_write_table{margin-top:10px;width:96%;}
+.mainbody .blogmain .comment_write_table .comment_write_title{ line-height:30px; padding-left:15px;}
+.mainbody .blogmain .comment_write_table textarea{ padding:10px; line-height:24px; color:#999;}
+
+.artlist .inputname{ color:#999; height:28px;}
+.artlist .inputcontent{ width:98%; color:#999; overflow:auto; margin-top:10px;}
+.btn{ background:#46BBFC; color:#fff; border:1px solid #46BBFC; height:24px; margin-top:10px; width:120px;}
+.artlist .comment_write_title{background:url(58pic_523928f62b1af_13.gif) no-repeat; background-size:30px; height:30px; padding-left:60px; line-height:30px;}
+.blogmain .writeblog{border: #efefef 1px dotted;text-align:center;height:50px;line-height:50px; background:url(58pic_523928f62b1af_01.gif) no-repeat; background-size:30px; background-position:218px 7px;}
+.blogmain .albumlist .setpicture{border: #efefef 1px dotted;text-align:center; background:url(58pic_523928f62b1af_01.gif) no-repeat; background-size:30px; background-position:250px 7px; height:50px; line-height:50px;}
+.blogmain .border .circle{border: #efefef 1px dotted;text-align:center; height:50px; line-height:50px; background:url(58pic_523928f62b1af_01.gif) no-repeat; background-size:30px; background-position:250px 7px;}
+.blogmain .friend{border: #efefef 1px dotted;text-align:center; background:url(58pic_523928f62b1af_01.gif) no-repeat; background-size:30px; background-position:250px 7px; height:50px; line-height:50px;}
+.blogmain .border .textmessage{border: #efefef 1px dotted;text-align:center;height:50px;line-height:50px; background:url(58pic_523928f62b1af_01.gif) no-repeat; background-size:30px; background-position:218px 7px;}
+.blogmain .messageme{ background:url(58pic_523928f62b1af_01.gif) no-repeat; background-size:30px; background-position:230px 7px; height:50px; line-height:50px;text-align:center}
+
+
+
+
+.copyright{width:951px; margin:0px auto; margin-top:10px; line-height:33px;color:#000; text-align:center;}

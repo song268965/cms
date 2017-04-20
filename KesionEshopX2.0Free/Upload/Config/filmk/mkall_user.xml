@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<field>
+	<item isenable="1" id="0">
+		<Fast>发布首页</Fast>
+		<Fasturl>Include/refreshindex.asp</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_1.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="1">
+		<Fast>基本设置</Fast>
+		<Fasturl>System/KS.Setting.asp</Fasturl>
+		<Attribute>SetParam</Attribute>
+		<Fastico>images/mk_6.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="2">
+		<Fast>栏目管理</Fast>
+		<Fasturl>System/KS.Class.asp</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_8.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="4">
+		<Fast>产品管理</Fast>
+		<Fasturl>System/KS.ItemInfo.asp?ChannelID=5</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_10.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="5">
+		<Fast>新闻管理</Fast>
+		<Fasturl>System/KS.ItemInfo.asp?ChannelID=1</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_2.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="6">
+		<Fast>订单处理</Fast>
+		<Fasturl>KS.ShopOrder.asp?ChannelID=5</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_3.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="7">
+		<Fast>用户管理</Fast>
+		<Fasturl>User/KS.User.asp</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_11.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="8">
+		<Fast>模板管理</Fast>
+		<Fasturl>System/KS.Template.asp</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_4.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="9">
+		<Fast>表单管理</Fast>
+		<Fasturl>plus/Plus_Form/KS.Form.asp</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_5.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="10">
+		<Fast>模型管理</Fast>
+		<Fasturl>System/KS.Model.asp</Fasturl>
+		<Attribute>SetParam</Attribute>
+		<Fastico>images/mk_6.png</Fastico>
+		<order>1</order>
+	</item>
+	<item isenable="1" id="11">
+		<Fast>发布管理</Fast>
+		<Fasturl>Include/RefreshHtml.asp?action=ref|Fast|channelid=1</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_3.png</Fastico>
+		<order>1</order>
+	</item>
+		<item isenable="1" id="12">
+		<Fast>论坛管理</Fast>
+		<Fasturl>Club/KS.GuestBook.asp?Action=Main</Fasturl>
+		<Attribute>disabled</Attribute>
+		<Fastico>images/mk_5.png</Fastico>
+		<order>1</order>
+	</item>
+
+</field>

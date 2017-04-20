@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<table>
+	<item isdefault="1" id="1" issys="1">
+		<tablename>KS_GuestReply</tablename>
+		<descript><![CDATA[
+		默认回复数据表
+		]]>
+		</descript>
+	</item>
+</table>

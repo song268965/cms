@@ -1,0 +1,135 @@
+﻿/*通用样式*/
+*{margin:0;padding:0;word-wrap:break-word;}
+body{font:12px/1.75 "宋体", arial, sans-serif,'DejaVu Sans','Lucida Grande',Tahoma,'Hiragino Sans GB',STHeiti,SimSun,sans-serif;color:#444;}
+body{background:#69140E;}
+html, body, h1, h2, h3, h4, ul, li, dl,input{ font-family:Arial, Helvetica, sans-serif;  margin:0px;padding:0px;list-style-type:none }
+a{color:#333;text-decoration:none;}
+a:hover{text-decoration:underline;}
+a img{border:none;} 
+div,ul,li,p,form{padding: 0px; margin: 0px;list-style-type: none;}
+em{font-style: normal;font-weight: normal;}
+table {padding: 0px; margin: 0px;list-style-type: none;}
+dt,dl,dd {padding: 0px; margin: 0px;list-style-type: none;}
+form{margin:0px;padding:0px;}
+tr {padding: 0px; margin: 0px;list-style-type: none;}
+h3,h4{padding:0px; font-size:14px; font-weight:bold;}
+.clear {clear:both;height:0px; overflow:hidden;}
+.blank10{height:10px;overflow:hidden;}
+.dotline{border-bottom:#CCC 1px dashed;margin:8px;}
+.btn{ background:#E47068; border:1px solid #E47068; margin-top:10px; height:30px; width:120px; color:#FFFFFF;}
+
+.wrap{width:970px; margin:0px auto; margin-top:50px; background:#fff; margin-bottom:20px;}
+.header{width:970px; margin:0px auto; background:url(img01.jpg) no-repeat; height:100px;}
+.header .head{width:970px; margin:0px auto;}
+.header .head .left{width:370px; float:left; padding-left:70px; padding-top:20px;}
+.header .head .left img{width:200px; height:50px;}
+.header .head .right{width:500px; float:right; text-align:right; line-height:54px; padding-right:15px;}
+
+.banner{width:970px; margin:0px auto; background:url(banner.jpg) no-repeat; height:241px;}
+.banner h1{font-size:22px;padding-top:76px; color:#000;padding-left:30px;}
+
+.menu{width:970px;margin:0px auto; background:url(img02.jpg) repeat-x;height:40px; }
+.menu ul{ padding:0px 10px;}
+.menu li{width:70px; float:left; text-align:center;line-height:40px;}
+.menu a{color:#fff; display:block; background:url(img03.jpg) no-repeat top right;}
+.menu a:hover{ background:#333; color:#FFF; display:block; text-decoration:none;}
+
+
+.main{width:970px; margin:0px auto;}
+.main .left{width:267px; float:left; margin-left:5px;}
+.main .left .left01{ background:#fff;}
+.main .left .left01 .title{ background:url(img05.jpg) no-repeat; height:34px; line-height:34px; font-size:14px; font-weight:bold; color:#FFF; padding-left:32px;}
+.main .left .left01 .left01box{ border-top:none; padding:8px;}
+.main .left .left01 .left01box ul{padding-left:35px;}
+
+
+.main .left .left01 .left02box{border-top:none; padding:8px;}
+.main .left .left01 .left02box ul{}
+.main .left .left01 .left02box td{ line-height:25px; border-bottom:#f1f1f1 1px dashed;}
+.main .left .left01 .left02box a{}
+.main .left .left01 .left02box a:hover{ color:red; text-decoration:none;}
+
+
+
+.main .right{width:671px; float:left; margin-left:15px;}
+.main .right .note{ border:#E8E8E8 1px solid; height:30px; line-height:30px; background:#fff;padding-left:15px;}
+.main .right .right01{ background:#fff; height:100%; overflow:hidden;}
+.main .right .right01 .title{ border-bottom:1px dashed #BBBBBB; height:34px; line-height:34px; padding-left:38px; font-size:14px; font-weight:bold; color:#8C0209; position:relative;}
+.main .right .right01 .title span{ position:absolute; right:10px; top:3px;}
+.main .right .right01 .title span a{ font-size:12px; font-weight:normal; color:#000;}
+.main .right .right01 .title span a:hover{ color:red; text-decoration:none;}
+.main .right .right01 .right01box{ padding:8px; line-height:25px; text-indent:2em;}
+
+.main .right .right01 .right02box{ padding:8px;}
+.main .right .right01 .right02box .productlist{}
+.main .right .right01 .right02box .productlist li{width:25%; float:left; height:150px; overflow:hidden;}
+.main .right .right01 .right02box .productlist img{ padding:2px; border:#f1f1f1 1px solid; margin-bottom:8px;}
+.main .right .right01 .right02box .productlist a{}
+.main .right .right01 .right02box .productlist a:hover{ color:red; text-decoration:none;}
+
+.main .right .rightmain{ background:#fff;}
+.main .right .rightmain .productlist{}
+.main .right .rightmain .productlist ul{ padding:5px 0px;}
+.main .right .rightmain .productlist ul li{ width:155px; height:130px; float:left; padding-left:12px;}
+.main .right .rightmain .productlist ul li img{ width:155px; height:90px;}
+.main .right .rightmain .productlist .productname{ height:26px; line-height:26px; overflow:hidden;}
+
+.main .right .rightmain .location{ border:#E8E8E8 1px solid; height:30px; line-height:30px; background:#fff;padding-left:15px;}
+.main .right .rightmain .location a{ font-size:12px;}
+.main .right .rightmain .location span{padding-right:10px;}
+.main .right .rightmain h3{width:100px;margin-top:10px; display:block; background:#B74900; text-align:center; height:30px; line-height:30px; font-size:14px; font-weight:normal; color:#FFF; margin-bottom:10px;margin-left:10px;}
+.main .right .rightmain p{ padding:15px; text-indent:2em; line-height:25px;}
+
+
+.main .right .rightmain td{ line-height:30px; color:#999;}
+.main .right .rightmain a{ font-size:14px;}
+.main .right .rightmain a:hover{ color:red; text-decoration:none;}
+
+.main .right .rightmain .albumlist{ background:#fff; height:100%;}
+.main .right .rightmain .albumlist li{width:25%; float:left; text-align:center;}
+.main .right .rightmain .albumlist .albumbg{}
+.main .right .rightmain .albumlist .albumbg img{ border:#f1f1f1 1px solid; padding:2px; margin-bottom:8px;}
+.main .right .rightmain .albumlist b a{ font-size:12px; font-weight:normal;}
+
+.main .right .rightmain .loglist{ padding:15px; border-bottom:#f1f1f1 1px dashed;}
+.main .right .rightmain .loglist .t a{ font-weight:bold;}
+.main .right .rightmain .loglist .t span.tips{ color:#999; font-size:14px;}
+.main .right .rightmain .loglist .intro{ text-indent:2em; line-height:25px; color:#555;}
+.main .right .rightmain .loglist .intro .pic img{width:500px; height:300px;}
+.main .right .rightmain .loglist
+
+.main .right .rightmain .loglist span.tips{ font-size:12px; color:#333;}
+.main .right .rightmain .loglist span.tips a{ font-size:12px; color:#333;}
+
+
+.main .right .rightmain .border{ padding:15px;margin-top:10px;}
+.main .right .rightmain .border .titlename{ height:30px; line-height:30px; font-weight:bold; background:#f1f1f1;}
+.main .right .rightmain .border .splittd{border-bottom:#f1f1f1 1px dashed;}
+.main .right .rightmain .border .splittd a{ font-size:12px;}
+
+
+.main .right .rightmain .margin_t_5{}
+.main .right .rightmain .margin_t_5 .tb_b_1{height:30px; line-height:30px; font-size:14px; font-weight:bold; color:#CC0000; padding-left:15px;margin-bottom:10px;margin-left:10px; border-bottom:#f1f1f1 1px dotted;}
+.main .right .rightmain .margin_t_5 .lxxx{ padding:8px;}
+.main .right .rightmain .margin_t_5 .lxxx li{width:49%; float:left; line-height:25px;}
+
+
+.main .right .rightmain .comment_write_table{ padding:10px;}
+.main .right .rightmain .comment_write_table .comment_write_title span{ color:#000;}
+.main .right .rightmain .comment_write_table textarea{width:500px;padding:10px; line-height:25px; font-size:12px; color:#999;}
+.messageme{ background:url(58pic_523928f62b1af_01.gif) no-repeat; background-size:30px; background-position:215px 7px; height:50px; line-height:50px;text-align:center}
+.circle{border: #efefef 1px dotted;text-align:center; height:50px; line-height:50px; background:url(58pic_523928f62b1af_01.gif) no-repeat; background-size:30px; background-position:230px 7px;}
+
+.foot{width:970px; height:70px;margin:0px auto; text-align:center; line-height:70px; color:#999; background:url(img04.jpg) no-repeat;}
+
+
+
+
+
+
+
+
+
+
+
+

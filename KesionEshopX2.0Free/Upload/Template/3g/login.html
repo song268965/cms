@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+<title>会员登录</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="author" content="kesion.com">
+<meta name="format-detection" content="telephone=no">
+<link href="{$GetSiteUrl}3g/images/common.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}3g/images/style.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}3g/images/member.css" rel="stylesheet" type="text/css">
+<script src="{$GetSiteUrl}ks_inc/jquery.js"></script>
+<script src="{$GetSiteUrl}ks_inc/common.js"></script>
+</head>
+<script type="text/javascript">
+var check={
+   CheckForm:function(){
+	 var username=$('#Username').val();
+	 var pass=$('#Password').val();
+	 var vycode=$('#Verifycode').val();
+	 if (username==''||username=='UID/用户名/Email'){
+	      $.dialog.alert("请输入用户名！",function(){ $("#Username").focus();});
+		  return false;
+	 }
+	 if (pass==''){
+	      $.dialog.alert("请输入登录密码！",function(){ $("#Password").focus();});
+	      return false;
+	 }
+	 if (vycode=='' && {$IsShowVerifyCode}==1){
+	      $.dialog.alert("请输入验证码！",function(){ $("#Verifycode").focus();});
+		  return false;
+	 }
+	 return true;
+	}
+}
+
+</script>
+<body>
+<script type="text/javascript"> 
+//===========================点击展开关闭效果====================================
+function openShutManager(oSourceObj,oTargetObj,shutAble,oOpenTip,oShutTip){
+var sourceObj = typeof oSourceObj == "string" ? document.getElementById(oSourceObj) : oSourceObj;
+var targetObj = typeof oTargetObj == "string" ? document.getElementById(oTargetObj) : oTargetObj;
+var openTip = oOpenTip || "";
+var shutTip = oShutTip || "";
+if(targetObj.style.display!="none"){
+   if(shutAble) return;
+   targetObj.style.display="none";
+   if(openTip && shutTip){
+    sourceObj.innerHTML = shutTip; 
+   }
+} else {
+   targetObj.style.display="block";
+   if(openTip && shutTip){
+    sourceObj.innerHTML = openTip; 
+   }
+}
+}
+</script>
+<script>
+$(function(){
+	$(".loginbox .formdetail li:eq(0) img").css("width","15px");
+	$(".loginbox .formdetail li:eq(2) img").css("width","16px");
+	$(".loginbox .formdetail li:eq(3) img").css("width","15px");
+	})
+</script>
+{LB_3g头部通用}
+<script>
+$(function(){
+	var tit =$("title").html();
+	$(".headertit").html(tit)
+})
+</script>
+
+<div id="box2013" style="display:none">
+	<div class="topbg"></div>
+	<ul>
+		{$GetModelList}
+	</ul>
+	<div class="clear"></div>
+</div>
+<div class="MiddleCont whitebg">
+    <div class="loginbox">
+        <form action="../user/CheckUserLogin.asp" id="myform" name="myform" method="post">
+            <input type="hidden" name="from3g" value="1"/>
+            
+            <div class="form_detail">
+            
+                <p><input type="text" name="Username" placeholder="UID/用户名/Email" maxlength="60" id="Username" class="ipt_tx"  tabindex="1" /></p>
+                <p><input type="password" placeholder="登录密码" placeholder="登录密码" name="Password" maxlength="60" id="Password" class="ipt_tx"  tabindex="2" autocomplete="off"/></p>
+                <p{$ShowVerifyCode}><input type="text" maxlength="6" placeholder="验证码" name="Verifycode" id="Verifycode" onFocus="this.value='';" class="ipt_tx" tabindex="3" autocomplete="off"/>
+                <span id="showVerify"><img style='height:38px;cursor:pointer; width:36%;' title='点击刷新' align='absmiddle' src='../../plus/verifycode.asp' onClick='this.src="../../plus/verifycode.asp?n="+ Math.random();'></span></p>
+                <p class="loginbut"><input type="hidden" name="u1" id="u1"/>
+                <input type="submit" onClick="return(check.CheckForm());" value="登陆" class="land land1"/>
+                <input type="button" onClick="location.href='reg.asp'" value="注册" class="land" style="margin-top:10px;" />
+                <div style="text-align:right;"><a tabindex="6" href="GetPassword.asp" style="height:40px; line-height:40px;">忘记密码？</a> </div>
+            
+            </div>
+        </form>
+        <style>
+        .ident{ margin-top:0.8rem;}
+        .ident span{ display:block; text-align:center; color:#888; position:relative;}
+		.ident span::before{ content:''; background:#ddd; position:absolute; left:0.5rem; top:0.5rem; width:30%; height:1px;}
+		.ident span::after{ content:''; background:#ddd; position:absolute; right:0.5rem; top:0.5rem; width:30%; height:1px;}
+        </style>
+        <div class="ident">
+        <span>其他方式登录</span>
+        <div class="formdetail">
+        
+            {$ShowQuickLogin}	
+        
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>PK管理</AppName>
+		<Role>pk</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>PK主题管理</ItemName>
+			<ItemUrl><![CDATA[Plus_PK/KS.PKZT.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS20014</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>PK观点管理</ItemName>
+			<ItemUrl><![CDATA[Plus_PK/KS.PKGD.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS200141</Role>
+			<Ico>6.png</Ico>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

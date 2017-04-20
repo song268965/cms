@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>广告管理</AppName>
+		<Role>ads</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>广告管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Ads/KS.Ads.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS20006</Role>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>添加广告</ItemName>
+			<ItemUrl><![CDATA[Plus_Ads/KS.Ads.asp?Action=Addads]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>KSMS200061</Role>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head> 
+<title>{$GetArticleTitle}-{$GetClassName}</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Cache-control" content="max-age=1700">
+<meta name="viewport" content="user-scalable=no, width=device-width">
+<meta name="MobileOptimized" content="320">
+<meta name="author" content="kesion.com">
+<meta name="format-detection" content="telephone=no">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/common.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.css" rel="stylesheet" type="text/css">
+<link href="{$GetSiteUrl}{$Get3GInstallDir}/images/style.css" rel="stylesheet" type="text/css">
+<script src="{$GetSiteUrl}ks_inc/jquery.js"></script>
+<script src="{$GetSiteUrl}ks_inc/common.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/pageauto.js"></script>
+<script src="{$GetSiteUrl}{$Get3GInstallDir}/images/swiper.min.js"></script>
+<SCRIPT language=JavaScript type=text/JavaScript> 
+function resizepic(thispic){ if(thispic.width>230) thispic.width=230;}
+function showimg(src){	window.open(src);}
+function bbimg(o){}
+</SCRIPT>
+</head>
+
+{LB_3g头部通用}
+<div class="location">{$Navigation}</div>
+
+
+<section class="LMlist whitebg">
+   <div class="content">
+        <h1>{$GetArticleTitle}</h1>
+        <div class="gray">(编辑：{$FL_Inputer}  日期：{$GetArticleDate} 浏览：{$GetHits}次 {$GetFav})</div>
+        <div class="newscontent">{$GetArticleContent}</div>
+        
+        <div class="prev control"><strong>上一篇：</strong>{$GetPrevArticle}</div>
+        <div class="next control"><strong>下一篇：</strong>{$GetNextArticle}</div>
+    </div>
+</section>
+
+
+<section class="comment">
+    <div class="comtit">网友评论：</div>
+    <div class="comcont">
+        <div class="cont">{$GetWriteComment}</div>
+        <div class="list">{$GetShowComment}</div>
+    </div>
+</section>
+
+</body>
+</html>

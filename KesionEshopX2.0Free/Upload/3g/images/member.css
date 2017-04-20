@@ -1,0 +1,242 @@
+@charset "utf-8";
+/* CSS Document */
+@font-face {font-family: 'iconfont';
+    src: url('iconfont.eot'); /* IE9*/
+    src: url('iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('iconfont.woff') format('woff'), /* chromeã€firefox */
+    url('iconfont.ttf') format('truetype'), /* chromeã€firefoxã€operaã€Safari, Android, iOS 4.2+*/
+    url('iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+}
+.iconfont{
+    font-family:"iconfont" !important;
+   font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+input,input[type="button"], input[type="submit"], input[type="reset"] {-webkit-appearance: none;}
+
+
+/*会员中心*/
+.ipt_tx{font-size:0.7rem;height:2rem;line-height:1.5rem;border:1px solid #ddd; width:96%; border-radius:0.3rem; padding:0 2%; }
+.loginbox h3{height:2rem;text-align:center;font-size:0.8rem; padding-top:1.5rem;}
+.loginbox .formdetail{text-align:center;padding:0.8rem 0;}
+.loginbox .formdetail ul{text-align: center; display: -webkit-box;display: -webkit-flex;display: -ms-flexbox;display: flex;}
+.loginbox .formdetail ul li{-webkit-box-flex: 1; -webkit-flex: 1;-ms-flex: 1;flex: 1;text-align: center;}
+.loginbox .formdetail ul li img{ width:1rem !important;vertical-align: middle;margin-right: 0.25rem;}
+.userbox{color:#555;font-size:0.8rem; line-height:1.2rem;}
+.userbox a.box{color:#1555a6; padding-top:0.25rem;}
+.userbox table{ clear:both; margin-top:0.5rem; }
+.userbox .usertopleft{margin-left:0.75rem;width:3.5rem;float:left;}
+.userborder{ padding:0px 0.75rem;background:#F0F0F0;border:1px solid #ececec; }
+.mymoney{border:0px;margin-top:0.5rem; background:#fff; border-radius:5px;}
+.mymoney ul{ overflow:hidden; background:#fff;}
+.mymoney li{font-size:0.8rem;}
+.mymoney li a{ display:block;}
+.mymoney li p{font-size:0.8rem;color:#555;font-weight:bold;}
+.userdetail{line-height:1.3rem;border:0px;background:#fff; }
+.userdetail h3{padding:0.5rem 0.75rem;font-weight:normal; *border-bottom:1px solid #f5f5f5;border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+.userdetail h3 span{float:right;}
+.userdetail h3 span a{color:#555}
+.textbox1{ height:2rem; line-height:2rem; font-size:0.8rem; margin-top:0.5rem; width:90%}
+.textboxq{ height:2rem; line-height:2rem; width:84%;}
+.uploadtext{ width:90%; margin-top:0.5rem; height:2rem;}
+.select{ border:1px solid #ddd; height:2rem; line-height:2rem;color:#666; margin-top:0.5rem;font-size:0.7rem;border-radius: 0.2rem; width:30%; background:#fff; background:url(down.png) no-repeat right center; background-size:0.6rem; }
+.pn,.button{padding:0.25rem;background:#FCAA43; border:1px solid #FCAA43; color:#fff;}
+.textarea{ margin-top:0.5rem; width:93%;}
+.input{font-size: 0.7rem; height: 2rem; line-height: 1.5rem; border: 1px solid #ddd;width: 93%; border-radius: 0.2rem; padding: 0 2%;}
+.loginbox{ padding:1rem 0.5rem;}
+.loginbox p{ padding:0.5rem 0;}
+.loginbox .loginbut .land{ width:48%; height:2rem; line-height:2rem; font-size:0.7rem;}
+.loginbox .loginbut .land1{ margin-right:2%;}
+.loginbox .ident{ font-size:0.8rem;}
+/*用户注册*/
+.user_topd .usertopd{ padding:0.5rem; background:#fff}
+.user_topd .usertopd dl{ margin:0.5rem 0;}
+.user_topd .usertopd dl dt{ float:left; font-size:0.9rem; height:2.5rem; line-height:2.5rem;}
+.regL dd{ margin:0.5rem 0;}
+
+/*找回密码*/
+.user_topc{ background:#fff;}
+.user_topc h4{ height:1.75rem; line-height:1.75rem; padding:0px 0.75rem;text-shadow: 1px 0px #ebecec,0 1px #ebecec;border-top:1px solid #d5d5d5;margin-top:-1px;font-weight:normal}
+.user_topG{ padding:0.75rem; line-height:1rem; background:#fff}
+.user_topG h1{ display:none}
+.user_topG .textbox{font-size:0.8rem;height:1.3rem;line-height:1.3rem;border:1px solid #ccc; background:#fff url(input.png) repeat-x;padding-left:0.25rem;This is a div for test!!!. }
+.user_topG tr td{ padding-bottom:0.5rem}
+.user_topG select{font-size:0.8rem;height:1.3rem;line-height:1.3rem;border:1px solid #ccc; padding:0 0.5rem}
+.user_topG .button{margin-top:0.75rem}
+.password{}
+.password tr td{ padding:0.5rem 0; font-size:0.7rem;}
+
+
+/*注册页*/
+.user_topd h2{height: 2rem;line-height: 2rem;font-size: 0.8rem;font-weight: normal;}
+.put{line-height: 1.8rem;}
+.put label input[type="radio"]{ vertical-align:middle;}
+.put label { margin-right:0.5rem;}
+.user_topd .usertopd dl .input{font-size: 0.7rem; height: 2rem; line-height: 1.5rem; border: 1px solid #ddd;width: 94%; border-radius: 0.2rem; padding: 0 2%;}
+.user_topd .usertopd dl dt{height:1.8rem;line-height: 1.8rem;}
+
+/*忘记密码*/
+.user_topG select{font-size: 0.6rem;height: 2rem;line-height:1.5rem;border-radius:0.15rem;}
+.user_topG tr td{ padding-bottom:0;}
+.user_topc {background: #f4f4f4;text-align: center;font-size: 0.7rem;}
+.user_topc h4{height: 2rem;line-height: 2rem;}
+.user_topG .button {margin-top: 10px;font-size: 0.6rem;width: 100%;}
+
+/*会员中心*/
+.userborder{padding:0;}
+.userdetail{border-radius:0;}
+.userbox .usertopbox{background: #FFFFFF;position:relative;padding-bottom:0.5rem;padding-top:0.5rem;}
+.mymoney{margin-top:0;*border-top:1px solid #f5f5f5;margin-bottom:0.5rem;}
+.userbox .usertopbox{border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+.userbox .usertopright{ border-bottom:none; height:auto;font-size: 0.8rem;color: #333;padding-top: 0.8rem;}
+.userborder,body{background: #efefef;}
+.cat{margin-bottom: 10px; border-radius:0;}
+.userbox .usertopleft{width: 3rem; margin-right:0.75rem;margin-left:0.75rem;}
+.avatar48{margin: 0.5rem auto; padding:0; width:3rem; height:3rem;}
+.avatar48 img {width: 3rem;height: 3rem;border-radius:3rem;}
+.button {font-size: 1rem;height: 1.8rem;line-height:1.8rem;padding: 0 0.5rem;}
+span.uid{ display:block;}
+#UpPhotoFrame{position: absolute;right: 0.75rem;width:4.3rem;top: 50%;margin-top: -0.9rem;}
+#BtnSubmit{border: 1px solid #4599de;background: none;color: #3087c4;width: 4.3rem;box-sizing: border-box; font-family:"微软雅黑"; font-size:0.8rem;border-radius: 4px;}
+.mymoney li{/*background:none !important;*/ float:left; width:25%; padding:0;box-sizing: border-box;*border-left: 1px solid #f5f5f5; border-bottom:none; height:auto; line-height:0.9rem;border: none;background-image: -webkit-linear-gradient(left ,transparent 50%,#e5e5e5 50%);background-image: -moz-linear-gradient(left ,transparent 50%,#e5e5e5 50%);background-image: -o-linear-gradient(left ,transparent 50%,#e5e5e5 50%);background-image: linear-gradient(left ,transparent 50%,#e5e5e5 50%);background-size: 1px 100%;background-repeat: no-repeat;background-position: left;}
+.mymoney li:first-child{ /*border-left:none;*/ background:none;}
+.mymoney ul{padding:0.75rem 0;}
+.mymoney li span{display:block;text-align: center;font-weight: normal;font-size: 0.6rem;color: #999;}
+.uid{line-height:0.9rem; font-size:0.6rem; color:#999; margin-top:0.4rem;}
+.uid .hyid{font-style: italic;padding: 1px 8px;border: 1px solid #ddd;border-radius:0.5rem; margin-right:0.5rem;font-weight: bold;color: #bbb;}
+.userdetail .f1{/*background:none;*/padding-right:0.5rem;padding-left: 0; margin-left:2.3rem; color:#333; font-size:0.7rem;height: 1.5rem;line-height:1.75rem;}
+.userdetail h3 span{font-size: 0.8rem;color: #ccc; padding-right:0;}
+.userdetail a{display:block; position:relative;}
+.userdetail a:last-child h3{*border-bottom:none; background:none;}
+.userdetail a i{position:absolute;left:0px;height:1.5rem;line-height:1.75rem;padding: 0.5rem 0.75rem;font-size: 0.8rem;color:#909295;}
+
+/*充值*/
+.tabs{background:#fff; height:2.05rem; border-bottom:1px solid #eee;}
+.tabs li{padding-left: 0; height:2rem; line-height:2rem; width:50%; margin:0;}
+.tabs li.puton {border-bottom: 2px solid #3087c4;font-weight: normal; height:2rem; width:50%;}
+.tabs li a{color: #333; font-size:0.8rem;}
+.tabs li.puton a{color:#3087c4;}
+.tabs ul{border-bottom:1px solid #eee;}
+.tableBGw2{background:#fff;padding: 0.2rem 0 1rem; overflow:hidden;}
+.tableBGw2 table tr td{border-bottom: none;padding:0;font-size: 0.7rem;}
+.border input[type="text"]{ border:1px solid #ede7e7; margin-top:0;height: 1.5rem;line-height: 1.5rem;}
+#Submit{font-size: 0.7rem;margin-top: 0.25rem;margin-left: 0.25rem;}
+
+/*用户信息*/
+.tableBGw table{background: #fff;}
+.tableBGw table tr:last-child td{ background:none;}
+.fgTitle{ height:2rem; line-height:2rem; text-align:center; font-size:0.8rem; color:#333;}
+.tableBGw table .tdbg td{padding: 0 0.75rem;*border-bottom: 1px solid #f5f5f5;border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+.tableBGw table .aRight{ text-align:right; padding-right:0 !important;}
+.aRight select{margin-top: 0;border: none;background: none;width: auto;}
+.aRight input[type="text"]{ border:none; margin-top:0; text-align:right;}
+.aRight,.aRight input[type="text"],.aRight select,.aRight textarea{ color:#999; font-size:0.6rem;}
+.tableBGw table .dtable dd:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.tableBGw table .dtable dd{ padding-top:0;*border-bottom:1px solid #f5f5f5;border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;line-height:2rem; height:2rem;text-align: right;font-size: 0.6rem;color: #999;}
+.tableBGw table .dtable dd:last-child{*border-bottom:none; background:none;}
+.tableBGw .dtable dd input[type="radio"],.aRight label input[type="radio"]{ vertical-align:middle; margin-right:0.25rem; margin-left:0.5rem;}
+.dtable .left{ line-height:2rem; height:2rem;}
+.tableBGw .dtable .left{ text-align:left; color:#333; font-size:0.7rem;}
+.tableBGw table .dtable dd input[type="text"]{color: #999;text-align:right;margin-top:0; border:none; font-size:0.6rem;}
+.updataBtn {text-align: center;padding-bottom: 0.5rem;}
+.updataBtn .pn{ padding:0.25rem 0.75rem;font-size: 0.7rem;border-radius: 3px;}
+.tableBGw .tableOther{ padding:0 0.75rem; background:#fff; border-bottom:1px solid #eee;}
+.tableBGw .clefttitle{ padding:0 !important;font-size: 0.7rem;color: #333;}
+.tableBGw table tr:last-child td{ border-bottom:none;}
+/*签到*/
+.userbox>table{background:#fff; margin-top:0;box-shadow: 1px 2px 2px #e6e6e6;border-bottom: 1px solid #d9d9d9;}
+#fenye table{background:none;}
+.border td{border-bottom:none;}
+
+/*我的订单*/
+.border .ContentTitle{padding:0;}
+.myOrderL table{background:#fff;overflow:hidden; margin-top:0; margin-bottom:0.5rem;border-bottom: 1px solid #eee;}
+.myOrderL table .ContentTitle{padding:0 0.75rem;height:2rem;line-height: 2rem;font-size: 0.62rem; color:#333;}
+.border td.Contenttips{ font-size:0.62rem;padding: 0.5rem 0.75rem;background:#f9f9f9;line-height: 1rem; color:#999;}
+.Contenttips font{margin-right:0.3rem;}
+.myOrderL tr.title{background:#fff;text-align:left;}
+.myOrderL tr.title a{color:#333;}
+
+.myOrderL .border .splittd .button{font-size:0.6rem; margin-right:0;border: 1px solid #ddd;background: none;color: #333; line-height:normal !important; height:auto;padding: 0.25rem 0.5rem !important;}
+.myOrderL table .orderMoney td{padding: 0 0.75rem;font-size: 0.6rem;text-align: right;}
+.orderMoney td span{font-size:0.72rem !important;}
+
+.TotalAmount tr td{ font-size:0.65rem; padding:0rem 0rem 0.5rem 0.75rem;}
+.TotalAmount tr td span{ font-size:0.72rem;}
+
+.tableBGw .aRight #Money{margin-top: 0;border: none;text-align: right;color: #999;}
+/*收藏夹*/
+.userbox .myCollection{ background:#fff; margin-top:0;*border-bottom: 1px solid #f5f5f5;    border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+.userbox .myCollection td{ padding:0.5rem 0.75rem;}
+.userbox .myCollection td.ContentTitle{font-size: 0.7rem;padding: 0.5rem 0.75rem;line-height: 1.2rem;height: 1.2rem; color:#333;}
+input[type="checkbox"],input[type="radio"]{ vertical-align:middle; margin-right:0.1rem; width:0.8rem;-webkit-appearance: none; border:0;height:0.8rem; background:url(nocheckbox.png) no-repeat center; background-size:100% 100%;outline: none;}
+input[type="checkbox"]:checked,input[type="radio"]:checked{background:url(checkbox.png) no-repeat center; background-size:100% 100%;}
+.myCollection td.ContentTitle a{ color:#333;}
+.userbox .myCollection td.Contenttips{ font-size:0.62rem;padding: 0.5rem 0.75rem;background: #f9f9f9;line-height: 1rem;color: #999;}
+.userbox .myCollection td.Contenttips a{ color:#999;}
+.myCollection td.splittd .box{font-size: 0.6rem;border: 1px solid #3087c4;padding: 0.25rem 0.5rem;color: #3087c4;border-radius: 3px;}
+.myCollection2 td .button{padding: 0.25rem 0.75rem !important;font-size: 0.7rem;border-radius: 3px;border: 0;background: #3087C4;color: #fff;height: auto;}
+
+/*消费记录*/
+.exRecord li.puton,.exRecord li{ width:33.33%;}
+.myCollection3{margin-bottom:0.5rem;}
+.myCollection3 tr td{ padding:0.75rem;}
+.myCollection3 tr td.Contenttips{ background:#f8f8f8; font-size:0.6rem; color:#888;line-height: 1rem;}
+.pageMoney tr td.splittd{ padding:0.5rem 0.75rem 0; font-size:0.62rem;line-height: 0.8rem;}
+.pageMoney tr td.splittd span{ font-size:0.75rem;}
+.noneRe{padding: 0.75rem;font-size: 0.7rem;color: #999;}
+.noneImg{width: 4rem;height: 4rem;line-height: 4rem;margin:2.67rem auto 0.75rem;border-radius: 100%;background:#ccc;color: #fff;}
+.noneImg i{font-size: 2rem;}
+.userbox .noborder{ background:none; border-bottom:none; box-shadow:none;}
+.PointsDetails{margin-bottom: 0.5rem;}
+.PointsDetails tr td{padding:0.5rem 0.75rem;}
+.PointsDetails tr td.ContentTitle{ background:#f9f9f9; font-size:0.65rem; color:#999;}
+.PointsDetails tr td.Contenttips{line-height: 1rem;font-size: 0.6rem;color: #777;}
+
+/*确认款项*/
+.userbox .Cpayment{ background:#fff; margin-top:0;}
+.Cpayment tr td{ font-size:0.7rem;*border-bottom: 1px solid #f5f5f5; padding-top:0.5rem !important; padding-bottom:0.5rem !important;width: 3rem;border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+.Cpayment tr td.aRight{ padding-right:0.75rem !important; font-size:0.6rem;}
+.Cpayment tr td.clefttitle{ padding-left:0.75rem !important;}
+.Cpayment tr td input[type="radio"]{ vertical-align:middle; margin-right:0.3rem;}
+.Cpayment .button{padding: 0.25rem 0.75rem;font-size: 0.7rem;border-radius: 3px;line-height: normal !important;height:auto !important; margin-top:0 !important;}
+
+/*意见投诉*/
+.opinion{background: #fff; padding:1rem 0;}
+.opinion table{ margin-top:0 !important; margin-bottom:0 !important;}
+.opinion table td{ padding:0.2rem 0;}
+.opinion table td textarea{ resize:none; border:1px solid #eee; border-radius:5px;}
+.opinion table .splittd { padding-left:0.75rem; font-size:0.7rem; padding-right:0;}
+.opinion table .splittd strong{ font-weight:normal;}
+.opinion .button{padding: 0.25rem 0.75rem;font-size: 0.7rem;border-radius: 3px;line-height: normal !important;height: auto !important;margin-top: 0 !important;}
+
+.userbox .ComRecord{ background:none; box-shadow:none; border-bottom:none;}
+.userbox .ComRecord .PointsDetails{ margin-top:0; background:#fff;}
+.ComRecord .PointsDetails td.splittd{*border-top:1px solid #f5f5f5;padding: 0.4rem 0.45rem;border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: top;}
+.ComRecord .PointsDetails td.splittd a{font-size: 0.6rem;color:#666; border:1px solid #ddd;padding: 0.25rem 0.5rem;border-radius: 3px; margin-right:0.3rem;}
+
+/*考试记录*/
+.myCollection td.splittd .grayBox{border: 1px solid #ddd; color:#333;}
+.normaltext .title .ContentTitle{ padding:0.5rem 0.75rem; color:#999; border-bottom:none;}
+.normaltext .title .ContentTitle p{ color:#666;line-height: 1.3rem;}
+.normaltext .title .ContentTitle p:nth-child(2){ margin-top:0.5rem;}
+.normaltext .title .ContentTitle p:last-child{ display:none;}
+.normaltext .splittd .ta{background: #f9f9f9;padding: 0.5rem 0.75rem;font-size: 0.7rem;}
+.normaltext .splittd .ta input[type="checkbox"]{ vertical-align:middle; margin-right:0.3rem;}
+.normaltext .ta strong{font-weight: normal;}
+.normaltext .splittd .button{border: 1px solid #3087c4;background: none;color: #3087c4;font-size: 0.6rem;padding: 0.2rem 0.5rem !important;border-radius: 3px;}
+
+.F5BorderB{*border-bottom: 1px solid #f5f5f5;border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+.F5BorderT{*border-top: 1px solid #f5f5f5;border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: top;}
+.myCollection tr:last-child .F5BorderB{ background:none;}
+.noBG{background-image: none !important;}
+.userbox .myCollection:last-child{background-image: none;}
+.empty,.order_no{ text-align:center;}
+
+/*签到记录*/
+.SignInL .titlename{background:#efefef;}
+.SignInL .titlename td{padding:0; height: 2rem;line-height: 2rem;font-size:0.8rem;}
+.SignInL .tdbg .splittd,.SignInL .tdbgmouseover .splittd{padding: 0.5rem;font-size:0.7rem;*border-bottom: 1px solid #f5f5f5;border: none;background-image: -webkit-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -moz-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: -o-linear-gradient(#e5e5e5 50%,transparent 50%);background-image: linear-gradient(#e5e5e5 50%,transparent 50%);background-size: 100% 1px;background-repeat: no-repeat;background-position: bottom;}
+.SignInL .tdbg .splittd:first-child,.SignInL .tdbgmouseover .splittd:first-child{ color:#999; font-size:0.6rem; line-height:1rem;}

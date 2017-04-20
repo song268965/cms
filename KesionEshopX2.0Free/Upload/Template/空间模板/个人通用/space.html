@@ -1,0 +1,147 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{$GetSiteName}-空间门户</title>
+<link href="{$GetInstallDir}user/images/css.css" type=text/css rel=stylesheet>
+<script src="{$GetInstallDir}ks_inc/jquery.js" type="text/javascript"></script>
+<script src="{$GetInstallDir}ks_inc/common.js" language="javascript"></script>
+<!--鼠标滑动特效end--> 
+<script type="text/javascript">
+ <!---
+  function getNewMessage()
+  {
+    $.get("UserAjax.asp",{action:"GetNewMessage"},function(d){
+	 jQuery("#NewMessage").html(unescape(d));
+	});
+	setTimeout("getNewMessage()", 10000);
+  }
+	setTimeout("getNewMessage()", 1000);
+  //-->
+</script>
+<script type="text/javascript">
+						  function copyToClipboard(txt) {
+							 if(window.clipboardData) {
+									 window.clipboardData.clearData();
+									 window.clipboardData.setData("Text", txt);
+							 } else if(navigator.userAgent.indexOf("Opera") != -1) {
+								  window.location = txt;
+							 } else if (window.netscape) {
+								  try {
+									   netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+								  } catch (e) {
+									   alert("被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将'signed.applets.codebase_principal_support'设置为'true'");
+								  }
+								  var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
+								  if (!clip)
+									   return;
+								  var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+								  if (!trans)
+									   return;
+								  trans.addDataFlavor('text/unicode');
+								  var str = new Object();
+								  var len = new Object();
+								  var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+								  var copytext = txt;
+								  str.data = copytext;
+								  trans.setTransferData("text/unicode",str,copytext.length*2);
+								  var clipid = Components.interfaces.nsIClipboard;
+								  if (!clip)
+									   return false;
+								  clip.setData(trans,null,clipid.kGlobalClipboard);
+							 }
+								  alert("复制成功！")
+						}
+		 </script>
+<!--[if IE 6]>
+<script src="{$GetInstallDir}js/iepng.js" type="text/javascript"></script>
+<script type="text/javascript">
+   EvPNG.fix('div, ul, img, li, input'); 
+</script>
+<![endif]-->
+</head>
+<body>
+
+
+{LB_会员中心头部}
+<div class="hearder">
+	<div class="logoNav">
+		<div class="wrap">
+			<div class="logo"><a href="{$GetInstallDir}"><img src="{$GetInstallDir}images/logo-black.png" alt="KESION" /></a></div>
+			<div class="nav">
+				<ul>
+					<li ><a href="{$GetInstallDir}">首页</a></li>
+					<li><a href="{$GetInstallDir}user/">会员</a></li>
+					<li><a href="{$GetInstallDir}user/weibo.asp">微博</a></li>
+					<li><a href="{$GetInstallDir}club/">论坛</a></li>
+					<li class="current" ><a href="{$GetInstallDir}space/">门户</a></li>
+					<li><a href="{$GetInstallDir}user/user_payonline.asp">充值</a></li>
+					<li><a href="{$GetInstallDir}user/Complaints.asp">投诉</a></li>
+					<li><a href="{$GetInstallDir}user/UserLogout.asp"  onclick="return(confirm('确认退出吗？'))">退出</a></li>
+			　　　</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="blank10 clear"></div>
+
+<div class="usermain">
+   <div class="mainleft">
+        <div class="left01">
+		    <div class="floatl avatar48"><img src="{#UserFace}" onerror="this.src='images/noavatar_small.gif';" width="50" height="50" /></div>
+			<div class="floatr">
+			    <ul>
+				   <li> 
+                   <span class="rl" style="cursor:pointer; display:inline-block;" onMouseover="$('#userstatus').show();">
+                   {#UserName}
+                   {ElseIf:KSUser.GetUserInfo("IsOnline")="1"}
+				   <img src="images/online.gif" align='absmiddle' alt="当前在线"> 
+				   {Else}
+				   <img src="images/notonline.gif" align='absmiddle' alt="当前隐身"/> 
+				   {/ElseIf}
+						<div id="userstatus" class='abs' style="top:30px;" onMouseOut="$('#userstatus').hide();">
+							<dl style="text-align:center"><a href="index.asp?action=offline">隐身离线</a></dl>
+							<dl style="text-align:center"><a href="index.asp?action=setonline">我在线上</a></dl>
+						</div></span>
+					</li>
+				 <li>{#GroupName}</li>
+				</ul>
+			</div>
+		</div>
+        <div class="clear blank10"></div>
+        <h3>管理面板</h3>
+		<div class="left02">
+		  <ul>
+		     <li><a href="User_Blog.asp?action=BlogEdit">空间参数设置</a></li>
+		     <li><a href="SetSpaceTemplate.asp" target="_blank">空间模板绑定</a></li> 
+			  {IF:KS.SSetting(14)<>"0"} 
+		     <li><a href="User_Blog.asp?action=BindDomain">空间域名绑定</a></li>
+			 {/IF}
+		  </ul>
+		</div>
+        <h3>发布内容</h3>
+		<div class="left02">
+		  <ul>
+		     {#ShowMyMenu}
+		  </ul>
+		</div>
+   
+   </div>
+   <div class="right">
+   
+		   {#ShowUserMain}
+		
+	
+		
+		<!--right end-->
+   </div>
+
+</div>
+		<div class="clear"></div>	
+	 <div class="foot">	<p>Copyright&copy 2006-2015 KESION.COM All Rights Reserved 福建·厦门科汛软件有限公司</p>
+</div>
+         
+</body>
+</html>

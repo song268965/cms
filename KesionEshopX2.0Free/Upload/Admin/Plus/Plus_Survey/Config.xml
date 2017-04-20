@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<MyApp>
+	<App>
+		<AppName>多问卷调查</AppName>
+		<Role>Survey</Role>
+		<AppStatus>1</AppStatus>
+		<AppItem>
+			<ItemName>问卷项目管理</ItemName>
+			<ItemUrl><![CDATA[Plus_Survey/KS.Survey.asp]]></ItemUrl>
+			<Attribute>Disabled</Attribute>
+			<Role>Survey0000</Role>
+			<Order>1</Order>
+		</AppItem>
+		<AppItem>
+			<ItemName>问卷结果查看</ItemName>
+			<ItemUrl><![CDATA[Plus_Survey/KS.SurveyR.asp]]></ItemUrl>
+			<Attribute>Go</Attribute>
+			<Role>Survey0001</Role>
+			<Order>1</Order>
+		</AppItem>
+	</App>
+</MyApp>

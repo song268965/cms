@@ -1,0 +1,66 @@
+﻿.dynamic-tab-pane-control.tab-pane {
+	position:	relative;
+	/*width:		100%;		 width needed weird IE bug */
+	/*margin-right:	-2px;	 to make room for the shadow */
+}
+.dynamic-tab-pane-control .tab-row{
+    z-index: 10;
+    height: 34px;
+    border-bottom: 1px solid #dfe5e6;
+    clear: both;
+	margin-left:20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    background: #fff;
+    border-radius: 5px 5px 0px 0px;
+}
+.dynamic-tab-pane-control .tab-row .tab {
+	float: left;
+	cursor: hand;
+	display:block;
+	height:33px;
+	padding:0px 15px;
+	margin-right:10px;
+	line-height:33px;
+	white-space: nowrap;
+	text-align: center;
+	border: 1px solid #dfe5e6;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    font-size: 14px;
+	font-weight:normal;
+	background: #f3f6f7;
+}
+
+/*.dynamic-tab-pane-control .tab-row .tab.selected {
+	min-width: 75px;
+	height:23px;
+	_height: 22px;
+
+}*/
+.dynamic-tab-pane-control .tab-row .tab.selected{ background:#fff;height:34px;}
+.dynamic-tab-pane-control .tab-row .tab a {color: #626a70;}
+/*.dynamic-tab-pane-control .tab-row .tab h2{
+	float: left;
+    margin: 0 12px 0 0;
+    border: 1px solid #dfe5e6;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+}
+.dynamic-tab-pane-control .tab-row .tab.hover {
+	border-bottom:4px solid green;
+}*/
+.tab-page{ background:#fff; margin:0px 20px 20px 20px; border-radius:5px;}
+.dynamic-tab-pane-control .tab-page {
+	/*border: 0px solid #ccc;
+	background: rgb( 252, 252, 254 );*/
+	top: 0px;
+	color: #333;
+	
+	/*244, 243, 238*/
+	/* 145, 155, 156*/
+	padding-bottom:20px;
+	margin-top:20px;
+}
+
+.dtable dd font a{ margin:0 10px;}
